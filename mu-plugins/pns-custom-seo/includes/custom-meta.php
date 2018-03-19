@@ -140,12 +140,12 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 
 			// Cats
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/cats/') ){
-				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-services-rabbit-hero.jpg";
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-services-cat-hero.jpg";
 			}	
 
 			// Rabits
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/rabbits/') ){
-				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-services-cat-hero.jpg";
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-services-rabbit-hero.jpg";
 			}	
 			
 			return $img;
