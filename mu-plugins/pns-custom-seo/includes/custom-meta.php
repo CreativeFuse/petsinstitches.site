@@ -67,6 +67,8 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 
 	}
 
+	// Force Services Titles
+	
 	add_filter( 'wpseo_title', 'pns_force_services_seo_titles', 1);
 
 	function pns_force_services_seo_titles( $title ){
@@ -93,6 +95,8 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 
 	}
 
+	//Force Services Description
+
 	//add_filter( 'wpseo_metadesc', 'pns_force_services_seo_desc', 1);
 
 	function pns_force_services_seo_desc( $desc ){
@@ -117,5 +121,33 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 			}	
 			
 			return $desc;
+
+	}
+
+	// Force Opengraph Img for Services
+	add_filter( 'wpseo_opengraph_image', 'pns_force_services_seo_img', 1);
+
+	function pns_force_services_seo_img( $img ){
+
+			$currentUrl = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+
+			// Dogs
+			
+			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/dogs/') ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-services-dog-hero.jpg";
+			}
+
+			// Cats
+			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/cats/') ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-services-rabbit-hero.jpg";
+			}	
+
+			// Rabits
+			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/rabbits/') ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-services-cat-hero.jpg";
+			}	
+			
+			return $img;
 
 	}
