@@ -1,0 +1,79 @@
+## ignore git
+.git
+/.git
+
+# Ignore all of the root wp-content things
+plugins/*
+themes/*
+advanced-cache.php
+backup-db/
+backups/
+blogs.dir/
+cache/
+upgrade/
+uploads/
+wp-cache-config.php
+
+## ignore OSX System junk
+*.DS_Store
+
+## ignore sass caching
+*.sass-cache
+
+## ignore docs
+*docs
+
+## ignore node_modules
+*node_modules
+
+## ignore bower_components
+*bower_components
+
+## ignore CSS Sourcemaps
+*style.css.map
+
+## ignore Editor files
+*.sublime-project
+*.sublime-workspace
+
+# ignore log files and databases
+*.log
+
+## ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!README.md
+!CHANGELOG.md
+!composer.json
+!guplfile.js
+!package.json
+!bower.json
+
+# ---------------------------------
+# Whitelist the theme
+# ---------------------------------
+
+!themes/pns-molecule/
+
+
+# --------------------------------------------------------
+# ALL custom plugins are MU plugins. Let's whitelist them.
+# --------------------------------------------------------
+
+
+
+mu-plugins/local-by-flywheel-demo-urls.php
