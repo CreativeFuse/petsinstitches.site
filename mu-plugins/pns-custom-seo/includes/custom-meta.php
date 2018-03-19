@@ -198,3 +198,19 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 			return $img;
 
 	}
+
+	// Force Opengraph Img for FAQs
+	add_filter( 'wpseo_opengraph_image', 'pns_force_faq_seo_img', 1);
+
+	function pns_force_faq_seo_img( $img ){
+
+			$currentUrl = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+			// Testimonials Landing
+			if( $_SERVER['REQUEST_URI'] === '/faqs/' ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-faqs-hero.jpg";
+			}
+			
+			return $img;
+
+	}
