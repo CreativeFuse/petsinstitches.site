@@ -151,3 +151,50 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 			return $img;
 
 	}
+
+	// Force Opengraph Img for Testimonials
+	add_filter( 'wpseo_opengraph_image', 'pns_force_testimonials_seo_img', 1);
+
+	function pns_force_testimonials_seo_img( $img ){
+
+			$currentUrl = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+			// Testimonials Landing
+			if( $_SERVER['REQUEST_URI'] === '/testimonials/' ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-partners-hero.jpg";
+			}
+
+			// Dogs
+			if( is_post_type_archive( 'testimonials' ) && strpos( $currentUrl, '/dogs/') ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-testmonial-dog-hero.jpg";
+			}
+
+			// Cats
+			if( is_post_type_archive( 'testimonials' ) && strpos( $currentUrl, '/cats/') ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-testimonial-cat-hero.jpg";
+			}	
+
+			// Rabits
+			if( is_post_type_archive( 'testimonials' ) && strpos( $currentUrl, '/rabbits/') ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-testmonial-rabbit-hero.jpg";
+			}	
+			
+			return $img;
+
+	}
+
+	// Force Opengraph Img for partners
+	add_filter( 'wpseo_opengraph_image', 'pns_force_partners_seo_img', 1);
+
+	function pns_force_partners_seo_img( $img ){
+
+			$currentUrl = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+			// Testimonials Landing
+			if( $_SERVER['REQUEST_URI'] === '/partners/' ){
+				$img = "https://petsinstitches.com/wp-content/uploads/2017/08/pets-in-stitches-partners-hero.jpg";
+			}
+			
+			return $img;
+
+	}
