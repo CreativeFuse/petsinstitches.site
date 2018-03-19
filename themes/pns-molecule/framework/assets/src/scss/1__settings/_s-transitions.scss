@@ -1,0 +1,34 @@
+/**
+ * BUILD FULL SASS TRANSITION MAP
+ */
+
+
+$transitions : (
+
+	accordion			: 	all .25s ease,
+	accordion_img		:   opacity .2s ease,
+	action_item			:   all .2s linear,
+	btn_bg				: 	all .4s ease-in-out,
+	btn_text 			:	all .2s linear,
+	btn_img				: 	all .2s linear,
+
+	card_flip			: 	all .4s ease-in-out,
+	cta_bg				: 	all .2s ease-in-out,
+	cta_text 			:	all .2s ease-in-out,
+	cta_img				: 	all .2s ease-in-out,
+    form				: 	all .2s ease-in-out,
+
+	partners			: 	all .4s ease-in-out,
+	post_item			: 	all .2s ease,
+
+	icon_fancy			:	all .2s ease,		
+	icon_fancy_border	:	all .3s ease,
+	icon_bg				:	all .2s ease,
+	mobile_icon			:	all .25s ease-in-out,
+
+	nav					:	all .25s ease,
+
+	service_card		:	all .25s ease-in,
+
+	
+);

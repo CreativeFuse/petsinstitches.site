@@ -1,0 +1,96 @@
+$service-consideration-req: #428E8D;
+$service-consideration-rec: #7F176B;
+$service-consideration-opt: #B34162;
+$service-consideration-well: color( purple );
+
+
+.c-service-considerations__items .c-service-considerations__item,
+.c-service-considerations__note{
+	margin-top: 35px;
+}
+
+
+.c-service-considerations__item{
+	float: left;
+}
+
+.c-service-considerations__color,
+.c-service-considerations__name{
+
+
+	display: block;
+	float: left;
+
+
+}
+
+.c-service-considerations__name{
+	margin-left: 15px;
+	margin-right: 27px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.c-service-considerations__color{
+
+	border-radius: 50%;
+	height: 20px;
+	position: relative;
+	top: 4px;
+	width: 20px;
+
+}
+
+
+.c-service-considerations__item--req{
+
+
+	.c-service-considerations__color{
+		background-color: $service-consideration-req;
+	}
+
+	.c-service-considerations__name{
+		color: $service-consideration-req;
+	}
+
+}
+
+.c-service-considerations__item--rec{
+
+
+	.c-service-considerations__color{
+		background-color: $service-consideration-rec;
+	}
+
+	.c-service-considerations__name{
+		color: $service-consideration-rec;
+	}
+
+}
+
+
+.c-service-considerations__item--opt{
+
+
+	.c-service-considerations__color{
+		background-color: $service-consideration-opt;
+	}
+
+	.c-service-considerations__name{
+		color: $service-consideration-opt;
+	}
+
+}
+
+
+.c-service-considerations__item--well{
+
+	.c-service-considerations__color{
+		background-color: $service-consideration-well;
+	}
+
+	.c-service-considerations__name{
+		color: $service-consideration-well;
+	}
+
+}

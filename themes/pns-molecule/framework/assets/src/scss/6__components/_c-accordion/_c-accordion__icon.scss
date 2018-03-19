@@ -1,0 +1,156 @@
+/**
+ * Accordion • Icon
+ */
+
+// Settings
+
+
+// Icon Wrapper
+.c-accordion__icon{
+
+  float: left;
+  position: absolute;
+  transition: transition( accordion );
+  transform-origin: 50% 50%;
+  
+}
+
+
+// Icon Bar Default Styles
+.c-accordion__icon-bar{
+
+  height: 2px;
+  position: absolute;
+  transition: transition( accordion );
+
+}
+
+// Start one bar rotated to 90
+.c-accordion__icon-bar--2{
+  transform: rotate(90deg);
+}
+
+
+/**
+ * Simple Accordion Icon
+ */
+
+
+ $accordion_icon_size_simple : 20px;
+
+
+// Wrapper
+  .c-accordion__icon--simple{
+
+    height: $accordion_icon_size_simple;
+    top: calc( 47% - ( #{$accordion_icon_size_simple} / 2 );
+    width: $accordion_icon_size_simple;
+    right: 15px;
+
+  }
+
+// Simple Variation 1
+.c-accordion--simple--1 .c-accordion__icon--simple{
+
+  border: 2px solid color( blue );
+
+}
+
+//Simple Variation 2
+.c-accordion--simple--2 .c-accordion__icon--simple{
+
+  border: 2px solid color( blue-m );
+
+}
+
+
+// Icon bars
+.c-accordion__icon--simple .c-accordion__icon-bar{
+    right:5px;
+    top: 9px;
+    width: 11px
+}
+
+// Simple Variation 1
+.c-accordion--simple--1 .c-accordion__icon--simple .c-accordion__icon-bar{
+
+    background-color: color( blue );   
+
+}
+
+// Simple Variation 2
+// 
+  .c-accordion--simple--2 .c-accordion__icon--simple .c-accordion__icon-bar{
+
+    background-color: color( blue-m );    
+    
+
+  }
+
+
+
+
+
+ /**
+  * Fancy Accordion Icon
+  */
+
+  $accordion_icon_size_fancy : 45px;
+
+
+//Wrapper
+  .c-accordion__icon--fancy{
+    height: $accordion_icon_size_fancy;
+    top: calc( 50% - ( #{$accordion_icon_size_fancy} / 2 );
+    width: $accordion_icon_size_fancy;
+    right: 0px;
+
+    @include respond-max( $phone ){
+      top: -20px;
+    }
+
+  }
+
+// Icon Bars
+  .c-accordion__icon--fancy .c-accordion__icon-bar{
+
+      background-color: color( blue );    
+      right: 7px;
+      top: 20px;
+      width:30px;
+
+  }
+
+
+
+
+/**
+ * Handle the animation of the accordion icon wrapper and bars
+ */
+
+// Fancy Icon Bar Color
+.c-accordion--is-active .c-accordion__icon--fancy .c-accordion__icon-bar--1,
+.c-accordion--is-active  .c-accordion__icon--fancy .c-accordion__icon-bar--2{
+  background-color: color( purple );
+}
+
+// Simple Icon bar Color
+.c-accordion--is-active .c-accordion__icon--simple .c-accordion__icon-bar--1,
+.c-accordion--is-active  .c-accordion__icon--simple .c-accordion__icon-bar--2{
+  background-color: color( blue-m );
+}
+
+// Simple 1 - Active Border Color
+.c-accordion--simple--1.c-accordion--is-active .c-accordion__icon--simple{
+  border-color: color( blue-m );
+}
+
+// Rotate entire X for fancy icons
+.c-accordion--is-active .c-accordion__icon--fancy{
+  transform: rotate(45deg);
+}
+
+// Rotate only 1 bar for simple icons
+.c-accordion--is-active .c-accordion__icon--simple .c-accordion__icon-bar--2{
+  transform: rotate(0deg);
+}

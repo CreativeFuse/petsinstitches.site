@@ -1,0 +1,28 @@
+.c-testimonials{
+	padding: 90px 0;
+}
+
+.c-testimonials .c-box .c-box__info{
+
+	@include respond-max( $nav_swap ){
+		padding:0;
+		margin-bottom: 15px;
+	}
+
+}
+
+.c-testimonials .c-box .c-box__info,
+.c-testimonials .c-box .c-box__content{
+
+	@include respond-max( $nav_swap ){
+		display: block;
+		text-align: center;
+		width:100%;
+	}
+
+}
+
+
+.c-testimonials .c-box .c-box__info .c-box__author__title{
+	color: color( blue-d );
+}

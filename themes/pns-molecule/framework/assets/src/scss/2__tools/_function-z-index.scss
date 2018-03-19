@@ -1,0 +1,26 @@
+/**
+ * Custom Function for Getting Mapped Z-Index Values
+ * 
+ * @ref https://www.sitepoint.com/better-solution-managing-z-index-sass/
+ * @param $layer -  Value from our z-index map in 1__settings
+ */
+
+@function z($layer) {
+
+  @if not map-has-key($z-layers, $layer) {
+
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+    @return null;
+    
+  }
+
+  @return map-get($z-layers, $layer);
+
+}
+
+// USAGE EXAMPLE
+// 
+// .modal {
+// 		...
+//		z-index: z("modal");
+//  }

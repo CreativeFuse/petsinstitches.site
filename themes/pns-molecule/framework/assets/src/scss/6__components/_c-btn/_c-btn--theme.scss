@@ -1,0 +1,36 @@
+/**
+ * ****************************
+ * Component • Button -- Theme
+ * ****************************
+ */
+
+// Loop through available themes as
+// defined in our theme array $btn-themes
+// and define outline and fill classes for each
+
+@each $btn-theme in $btn-themes {
+  	
+
+	.c-btn--#{$btn-theme}{
+
+		&.c-btn--fill{
+
+			
+			background-color: color( $btn-theme );
+			border-color: color( $btn-theme );
+			color: white;
+
+
+		}
+
+		&.c-btn--outline{
+
+			background-color:rgba( color( grayscale, white), 0 );
+			border-color : color( $btn-theme, light15 );
+			color: color( $btn-theme );
+
+		}
+
+	}
+
+}

@@ -1,0 +1,122 @@
+/**
+ * ****************************
+ * Component • Title Group
+ * ****************************
+ */
+
+
+/**
+ * Base styles for the title group component
+ */
+.c-title-group{
+
+}
+
+
+// We don't want top margin on title group titles
+.c-title-group__title{
+	margin: 0;
+}
+
+
+/**
+ * Title Group Sub Copy
+ */
+
+// We don't want top margin on title group titles
+.c-title-group__sub{
+
+	margin-top: 10px;
+	margin-bottom: 0;
+
+	// For e-h2...remove top margin
+	&.e-h2{
+		margin-top: 0;
+	}
+
+}
+
+
+
+/**
+ * Title Group Buttons
+ */
+
+.c-title-group__btn{
+	margin-top: 20px;
+}
+
+
+/**
+ * Hero Title Group
+ */
+.c-title-group--hero{
+
+	@include respond-max( $nav_swap ){
+
+		margin: 0 auto !important
+
+	}
+
+ }
+
+
+/**
+ * Call to Action Title Group
+ */
+
+.c-title-group--cta > .e-h1,
+.c-title-group--cta > .e-h4{
+	margin-bottom: 0px;
+}
+
+.c-title-group--cta > .e-h1{
+	margin-top: 0px;
+}
+
+
+/**
+ * Title Group Media
+ */
+
+.c-title-group__media__img{
+	margin-top: 30px;
+}
+
+
+/**
+ * 404 Title Group Variant
+ */
+
+.c-title-group--404{
+	padding-top: 25%;
+}
+
+
+/**
+ * Post Item Title Group
+ */
+
+ .c-title-group--post{
+ 	padding: 40px
+ }
+
+
+
+/**
+ * Contact Title Group
+ */
+
+.c-title-group--contact{
+	margin-bottom: 50px;
+}
+
+
+
+/**
+ * Getting Started Title Group
+ */
+
+ .c-title-group--getting-started{
+ 	margin-top: 60px;
+ }

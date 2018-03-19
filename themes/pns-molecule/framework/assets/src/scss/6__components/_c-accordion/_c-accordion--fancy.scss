@@ -1,0 +1,130 @@
+/**
+ * Base Styles
+ */
+
+.c-accordion--fancy{
+
+	border-top: 2px solid color( grayscale, 95 );
+	cursor: pointer;
+	padding: 45px 0;
+	transition: all .25s ease-in-out;
+
+	&:last-child{
+
+		border-bottom: 2px solid color( grayscale, 95 );
+
+	}
+}
+
+.c-accordion--fancy__container{
+	
+	 margin-left: auto;
+ 	 margin-right: auto;
+ 	 max-width: grid( max-width );
+	 width: grid( site-width);
+
+}
+
+.c-accordion--fancy__header{
+	 position: relative;
+}
+
+//*** Display settings ***
+.c-accordion--fancy__body{
+	cursor: default;
+	padding: 50px 0;
+	// display: flex;
+	// // flex-direction: row;
+	// flex-flow: row wrap;
+	// justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+
+.c-accordion--fancy__description{
+	max-width: 800px;
+}
+
+
+.c-accordion--fancy__body > .o-col-md-5:nth-child( even ){
+		margin-left: 8.33333333%
+}
+
+
+/**
+ * Inert State of Items that will eventually change
+ */
+
+.c-accordion--fancy{
+	box-shadow: inset 0px 0px 0px 0px color( grayscale, white );
+
+}
+
+.c-accordion--fancy__body{
+	display:none;
+}
+
+// Handle elements that will need to be animated to 
+// prevent glitching due to display type getting
+// redefined from non to flex when the accordion is 
+// active or expanded.
+// 
+.c-accordion--fancy__body{
+
+	@include opacity(0);
+
+	> .c-card{
+
+		transition: transition( service_card );
+		@include opacity(0);
+
+	}
+}
+
+
+/**
+ * Active State
+ *
+ * To Do: Fix height clitch expand
+ */
+
+.c-accordion--fancy.c-accordion--is-expanded{
+
+	box-shadow: inset 5px 0px 0px 0px color( blue );
+
+	@include respond-max( $phone ){
+		box-shadow: inset 0px 5px 0px 0px color( blue );
+	}
+
+}
+
+
+/**
+ * Set display type to flex as soon as the accordion is
+ * clicked AND after it finishes expanding
+ */
+
+.c-accordion--fancy.c-accordion--is-expanded .c-accordion--fancy__body,
+.c-accordion--fancy.c-accordion--is-active .c-accordion--fancy__body,{
+	display: flex !important;
+	flex-direction: row;
+}
+
+/**
+ * Handle animating in the accordion body and cards so that we don;t
+ * have any glitching due to layout re-arangement when the accordion 
+ * is in the process of expanding.
+ */
+
+.c-accordion--fancy.c-accordion--is-expanded .c-accordion--fancy__body{
+
+		@include opacity(1);
+
+	> .c-card{
+
+		transition: transition( service_card );
+		@include opacity(1);
+
+	}
+
+}

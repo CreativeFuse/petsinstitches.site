@@ -1,0 +1,64 @@
+.c-icon--mobile {
+
+  cursor: pointer;
+  display: none;
+  height: 45px;
+  position: absolute;
+  right: 25px;
+  top: 19px;
+  transform: rotate(0deg);
+  transition: transition(mobile_icon);
+  width: 30px;
+  z-index: z(mobile_menu);
+
+
+  @include respond-max( $nav_swap ){
+    display: block;
+  }
+
+}
+
+.c-icon--mobile-spans {
+  background: color(blue-m);
+  border-radius: 9px;
+  display: block;
+  height: 3px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: transition(mobile_icon);
+  width: 100%;
+}
+
+.c-icon--mobile-spans:nth-child(1) {
+  top: 0px;
+}
+
+.c-icon--mobile-spans:nth-child(2),.c-icon--mobile-spans:nth-child(3) {
+  top: 10px;
+}
+
+.c-icon--mobile-spans:nth-child(4) {
+  top: 21px;
+}
+
+.open .c-icon--mobile-spans:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.open .c-icon--mobile-spans:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.open .c-icon--mobile-spans:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.open .c-icon--mobile-spans:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}

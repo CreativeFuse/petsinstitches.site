@@ -1,0 +1,63 @@
+/**
+ * ****************************
+ * Component • Menu -- Primary
+ * ****************************
+ */
+
+// Menu Settings
+$primary-link-padding: 20px;
+
+.c-menu--primary{
+	display: block;
+}
+
+.c-menu--primary > .menu-item > a{
+
+	border-bottom: 5px solid rgba( color( grayscale, white ), 0 );
+	
+	color: color( gray );
+	float: left;
+	font-size: 19px;
+	font-weight: 600;
+	padding-bottom: $primary-link-padding;
+	padding-left: $primary-link-padding;
+	padding-top: $primary-link-padding;
+	text-transform: uppercase;
+	transition: transition( nav );
+
+	&.has-mega--active{
+		border-color: color( blue );
+		color: color( blue );
+
+		&:hover{
+			border-color: color( blue );
+			color: color( blue );
+		}
+
+	}
+
+}
+
+// We do not want left padding on the list item because
+// we want it to perfectly align with the content above it
+
+.c-menu--primary > .menu-item:not(:last-child) > a{
+
+	padding-right: $primary-link-padding;
+
+}
+
+
+
+/**
+ * Menu • Primary : Hover
+ */
+
+.c-menu--primary > .menu-item > a{
+
+	&:hover{
+		border-color: color( blue, light10 );
+		color: color( blue, light10 );
+	}
+
+}

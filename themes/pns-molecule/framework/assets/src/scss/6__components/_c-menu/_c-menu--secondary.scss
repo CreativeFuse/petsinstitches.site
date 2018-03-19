@@ -1,0 +1,94 @@
+.c-menu--secondary{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content:center;
+	max-width: grid( max-width );
+  	width: grid( site-width );
+  	margin: 0 auto;
+  	position: relative;
+
+  	@include respond-max( $md_col_break ){
+
+  		justify-content:flex-start;
+  		margin-left: 50px;
+
+  	}
+}
+
+
+.c-menu--secondary > .c-menu__item{
+	flex: 0 0 auto;
+	float: none;
+	text-align:center;
+
+	&:not( :last-child ){
+		margin-right: 5%;
+	}
+}
+
+/**
+ * Handle Standard Menu AND special
+ * button menu use case for Isotope
+ */
+.c-menu--secondary > .c-menu__item > a,
+.c-menu--secondary > button.c-menu__item{
+	display: block;
+	color: color( blue-l, dark5 );
+	padding: 25px 0px;
+	text-transform: uppercase;
+    transition: transition( nav );
+    
+	&:hover{
+		color: color( grayscale, white );
+	}
+
+
+}
+
+/**
+ * Handle button menu use case for Isotope
+ */
+.c-menu--secondary > button.c-menu__item{
+	background: transparent;
+	border:none;
+	cursor: pointer;
+	text-shadow: none;
+	-webkit-appearance: none;
+
+	&:hover{
+		color: color( grayscale, white );
+	}
+
+	&:focus{
+		outline: none !important;
+	}
+
+
+}
+
+
+
+/**
+ * Active Item
+ */
+
+.c-menu--secondary > .c-menu__item--active > a,
+.c-menu--secondary > button.c-menu__item--active,
+.c-menu--secondary > .c-menu__item.active > a{
+	color: color( grayscale, white );
+
+}
+
+
+/**
+ * handle Secondary Nav on Mobile Phones on post archive pages
+ */
+
+ .category .o-content--post .c-menu--secondary{
+
+ 	@include respond-max( $nav_swap ){
+
+ 		margin-top: 63px;
+
+ 	}
+ }

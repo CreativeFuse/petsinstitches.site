@@ -1,0 +1,17 @@
+
+//Set sitewide fallback Font
+$fallback_cursive 	: cursive;
+$fallback_default	: sans-serif;
+
+/**'Delius', cursive
+ * BUILD FULL SASS FONT FAMILY MAP
+ */
+
+// Customize as needed!
+
+$font_families : (
+
+	Delius 			: 	(Delius, $fallback_cursive),
+	Assistant 		: 	(Assistant, $fallback_default)
+
+);

@@ -1,0 +1,39 @@
+/**
+ * SECTION • Intro
+ */
+
+.p-home--intro{
+	padding: 80px 0 130px 0;
+}
+
+
+/**
+ * SECTION • Petcare with Passion
+ */
+.p-home--petcare-passion{
+	padding: 180px 0 80px 0;
+
+	@include respond-max( $md_col_break ){
+		padding: 180px 0px 0px 0px;
+	}
+
+}
+
+
+.p-home--petcare-passion .o-row:last-child{
+	padding: 90px 0 90px 0;
+}
+
+.p-home--petcare-passion .c-title-group{
+	margin-top: 50px;
+}
+
+
+/**
+ * Section • Choose Your Pet
+ */
+
+.p-home--choose-pet{
+	padding: 120px 0;
+    text-align: center;
+}

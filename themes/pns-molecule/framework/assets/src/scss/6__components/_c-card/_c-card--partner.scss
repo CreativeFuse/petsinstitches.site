@@ -1,0 +1,79 @@
+/**
+ * ****************************
+ * Component • Card -- Partner
+ * ****************************
+ */
+
+.c-card--partner {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30px;
+	padding: 10px;
+	min-height: 200px;
+	width: 43%;
+
+	// This random little number center aligns our items in th grid.
+	// Otherwise, they will be off center
+	margin-left: 1.25%;
+
+	&:hover {
+		background-color: color(grayscale, 90);
+	}
+}
+
+.c-card--partner .c-card__content {
+	padding: 20px 30px;
+}
+
+.c-card--partner .c-card__phone {
+	margin-bottom: 0;
+}
+
+/**
+ * Handle Mobile
+ */
+
+.c-card--partner {
+	@include respond-max( $md_col_break ) {
+		margin-left: -1.25%;
+		width: 91%;
+	}
+
+	@include respond-max( $phone ) {
+		margin-left: -3.25%;
+		width: 93%;
+	}
+
+	@include respond-max( $phone-s ) {
+		margin-left: -4.25%;
+		width: 93%;
+	}
+
+	@include respond-max( $small ) {
+		margin-left: -5.25%;
+		width: 93%;
+	}
+
+	@include respond-max( $very-small ) {
+		margin-left: -5.75%;
+		width: 90%;
+
+		//Stacked Layout on small screens
+		flex-direction: column;
+
+		.c-card__content {
+			text-align: center;
+		}
+	}
+
+	@include respond-max( $partners ) {
+		margin-left: -6.75%;
+		width: 90%;
+	}
+
+	@include respond-max( $partners ) {
+		margin-left: -2.75%;
+		width: 80%;
+	}
+}

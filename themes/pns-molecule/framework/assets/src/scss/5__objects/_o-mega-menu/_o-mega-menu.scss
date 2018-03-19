@@ -1,0 +1,87 @@
+/*
+ ****************************
+ * Object • MEGA MENU
+ ****************************
+ */
+
+/**
+ * Core Styles
+ */
+
+
+// Sub Menu
+.has-mega .o-mega{
+	
+	background-color: rgba( color( blue ), .95 );
+	@include opacity(0);
+	float:left;
+	left:0;
+	pointer-events: none;
+	position: absolute;
+	top:100%;
+	width:100%;
+	z-index: z( nav );
+
+}
+
+.o-mega__panel{
+	display: block;
+	float: left;
+	padding: 45px 0px;
+	width: 100%;
+}
+
+.o-mega__well__title{
+	margin-bottom:15px;
+}
+
+
+/**
+ * Mega Menu • State Change Prep
+ */
+
+
+// Sub Menu
+.has-mega .o-mega{
+	
+	pointer-events: none;
+	@include opacity(0);
+
+}
+
+
+
+/**
+ * Mega Menu • Modified State
+ */
+
+
+
+.has-mega .o-mega.o-mega--active{
+
+	pointer-events: all;
+	@include opacity(1);
+
+}
+
+
+.o-mega__well__img img{
+	max-width: 100px;
+}
+
+.o-mega__well__img{
+	transition: transition( icon_fancy );
+
+	@include opacity(1);
+}
+
+.o-mega__well__img:hover{
+ 	
+	@include opacity(.85);
+
+}
+
+
+.o-mega__well--center{
+	text-align: center;
+}

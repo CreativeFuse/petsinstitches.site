@@ -1,0 +1,94 @@
+{
+    "key": "group_596cab5328c54",
+    "title": "Service • Content",
+    "fields": [
+        {
+            "key": "field_596cb69c20d44",
+            "label": "Cost",
+            "name": "service_cost",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "(whole numbers only)",
+            "prepend": "$",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_596cb76d67c15",
+            "label": "Description",
+            "name": "service_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5977616853765",
+            "label": "Service Note",
+            "name": "service_note",
+            "type": "radio",
+            "instructions": "Are there any special considerations to note for this service?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100%",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "surgurey_req": "Required with Surgery",
+                "surgurey_rec": "Recommended with Surgery",
+                "surgurey_opt": "Optional with Surgery",
+                "wellness": "Wellness"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "none",
+            "layout": "vertical",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 9,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "author"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1504131946
+}

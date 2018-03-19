@@ -1,0 +1,72 @@
+/**
+ * ****************************
+ * Component • Nav
+ * ****************************
+ */
+
+// Movile Nav Handling
+.c-nav.c-nav--primary{
+
+	@include respond-max( $nav-swap ){
+		display: none;
+	}
+
+}
+
+
+/**
+ * Blue Navigation bar for pages and posts
+ *
+ * This bar could be used for sorting posts,
+ * or navigating pages.
+ */
+.c-nav--secondary{
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+
+/**
+ * Nav Logo
+ */
+.c-nav__logo{
+	position: absolute;
+	max-width: 300px;
+	top: -35px;
+
+	@include respond-max( $nav-shrink ){
+		max-width: 240px;
+	}
+
+
+	@include respond-max( $nav-swap ){
+		display: block;
+		max-width: 200px;
+		position: relative;
+		top: 0;
+	}
+
+
+}
+
+.c-nav__logo__link{
+    
+    transition: transition( nav );
+    
+}
+
+
+
+/**
+ * Nav Logo Hover State
+ */
+.c-nav__logo__link:hover{
+
+    @include opacity ( 0.7 );
+
+    
+}

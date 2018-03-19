@@ -1,0 +1,30 @@
+/**
+ * Build our Z-Index Map for later use
+ */
+
+$z-layers: (
+
+  // These values are specifically for
+  // Lightcase elements.
+
+  "lightcase-elements"      : 1000003,
+  "lightcase-base"          : 1000002,
+  "lightcase-loader"        : 1000001,
+
+  //This value is required to get our Alert
+  //to show up above our mobile menu
+  "modal"			  : 100000,
+
+  // This value is require to get our mobile nav to show above
+  // our mobile sticky bar, but blow our alert modal.
+  "mobile_menu"	: 10000,
+
+  "card_front"  : 35,
+  "card_back"   : 30,
+  "topbar"			: 25,
+  "nav"				  : 20,
+  "mega"	 		  : 15,
+  "front"			  : 10,
+  "base"			  : 1,
+  "below"			  : -1
+);

@@ -1,0 +1,74 @@
+.o-post{
+
+	max-width: 700px;
+	margin: 0 auto;
+
+}
+
+/**
+ * Handle special post typography rules
+ */
+
+.o-post h1,
+.o-post h2{
+	color: color( blue );
+}
+
+.o-post h2{
+	margin-top: 35px;
+}
+
+.o-post h3{
+	margin-top: 60px;
+	text-transform: uppercase;
+}
+
+.o-post strong{
+	color: color( blue-d );
+}
+
+ /**
+  * Hanlde Ordered lists in posts
+  */
+
+ .o-post ol > li{
+
+ 	padding: 12px 0px 12px 0px;
+
+ }
+
+.o-post__header{
+
+	text-align: center;
+
+}
+
+.o-post__header__date{
+	color: color( grayscale, 50 );
+}
+
+
+.o-post__featured-img{
+	margin-bottom: 70px;
+}
+
+
+
+/**
+ * Handle Default WP Image classes in our post
+ */
+
+ .o-post img.alignleft,
+ .o-post img.alignright{
+
+ 	margin-bottom: 10px;
+
+ }
+
+ .o-post img.alignleft{
+ 	margin-right: 45px;
+ }
+
+  .o-post img.alignright{
+ 	margin-left: 45px;
+ }

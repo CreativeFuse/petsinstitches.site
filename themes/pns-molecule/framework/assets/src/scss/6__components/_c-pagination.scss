@@ -1,0 +1,53 @@
+/**
+ * This styles pagination
+ */
+.c-pagination {
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.c-pagination .nav-links span {
+    margin: 0 3px;
+    font-size: 19px;
+}
+
+/**
+ * This styles pagination base text
+ */
+.c-pagination a,
+.c-pagination a:visited,
+.c-pagination .page-numbers.dots {
+    color: color(grayscale, 60);
+    font-size: 19px;
+}
+
+/**
+ * This styles pagination text hover
+ */
+.c-pagination a:hover {
+    color: color(blue);
+}
+
+/**
+ * This styles pagination "current page number"
+ */
+.c-pagination .page-numbers.current {
+    font-weight: 600;
+    color: color(blue);
+}
+
+/**
+ * These style pagination "previous" and "next"
+ */
+.c-pagination .next.page-numbers,
+.c-pagination .prev.page-numbers {
+    margin: 0 10px;
+}
+
+.c-pagination .next.page-numbers:after {
+    content: " »";
+}
+
+.c-pagination .prev.page-numbers:before {
+    content: "« ";
+}

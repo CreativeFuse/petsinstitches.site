@@ -1,0 +1,90 @@
+// Photo offset number
+
+$getting_started_photo_offset: -120px;
+
+.c-photo--getting-started{
+	position: relative;
+}
+
+// Photos will be in the left column in odd rows
+
+.o-row--odd .o-col-6--left{
+	text-align:center;
+}
+
+.o-row--odd .o-col-6--left .c-photo--getting-started{
+
+	left: $getting_started_photo_offset;
+
+}
+
+// Photos will be in the right column in even rows
+
+.o-row--even .o-col-6--right{
+	text-align: center;
+}
+
+.o-row--even .o-col-6--right .c-photo--getting-started{
+
+	right: $getting_started_photo_offset;
+
+}
+
+
+
+
+/**
+ * Block Quotes
+ */
+
+ .o-content--getting-started blockquote{
+
+ 	color: color( blue-d );
+ 	
+ }
+
+/**
+ * Mobile Dev
+ */
+
+.o-row--getting-started{
+
+	@include respond-max( $sm_col_break ){
+		text-align: center;
+	}
+
+}
+
+
+// Move photos to center
+.o-row--odd .o-col-6--left .c-photo--getting-started{
+	@include respond-max( $sm_col_break ){
+		left:0;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+
+.o-row--even .o-col-6--left .c-photo--getting-started{
+
+	@include respond-max( $sm_col_break ){
+		right:0;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+
+.c-title-group--getting-started{
+
+	@include respond-max( $sm_col_break ){
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+
+
+}
+
+

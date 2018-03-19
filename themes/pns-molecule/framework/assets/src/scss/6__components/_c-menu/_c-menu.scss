@@ -1,0 +1,24 @@
+/**
+ * ****************************
+ * Component • Menu
+ * ****************************
+ */
+
+
+/**
+ * Base Styles for the menu component
+ */
+.c-menu{
+	padding:0;
+	margin:0;
+}
+
+.c-menu > .menu-item,
+.c-menu > .c-menu__item{
+	float: left;
+}
+
+.c-menu > .menu-item > a,
+.c-menu > .c-menu__item > a{
+	cursor: pointer !important;
+}

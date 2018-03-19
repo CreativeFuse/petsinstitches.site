@@ -1,0 +1,120 @@
+/**
+ * This styles the "container" of Gravity Forms
+ */
+
+.c-form .gform_fields .ginput_container,
+.c-form .gform_wrapper ul li.gfield{
+    
+    margin-bottom: 15px !important;
+    
+}
+
+
+
+/**
+ * This styles the "footer" of Gravity Forms
+ */
+.c-form .gfooter,
+.c-form .gform_footer{
+    
+    text-align: center;
+    
+}
+
+
+
+/**
+ * This styles the "button" of Gravity Forms
+ */
+.gform_button{
+    border: $btn_border_width solid color(purple);
+	border-radius: $btn_border_rad;
+    cursor: pointer !important;
+	letter-spacing: 1px;
+	font-size: $btn_font;
+	font-weight: 700;
+	padding: $btn_pad;
+	text-transform: uppercase;
+    text-align:center;
+    color: color( grayscale, white );
+    background-color: color( purple );
+    transition: transition( btn_bg );
+}
+
+
+.gform_button:hover{
+    
+    background-color: color( grayscale, white );
+	border-color: color( purple );
+    color:  color( purple );
+    
+}
+
+
+
+/**
+ * This styles the "text area and input" of Gravity Forms
+ */
+.c-form .gform_fields .ginput_container textarea,
+.c-form .gform_fields .ginput_container input{
+
+    border: none;
+    border-radius: 6px;
+    background-color: color( grayscale, 95 );
+    color: color( grayscale, 40 );
+    padding: 10px !important;
+    font-size: 13px !important;
+    transition: transition( form );
+    
+}
+
+
+
+/**
+ * This styles the "input and text area focus states" of Gravity Forms
+ */
+.c-form .gform_fields .ginput_container textarea:focus,
+.c-form .gform_fields .ginput_container input:focus{
+
+    background-color: color( blue-l );
+    outline: none;
+    
+}
+
+
+
+/**
+ * This styles the "field label" of Gravity Forms
+ */
+.c-form .gform_fields label.gfield_label{
+
+    color: color( grayscale, 30 );
+    
+} 
+
+
+
+
+/**
+ * This styles the "field required tag" of Gravity Forms
+ */
+.c-form .gform_fields label.gfield_label .gfield_required{
+
+    color: color( purple );
+    
+} 
+
+
+
+/**
+ * This styles the "field label and description" of Gravity Forms
+ */
+.c-form .gform_fields .name_first label,
+.c-form .gform_fields .name_last label,
+.c-form .gform_fields .gfield_description{
+    
+    padding: 5px 0px 0px !important;
+    color: color(grayscale, 45) !important;
+    
+}
+

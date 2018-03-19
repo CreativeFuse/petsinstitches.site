@@ -1,0 +1,36 @@
+/**
+ * ****************************
+ * Utility • Pseudo Elements
+ * ****************************
+ */
+
+
+.u-before{
+
+	&:before{
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+	    width: 100%;
+	    z-index: z("base");
+	}
+
+}
+
+.u-after{
+
+	&:after{
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+	    width: 100%;
+	    z-index: z("base");
+	}
+	
+}

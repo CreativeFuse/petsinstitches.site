@@ -1,0 +1,53 @@
+/**
+ * *******************************
+ * Component • Button -- Animation
+ * *******************************
+ */
+
+/**
+ * Default State
+ */
+
+.c-btn{
+
+	transition: transition( btn_bg );
+	
+	.c-btn__text{
+		transition: transition( btn_text );
+		@include opacity( 1 );
+	}
+
+	&:before{	
+
+		backface-visibility: hidden;
+		transform: translateZ(0);
+		transition: transition( btn_img );
+		transform: translateX( 150% );
+		@include opacity( 0 );
+
+	}
+
+}
+
+
+/**
+ * Hover State
+ */
+
+.c-btn{
+
+	&:hover{
+
+		.c-btn__text{
+			transform: translateX( -150% );
+		}
+
+		&:before{
+			transform: translateX( 0% );
+			@include opacity( 1 );
+
+		}
+
+	}
+
+}

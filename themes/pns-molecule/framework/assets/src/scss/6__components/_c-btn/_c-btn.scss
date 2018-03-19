@@ -1,0 +1,126 @@
+/**
+ * ****************************
+ * Component • Button
+ * ****************************
+ */
+
+
+/**
+ * The following code will allow us to build flexible
+ * buttons with the least amount of code.  This method is scalable
+ * and totally themeable to fit any design need.  As of now, this is
+ * best practice for building your site buttons.  If you have
+ * suggestions for improvements, please talk to Chris!
+ *
+ * @note All of the values entered below are for example
+ * purposes only.  Feel free to change anything you need
+ * to fit your theme styles!
+ *
+ * @since 1.0.0
+ * @author Christopher Hahn
+ *
+ */
+
+
+ /**
+  * Build Button Settings
+  */
+
+  	//border
+  	$btn_border_rad: 50px;
+  	$btn_border_width: 2px;
+
+  	//padding
+  	$btn_pad: 8px 30px;
+  	$btn_pad--small: 6px 30px;
+
+  	//font-size
+  	$btn_font: 14px;
+  	$btn_font--small: 12px;
+  	
+    /**
+     * Define Button Themes
+     */
+
+  	$btn-themes : ( 
+
+  		purple,
+  		blue,
+      blue-m
+
+  	);
+
+    /**
+     * Define Button Sizes
+     */
+
+  	$btn-sizes : (
+
+  		standard,
+  		small
+
+  	);
+
+    /**
+     * Define Button Hover Options
+     */
+     
+  	$btn-hovers : (
+
+  		hover-fill,
+  		hover-outline
+
+  	);
+
+
+/**
+ * Button • Base
+ */
+.c-btn{
+
+	border: $btn_border_width;
+	border-radius: $btn_border_rad;
+	border-style: solid;
+  cursor: pointer !important;
+  display: inline-block;
+	letter-spacing: 1px;
+	font-size: $btn_font;
+	font-weight: 700;
+  overflow: hidden;
+	padding: $btn_pad;
+	position: relative;
+	text-transform: uppercase;
+  text-align:center;
+  vertical-align: middle;
+
+}
+
+
+/**
+ * Simple Modifier Classes
+ */
+
+.c-btn--small{
+	font-size: $btn_font--small;
+	font-weight: 400;
+	padding: $btn_pad--small;
+
+}
+
+.c-btn--block{
+	display: block;
+}
+
+
+/**
+ * Button • Topbar
+ */
+
+.c-btn--topbar{
+  border-color: color( blue-l ) !important;
+
+  &:hover{
+    border-color: color( blue ) !important;
+  }
+}
+

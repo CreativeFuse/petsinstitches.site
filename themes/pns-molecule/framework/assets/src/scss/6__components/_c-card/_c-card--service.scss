@@ -1,0 +1,63 @@
+/**
+ * ****************************
+ * Component • Card -- Service
+ * ****************************
+ */
+
+.c-card--service {
+	position: relative;
+	flex: 0 0 calc(50% - 74px);
+	margin: 12px;
+	border-radius: 12px !important;
+
+	@include respond-max( $small ){
+
+		flex: auto;
+	
+	}
+}
+
+.c-card--service .c-card__title {
+	float: left
+}
+
+.c-card--service .c-card__cost {
+	float: right;
+}
+
+
+.c-card__cost--tbd{
+	color: color( grayscale, 60 );
+}
+
+.c-card--service .c-card__body {
+	float: left;
+}
+
+
+
+.c-card--service .c-service-considerations__item .c-service-considerations__color{
+
+	@include respond-max( $phone ){
+
+		height: 15px;
+		top: 7px;
+		width: 15px;
+
+
+
+	}
+
+}
+
+
+.c-card--service .c-service-considerations__item .c-service-considerations__name{
+
+	@include respond-max( $phone ){
+
+		font-size: 14px;
+		margin-left: 10px;
+
+	}
+
+}

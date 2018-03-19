@@ -1,0 +1,25 @@
+/**
+ * Custom Function for Getting Mapped Shadow Values
+ * 
+ * @param $shadow -  Value from our $shadows map in 1__settings
+ */
+
+@function shadow($shadow) {
+
+  @if not map-has-key($shadows, $shadow) {
+
+    @warn "No layer found for `#{$shadow}` in $shadows map. Property omitted.";
+    @return null;
+    
+  }
+
+  @return map-get($shadows, $shadow);
+
+}
+
+// USAGE EXAMPLE
+// 
+// .modal {
+// 		...
+//		box-shadow: shadow(modal);
+//  }

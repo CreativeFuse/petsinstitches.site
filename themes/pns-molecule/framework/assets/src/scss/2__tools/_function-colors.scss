@@ -1,0 +1,38 @@
+/**
+ * Eventually, we’ll get tired of repeating map-get($color, ...) over and over so you can use a little 
+ * helper function to ease your pain!
+ *
+ * @ref http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+ *
+ * @param $color - color in our color sass map in 1__settings
+ *
+ */
+
+
+@function color($color, $tone: 'base') {
+
+	@if not map-has-key($colors, $color) {
+
+		    @warn "No color found for `#{$color}` and tone `#{$tone}` in $colors map. Property omitted.";
+
+		    @return null;
+
+	}
+
+    @return map-get( map-get($colors, $color), $tone);
+
+}
+
+
+
+// Example Usage
+// Assume we need to get a grayscale color at 10% brightness
+
+// .element{
+// 		color: color(grayscale, 10);
+// 		
+// 		&:hover{
+// 			color: color(grayscale, 15);
+// 		}
+// 		
+// 	}

@@ -1,0 +1,86 @@
+/**
+ * **********************************
+ * Component • Slider -- Testimonial
+ * *********************************
+ */
+
+
+.c-slider--testimonials{
+	margin: 0 auto;
+	width: 90%;
+}
+
+.c-slider--testimonial__item .c-photo{
+}
+
+
+
+.c-testimonials--featured{
+	background: color( blue-l );
+	padding: 120px 0;
+	position: relative;
+	text-align: center;
+}
+
+.c-testimonials--featured .o-container{
+	position: relative;
+}
+
+.c-testimonial--featured__body{
+	max-width: 600px;
+	margin: 40px auto 0 auto;
+}
+
+
+.unslider-arrow{
+	
+	
+	background: color( blue ) no-repeat 50% 50%;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAAi0lEQVR4AU3OISBEQQBAwS0AACS9NxqQgCZpkiYBVddFvWhAAUABAPQCAGC4g/0vTnrBqCfDIZl70J+kMUBPpEwT4FNXxBxz4F1HxHyr4EVTxBLb4EFNxEon4CJSlVNw9AcV9sC16h8osgke1P1ArgXwouVvdQq86ww/GQefusNf7kBviBlxpT8k+gL/Wox4r1d4MwAAAABJRU5ErkJggg==');
+	background-size: 7px 11px;
+	border-radius: 32px;
+	display: block;
+	height:32px;
+	margin-top:-16px;
+	overflow: hidden;
+	text-indent: -999em;
+	top:50%;
+	transition: transition( btn_img );
+	width: 32px;
+
+	@include opacity( .6 );
+
+}
+
+.unslider-arrow:hover{
+	@include opacity( 1 );
+}
+
+.unslider-arrow.next{
+	right: -70px;
+	left: auto;
+
+	@include respond-max( $nav-swap ){
+
+		bottom: -60px;
+		top:auto;
+		right:40%;
+
+	}
+
+}
+
+.unslider-arrow.prev{
+	left: -70px;
+	right: auto;
+	transform: rotate( -180deg );
+
+	@include respond-max( $nav-swap ){
+
+		bottom: -60px;
+		top:auto;
+		left:40%;
+
+	}
+
+}

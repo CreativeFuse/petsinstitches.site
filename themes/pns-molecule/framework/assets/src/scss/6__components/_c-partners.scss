@@ -1,0 +1,8 @@
+.c-partners__grid{
+	padding: 90px 0;
+	transition: transition( partners );
+
+	@include respond-max( $md_col_break ){
+		padding: 90px 20px;
+	}
+}

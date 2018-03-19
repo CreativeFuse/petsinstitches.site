@@ -1,0 +1,48 @@
+{
+    "key": "group_596cbfd2589fd",
+    "title": "FAQ • Content",
+    "fields": [
+        {
+            "key": "field_596cbfe6dbe2f",
+            "label": "Answer",
+            "name": "faq_answer",
+            "type": "wysiwyg",
+            "instructions": "Please enter the answer to the frequently asked question in the editor below.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "faqs"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "author"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1503702097
+}

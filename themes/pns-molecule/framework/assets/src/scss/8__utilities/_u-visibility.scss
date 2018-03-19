@@ -1,0 +1,25 @@
+/**
+ * ****************************
+ * Utility • Visibility
+ * ****************************
+ */
+
+.u-hide {
+  display: none !important;
+}
+
+.u-show {
+  display: block !important;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}

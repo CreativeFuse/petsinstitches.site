@@ -1,0 +1,18 @@
+/**
+ * A Custom Function to grab the correct font family
+ * from the $font-families map.
+ */
+
+@function font($family) {
+
+  @if not map-has-key($font_families, $family) {
+
+    @warn "No font family found for `#{$family}` in $font-families map. Property omitted.";
+
+    @return null,
+
+  }
+
+  @return map-get($font-families, $family);
+
+}

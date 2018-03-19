@@ -1,0 +1,65 @@
+.c-card--post{
+	padding: 0 !important;
+	flex: 0 0 48.5%;
+	margin-bottom: 30px;
+	transition: transition( post_item );
+
+	@include respond-max( $tablet ){
+		flex: 0 0 100%;
+	}
+
+}
+
+.c-card--post__date{
+	margin-top: 5px !important;
+}
+
+
+.c-card--post__header{
+
+	@include opacity(1);
+}
+
+$post_card_internal_padding: 30px;
+
+.c-card--post__bg{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	padding-bottom: 300px;
+}
+
+.c-card--post > .c-card--post__body{
+	
+}
+
+.c-card--post > .c-card--post__body{
+	padding-top: 0;
+	padding-left: $post_card_internal_padding;
+	padding-right: $post_card_internal_padding;
+	padding-bottom: $post_card_internal_padding;
+}
+
+
+.c-card--post__excerpt{
+	color: color( gray );
+	margin: 0 !important;
+}
+
+/**
+ * Hover State
+ */
+
+.c-card--post:hover{
+
+	background-color: color( grayscale, 90 ) !important;
+
+
+	.c-card--post__header{
+
+		@include opacity(.9);
+	
+	}
+}

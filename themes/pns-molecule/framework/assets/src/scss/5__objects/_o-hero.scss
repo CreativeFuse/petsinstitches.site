@@ -1,0 +1,97 @@
+.o-hero{
+	background-repeat: no-repeat;
+	padding: 150px 0;
+}
+
+.o-hero--home{
+
+	background-position: right 15% bottom 0px;
+	background-size: contain;
+	
+}
+
+
+.o-hero--partners,
+.o-hero--services,
+.o-hero--testimonials,
+.o-hero--faqs,
+.o-hero--archive--blog{
+
+	background-position: right 40% bottom 0px;
+	background-size: 350px;
+    margin-left: 15%;
+
+}
+
+.o-hero--page{
+
+	background-position: left 27% bottom 0px;
+	background-size: 350px;
+    margin-right: 3%;
+     
+
+}
+
+/**
+ * Responsive Handling for all Hero Sections
+ */
+
+.o-hero--partners,
+.o-hero--services,
+.o-hero--testimonials,
+.o-hero--faqs,
+.o-hero--archive--blog,
+.o-hero--page,
+.o-hero--home{
+
+	@include respond-max( $nav_swap ){
+
+    	background-position: center bottom 0px;
+    	background-size: 350px;
+    	margin: 0 auto !important;
+    	padding-bottom: 30%;
+    	text-align: center;
+
+    }
+
+    @include respond-max( $tablet ){
+    	padding-bottom:40%;
+    }
+
+    @include respond-max( $phone ){
+    	padding-bottom:50%;
+    }
+
+    @include respond-max( $small ){
+    	padding-bottom: 70%;
+    }
+
+    @include respond-max( $very-small ){
+    	padding-bottom: 90%;
+    }
+
+     @include respond-max( $tiny ){
+
+
+    	padding-bottom: 100%;
+    	padding-top: 120px;
+    	
+
+    }
+}
+
+/**
+ * Adjust BG Image Size Specifically for FAQs
+ * and Post Operative Car for Dogs - ID 278
+ */
+.o-hero--faqs,
+.page-id-278 .o-hero--page{
+    
+    @include respond-max( $nav-swap ){
+
+        background-size: 270px;
+
+    }
+
+
+}

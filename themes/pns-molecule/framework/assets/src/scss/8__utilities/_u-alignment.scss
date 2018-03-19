@@ -1,0 +1,55 @@
+.u-align--left{
+	text-align: left;
+}
+
+
+.u-align--center{
+	text-align: center;
+}
+
+
+.u-align--right{
+	text-align: center;
+}
+
+
+
+
+
+// Set Default Mobile Alignment Breakpoint
+
+$mobile-align: $phone-s;
+
+.u-align-mobile--left{
+
+	@include respond-max( $mobile-align ){
+
+		text-align: left !important;
+
+	}
+}
+
+
+.u-align-mobile--right{
+	
+
+	@include respond-max( $mobile-align ){
+
+		text-align: right !important;
+
+	}
+
+
+}
+
+
+.u-align-mobile--center{
+	
+
+	@include respond-max( $mobile-align ){
+
+		text-align: center !important;
+
+	}
+
+}

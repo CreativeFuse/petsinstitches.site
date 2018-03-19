@@ -1,0 +1,27 @@
+/**
+ * ****************************
+ * Utility • Arrow
+ * ****************************
+ */
+
+.u-arrow--bottom{
+
+	position:relative;
+
+	&:before{
+		background-image: url( '/wp-content/uploads/2017/08/white-bar-arrow.png' );
+		background-position: center center;
+		background-repeat:no-repeat;
+		background-size: cover;
+		bottom:0;
+		content: '';
+		display: block;
+		height: 50px;
+		left:  0;
+		position: absolute;
+		width:100%;
+		z-index: z( front );
+	}
+
+
+}

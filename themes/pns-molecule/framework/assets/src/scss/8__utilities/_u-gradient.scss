@@ -1,0 +1,14 @@
+/**
+ * ****************************
+ * Utility • Gradient
+ * ****************************
+ */
+
+.u-gradient--blue{
+	background-color: color( blue );
+	background-image: linear-gradient( to right, color( blue ), color( blue-l, dark5 ) );
+
+	@include respond-max( $phone ){
+		background-image: linear-gradient( to right, color( blue ), color( blue-m, light10 ) );
+	}
+}

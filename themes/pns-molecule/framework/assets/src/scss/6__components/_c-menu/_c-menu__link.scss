@@ -1,0 +1,14 @@
+/**
+ * ****************************
+ * Component • Menu Link 
+ * ****************************
+ */
+
+
+.c-menu__link {
+    transition: transition( nav );
+}
+
+.c-menu__link:hover {
+    color: color( grayscale, white );
+}

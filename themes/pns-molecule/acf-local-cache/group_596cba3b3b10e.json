@@ -1,0 +1,43 @@
+{
+    "key": "group_596cba3b3b10e",
+    "title": "Services -> Type • Custom Settings",
+    "fields": [
+        {
+            "key": "field_597b9c2558d81",
+            "label": "Service Type Page Title",
+            "name": "service_type_page_title",
+            "type": "text",
+            "instructions": "The custom title to be displayed for the parent service on the \"services\" pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "Choose a",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "type"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1503003511
+}

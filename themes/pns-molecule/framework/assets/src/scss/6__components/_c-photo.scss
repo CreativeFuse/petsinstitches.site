@@ -1,0 +1,60 @@
+/**
+ * ****************************
+ * Component • Photo
+ * ****************************
+ */
+ 
+.c-photo--standard,
+.c-photo--video,
+.o-post img,
+.c-photo--fancy{
+	height: auto;
+}
+
+
+
+.c-photo--standard,
+.c-photo--video,
+.o-post img{
+	border-radius: 32px;
+    transition: transition( cta_img );
+}
+
+.c-photo--video:hover{
+	opacity: 0.8;
+}
+
+.c-photo--fancy{
+
+	background-color: color( grayscale, white );
+	border: 6px solid color( grayscale, white );
+	border-radius: 50%;
+
+}
+
+
+
+/**
+ * Getting Started Photos
+ */
+
+.o-col-6--even .c-photo--getting-started--desktop{
+
+	@include respond-max( $sm_col_break ){
+		display: none;
+	}
+
+}
+
+.c-photo--getting-started--mobile{
+	display: none;
+}
+
+
+.o-col-6--even .c-photo--getting-started--mobile{
+
+	@include respond-max( $sm_col_break ){
+		display: block;
+	}
+
+}

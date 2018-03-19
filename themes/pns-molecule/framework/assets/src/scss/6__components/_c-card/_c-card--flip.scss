@@ -1,0 +1,148 @@
+/**
+ * ****************************
+ * Component • Card -- Flip
+ * ****************************
+ */
+
+// @ ref https://css3playground.com/3d-flip-cards/
+
+
+// Define Variables
+
+$card--flip-padding: 15px 35px 35px;
+$card--flip-height: 250px;
+$card--flip-radius: 40px;
+
+// Front
+$card--flip-border__front: 4px solid color( grayscale, 95 );
+
+//Back
+$card--flip-border__back: 4px solid color( blue );
+
+.c-card--flip{
+
+	display: block;
+	height: $card--flip-height;
+	margin: 0px auto 120px auto;
+	perspective: 600px;
+	width:80%;
+
+}
+
+.c-card--flip__front,
+.c-card--flip__back{
+
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	border-radius: $card--flip-radius;
+	height: inherit;
+	left: 0;
+	padding: $card--flip-padding;
+	position: absolute;
+	top: 0;
+	transform-style: preserve-3d;
+	transition: transition( card_flip );
+	width: inherit;
+
+}
+
+
+.c-card--flip__front{
+	
+	background-color: color( grayscale, white );
+	border: $card--flip-border__front;
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	color: color( blue );
+	text-transform: uppercase;
+	transform: rotateX(0) rotateY(0);
+	z-index: z( card_front );
+	
+
+}
+
+.c-card--flip__back{
+
+	background-color: color( blue );
+	border: $card--flip-border__back;
+    transform: rotateY(-179deg);
+    z-index: z( card_back );
+    
+
+}
+
+.c-card--flip__title{
+	margin-top:40px;
+}
+
+/**
+ * Icons
+ */
+
+.c-card--flip__front > .c-icon--standard,
+.c-card--flip--mobile__icon > .c-icon--standard{
+
+	position: relative;
+	left: 50%;
+	overflow: visible;
+	margin-top: 60px;
+	fill: color( grayscale, 70 );
+	transform: translateX(-50%);
+	height: 80px;
+    padding-top: 10px;
+
+}
+
+
+
+/**
+ * Hover State
+ */
+.c-card--flip.c-card--flip--is-flipped{
+
+	> .c-card--flip__front{
+
+		background-color: color( grayscale, 90 );
+	    z-index: z( card_back );
+	    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	    transform: rotateY(179deg);
+	}
+
+
+	> .c-card--flip__back{
+
+	    z-index: z( card_front );
+	    transform: rotateX(0) rotateY(0);
+	    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	}
+
+
+}
+
+
+
+
+
+/**
+ * WHen we go mobilem we are, temporarily, going to hide the dekstop struture
+ * content and display a mobile version. We will fix this after launch!
+ */
+
+.c-card--flip{
+
+	@include respond-max( $md_col_break ){
+		display: none;
+	}
+
+}
+
+
+.c-card--flip--mobile{
+	display: none;
+	margin-bottom: 80px !important;
+
+	@include respond-max( $md_col_break ){
+		display: block;
+	}
+
+}
+

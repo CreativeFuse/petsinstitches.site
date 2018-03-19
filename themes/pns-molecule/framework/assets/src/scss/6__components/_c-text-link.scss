@@ -1,0 +1,23 @@
+/**
+ * ****************************
+ * Component • Text Link
+ * ****************************
+ */
+
+
+.c-text-link a,
+.c-text-link {
+    
+    color: color( blue-m );
+    
+}
+
+
+
+.c-text-link a:hover,
+.c-text-link:hover {
+    
+    color: color( blue );
+    text-decoration: underline;
+    
+}

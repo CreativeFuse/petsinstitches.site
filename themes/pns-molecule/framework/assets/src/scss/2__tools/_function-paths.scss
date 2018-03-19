@@ -1,0 +1,18 @@
+/**
+ * A custom function to grab our mapped paths
+ *
+ * @param $path - Value from our $paths map
+ */
+
+@function path($path) {
+
+  @if not map-has-key($paths, $path) {
+
+    @warn "No layer found for `#{$path}` in $paths map. Property omitted.";
+    @return null;
+    
+  }
+
+  @return map-get($paths, $path);
+
+}

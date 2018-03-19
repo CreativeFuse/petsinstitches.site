@@ -1,0 +1,25 @@
+/**
+ * A custom function to grab our mapped transitions
+ *
+ * @param $transition - Value from our $transitions map
+ */
+
+@function transition($transition) {
+
+  @if not map-has-key($transitions, $transition) {
+
+    @warn "No layer found for `#{$transition}` in $transitions map. Property omitted.";
+    @return null;
+    
+  }
+
+  @return map-get($transitions, $transition);
+
+}
+
+// USAGE EXAMPLE
+// 
+// .modal {
+// 		...
+//		z-index: z("modal");
+//  }

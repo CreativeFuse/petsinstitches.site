@@ -1,0 +1,25 @@
+/**
+ * Custom Function for Getting Mapped Shadow Values
+ * 
+ * @param $shadow -  Value from our $shadows map in 1__settings
+ */
+
+@function grid($grid) {
+
+  @if not map-has-key($grid_settings, $grid) {
+
+    @warn "No layer found for `#{$grid}` in $grid_settings map. Property omitted.";
+    @return null;
+    
+  }
+
+  @return map-get($grid_settings, $grid);
+
+}
+
+// USAGE EXAMPLE
+// 
+// .modal {
+// 		...
+//		box-grid: grid(modal);
+//  }

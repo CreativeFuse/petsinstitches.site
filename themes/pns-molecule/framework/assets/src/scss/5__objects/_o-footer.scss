@@ -1,0 +1,34 @@
+/**
+ * ****************************
+ * Object • Footer
+ * ****************************
+ */
+
+
+.o-footer{
+	background-color: color( blue-m );
+	padding: 90px 0;
+
+	@include respond-max( $phone ){
+		text-align: center;
+
+		.o-col-md-4{
+			
+			margin-bottom: 60px;
+
+		}
+
+
+	}
+
+
+
+}
+
+.o-footer__well__title{
+	margin-bottom: 0;
+}
+
+.o-footer__well .c-text-icon > .c-icon{
+	fill: color( blue-l );
+}

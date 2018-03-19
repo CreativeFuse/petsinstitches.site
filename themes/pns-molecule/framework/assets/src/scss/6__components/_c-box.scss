@@ -1,0 +1,110 @@
+/**
+ * ****************************
+ * Component • Box
+ * ****************************
+ * 
+ * The box is used for overflow content sections.
+ * A portion of the text is hidden, only to be 
+ * revealed by a button click
+ * 
+ */
+
+
+ 
+/**
+ * Box • Base Styles
+ */
+
+.c-box:not( :last-child ){
+
+	// Give margin bottom to every testimonial except the last one
+	&:not( :last-child ){
+		margin-bottom: 60px;
+	}
+
+}
+
+// Info wrapper contains images and other meta content
+.c-box__info{
+	float: left;
+	padding: 1.5%;
+	text-align:center;
+	width:20%;
+}
+
+
+.c-testimonials .c-box__content{
+
+	float:left;
+	width:74%;
+
+}
+
+// THe wrapper for the actual content
+.c-box__content__holder{
+	padding:1.5%;
+}
+
+// The content itself
+.c-box__copy{
+	margin-top:0;
+}
+
+// THe read more Button
+.c-box__more{
+	margin-top: 35px;
+}
+
+
+/**
+ * Box • Author
+ */
+.c-box__author{
+
+	> .c-box__author__name{
+		margin: 0 auto;
+	}
+
+	> .c-box__author__title{
+		margin: 0 auto;
+	}
+
+}
+
+/**
+ * Box • Content Mask
+ */
+
+.c-box__content__holder{
+	overflow: hidden;
+	position: relative;
+	height: 75px;
+}
+
+.c-box__content__mask{
+
+	background-image: linear-gradient( to top, color( grayscale, white ), rgba( color( grayscale, white ), .2 ) );
+	display: block;
+	height: 75px;
+	left:0;
+	position: absolute;
+	bottom:0;
+	width:100%;
+
+	@include opacity( 1 );
+
+}
+
+
+
+/**
+ * Box Statee Classes
+ */
+
+.c-box__content__holder.c-box--is-active{
+	height:100%;
+
+	.c-box__content__mask{
+		@include opacity( 0 );
+	}
+}

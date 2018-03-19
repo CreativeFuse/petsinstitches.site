@@ -1,0 +1,26 @@
+/**
+ * *******************
+ * Component • Icon
+ * *******************
+ */
+
+.c-icon{
+
+	display: block;
+	
+}
+
+.c-icon--inline{
+	display: inline-block;
+}
+
+.c-icon--social svg {
+    max-width: 30px;
+    margin-right: 5px;
+    fill: color( blue );
+    transition: transition( icon_bg )
+}
+
+.c-icon--social svg:hover {
+    fill: color( blue, light5 );
+}

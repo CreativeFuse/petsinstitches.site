@@ -1,0 +1,35 @@
+/**
+ * ****************************
+ * Elements • Site
+ * ****************************
+ */
+
+// Prevent side scrolling resulting from overflow
+body{
+	overflow-x: hidden;
+	margin: 0;
+}
+
+body.mobile-menu--open{
+	overflow: hidden !important;
+}
+
+
+blockquote{
+	margin: 0;
+}
+
+img{
+	max-width: 100%;
+}
+
+ul{
+	list-style:none;
+}
+
+hr{
+
+	border: 1px solid  color( grayscale, 90 ) !important;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}

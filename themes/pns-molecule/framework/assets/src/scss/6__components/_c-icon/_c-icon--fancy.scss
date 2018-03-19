@@ -1,0 +1,44 @@
+/**
+ * ****************************
+ * Component • Icon -- Fancy
+ * ****************************
+ */
+
+.c-icon--fancy__group{
+	background: color( grayscale, 95 );
+	border-radius: 50%;
+	box-shadow: inset 0px 0px 1px 5px color( grayscale, 95 );
+	display: block;
+	position: relative;
+	height: 125px;
+	margin: 30px auto 0px auto;
+	padding: 80px;
+	transition: transition( icon_fancy_border );
+  	width: 125px;
+}
+
+.c-icon--fancy{
+	fill: color( blue );
+	position: absolute;
+	top: calc( 50% - 75px );
+	left: calc( 50% - 150px );
+	transition: transition( icon_fancy );
+	z-index: z( front );
+
+}
+
+
+.c-icon--fancy__group{
+
+	&:hover{
+
+		background: color( grayscale, 98 );
+		box-shadow: inset 0px 0px 1px 5px color( purple );
+
+		.c-icon--fancy{
+			opacity: 0;
+		}
+		
+	}
+
+}
