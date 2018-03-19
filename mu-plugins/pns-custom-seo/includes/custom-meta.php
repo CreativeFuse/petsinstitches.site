@@ -78,17 +78,17 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 			// Dogs
 			
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/dogs/') ){
-				$title = "Health and Wellness Services For Dogs | Pets In Stitches";
+				$title = "Dog Services in Dayton, Ohio | Pets In Stitches";
 			}	
 
 			// Cats
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/cats/') ){
-				$title = "Health and Wellness Services For Cats | Pets In Stitches";
+				$title = "Cat Services in Dayton, Ohio | Pets In Stitches";
 			}	
 
 			// Rabits
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/rabbits/') ){
-				$title = "Health and Wellness Services For Rabbits | Pets In Stitches";
+				$title = "Rabbit Services in Dayton, Ohio | Pets In Stitches";
 			}	
 			
 			return $title;
@@ -107,17 +107,17 @@ function pns_disable_paginated_testimonial_canonical( $link ){
 			// Dogs
 			
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/dogs/') ){
-				$desc = "We offer a wide variety of services to support your dog's health and wellness.";
+				$desc = "Looking for safe and affordable services for your pet dog? Pets in Stitches offers a wide variety of general, precautionary, in surgery, and dental services, as well as vaccinations and testing, to support your dog's health and wellness.";
 			}	
 
 			// Cats
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/cats/') ){
-				$desc = "We offer a wide variety of services to support your cat's health and wellness.";
+				$desc = "Looking for safe and affordable services for your pet cat? Pets in Stitches offers a wide variety of general, precautionary, in surgery, and dental services, as well as vaccinations and testing, to support your cat's health and wellness.";
 			}	
 
 			// Rabits
 			if( is_post_type_archive( 'service' ) && strpos( $currentUrl, '/rabbits/') ){
-				$desc = "We offer a wide variety of services to support your rabbit's health and wellness.";
+				$desc = "Looking for safe and affordable services for your pet rabbit? Pets in Stitches offers a wide variety of general, precautionary, in surgery, and dental services, as well as vaccinations and testing, to support your rabbit's health and wellness.";
 			}	
 			
 			return $desc;
