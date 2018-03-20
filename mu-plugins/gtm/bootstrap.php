@@ -27,7 +27,9 @@ class Bootstrap{
 	public function launch(){
 
 		// Here we go.
-		require_once ( __DIR__ . '/src/class-gtm.php' );
+		if( ! is_admin() ){
+			require_once ( __DIR__ . '/src/class-gtm.php' );
+		}
 
 	}
 

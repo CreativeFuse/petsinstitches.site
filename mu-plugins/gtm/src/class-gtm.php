@@ -252,11 +252,16 @@ class GTM{
 	*/
 	public function load_gtm(){
 
+		// Only load GTM of the user is not logged in AND
+		// we are not on any admin pages
+		if( ! \is_user_logged_in() && ! \is_admin() ){
 
-		if( $this->get_config( 'container' )['id'] ){
+			if( $this->get_config( 'container' )['id'] ){
 
-			add_action( 'wp_head', array( $this, 'load_gtm_head' ), 1 );
-			add_action( $this->get_gtm_body_hook(), array( $this, 'load_gtm_body' ), 1 );
+				add_action( 'wp_head', array( $this, 'load_gtm_head' ), 1 );
+				add_action( $this->get_gtm_body_hook(), array( $this, 'load_gtm_body' ), 1 );
+
+			}
 
 		}
 
