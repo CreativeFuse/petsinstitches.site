@@ -23,15 +23,11 @@ if ( ! defined( 'WPINC' ) ) {
 
 class Bootstrap{
 
-
+	// Here we go.
 	public function launch(){
 
-		// Here we go.
-		if( ! is_admin() ){
-			require_once ( __DIR__ . '/src/class-gtm.php' );
-		}
+		require_once ( __DIR__ . '/src/class-gtm.php' );
 
 	}
-
 
 }
