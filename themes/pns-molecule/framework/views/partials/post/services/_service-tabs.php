@@ -37,7 +37,19 @@ $services = CreativeFuse\PetsInStitches\Services\get_animal_services();
 
 	</nav>
 
-	<div class="c-tabs__panels">
+	<div itemscope itemtype="http://schema.org/Service">
+
+		<meta itemprop="serviceType" content="Animal Services" />
+
+		<span itemprop="provider" itemscope itemtype="http://schema.org/VeterinaryCare">
+
+			<meta itemprop="name" content="Pets in Stitches"/>
+
+			<img itemprop="image" class="u-vis-hide c-nav__logo__img c-nav__logo__img--desktop" src="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'url', 'nav_logo_desktop' ); ?>" alt="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'alt', 'nav_logo_desktop' ); ?>">
+
+		</span>
+	
+		<div itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog" class="c-tabs__panels">
 
 		<?php
 
@@ -51,6 +63,8 @@ $services = CreativeFuse\PetsInStitches\Services\get_animal_services();
 			Molecule_Router::render( 'post/services', '_service', 'panels', $services );
 
 		?>
+
+		</div>
 
 	</div>
 

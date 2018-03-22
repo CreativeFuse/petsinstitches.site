@@ -24,7 +24,7 @@ $title = $title_prepend . $title;
 
 ?>
 
-<div id="panel--<?php esc_html_e( $title_class ); ?>" class="o-panel o-panel--service o-panel--service--<?php esc_html_e( $title_class ); ?>">
+<div itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog" id="panel--<?php esc_html_e( $title_class ); ?>" class="o-panel o-panel--service o-panel--service--<?php esc_html_e( $title_class ); ?>">
 
 	<div class="o-panel__header o-container o-container--max">
 
@@ -37,7 +37,9 @@ $title = $title_prepend . $title;
 				<?php // The Intro to our service ?>
 
 				<div class="c-title-group u-max-width--900">
-
+					
+					<meta itemprop="name" content="<?php esc_html_e( $output['term_name'] ); ?>" />
+					
 					<h2 class="e-h2 c-title-group__title u-color--blue"><?php esc_html_e( $title ); ?></h2>
 
 					<p class="e-p--common c-title-group__sub"><?php esc_html_e( $output['term_description'] ); ?></p>
