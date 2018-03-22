@@ -4130,6 +4130,21 @@ a[class*='lightcase-icon-'] {
 
 /**
  * ****************************
+ * Utility • Visibility
+ * ****************************
+ */
+.u-vis-hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+/**
+ * ****************************
  * Utility • Widths
  * ****************************
  */
