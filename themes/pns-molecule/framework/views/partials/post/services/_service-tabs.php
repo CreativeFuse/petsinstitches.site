@@ -11,6 +11,8 @@
  */
 
 $services = CreativeFuse\PetsInStitches\Services\get_animal_services();
+$animal = get_query_var( 'animal' );
+$service_type = ucfirst( rtrim( $animal, 's' ) ) . ' Services';
 ?>
 
 <div id="services-nav" class="c-tabs">
@@ -37,8 +39,20 @@ $services = CreativeFuse\PetsInStitches\Services\get_animal_services();
 
 	</nav>
 
-	<div class="c-tabs__panels">
+	<div itemscope itemtype="http://schema.org/Service">
 
+		<meta itemprop="serviceType" content="<?php echo $service_type; ?>" />
+
+		<span itemprop="provider" itemscope itemtype="http://schema.org/VeterinaryCare">
+
+			<meta itemprop="name" content="Pets in Stitches"/>
+
+			<img itemprop="image" class="u-vis-hide c-nav__logo__img c-nav__logo__img--desktop" src="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'url', 'nav_logo_desktop' ); ?>" alt="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'alt', 'nav_logo_desktop' ); ?>">
+
+		</span>
+	
+		<div itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog" class="c-tabs__panels">
+		
 		<?php
 
 			/**
@@ -51,6 +65,15 @@ $services = CreativeFuse\PetsInStitches\Services\get_animal_services();
 			Molecule_Router::render( 'post/services', '_service', 'panels', $services );
 
 		?>
+
+		<!--
+		Note: tabtab.js looks for the closestChild of c-tabs__panels.
+		Because of this, any schema connected to the root OfferCatalog
+		needs to be after the panel renders 
+		-->
+		<meta itemprop="numberOfItems" content="<?php echo( count( $services ) ); ?>" />
+
+		</div>
 
 	</div>
 
