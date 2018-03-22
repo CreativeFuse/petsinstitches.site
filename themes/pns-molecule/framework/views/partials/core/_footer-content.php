@@ -9,7 +9,7 @@
 
 <div class="o-col-md-4">
 	
-	<div itemscope itemtype="http://schema.org/LocalBusiness" class="o-footer__well">
+	<div itemscope itemtype="http://schema.org/VeterinaryCare" class="o-footer__well">
 
 		<h4 class="e-h4 o-footer__well__title u-color--white">
 			<?php esc_html_e( 'Let\'s Connect' ); ?>	
