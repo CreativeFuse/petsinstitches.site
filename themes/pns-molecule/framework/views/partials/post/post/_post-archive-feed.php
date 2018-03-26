@@ -1,4 +1,4 @@
-<div class="o-section o-section--post-archive">
+<div itemscope itemtype="http://schema.org/Blog" class="o-section o-section--post-archive">
 	<div class="o-container o-container--max">
 
 		<div class="o-row">
