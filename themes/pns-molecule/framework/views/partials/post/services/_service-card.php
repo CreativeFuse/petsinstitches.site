@@ -38,13 +38,16 @@ foreach ( $fields as $field ){
 
 ?>
 
-<div <?php post_class( 'c-card c-card--simple c-card--service ' ); ?> >
+<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer" <?php post_class( 'c-card c-card--simple c-card--service ' ); ?> >
 
-	<div class="c-card__header u-clearfix">
+	<meta itemprop="price" content="<?php echo $service['cost']; ?>" />
+	<meta itemprop="priceCurrency" content="USD" />
+
+	<div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service" class="c-card__header u-clearfix">
 
 		<h4 class="e-h6 c-card__title">
 
-			<?php echo esc_html( $output['service_title'] ); ?>
+			<span itemprop="serviceType name"><?php echo esc_html( $output['service_title'] ); ?></span>
 
 		</h4>
 
@@ -68,7 +71,7 @@ foreach ( $fields as $field ){
 	<div class="c-card__body">
 
 		<p class="e-p--common c-card__description">
-			<?php echo $service['description']; ?>
+			<span itemprop="description"><?php echo $service['description']; ?></span>
 		</p>
 
 		<?php
