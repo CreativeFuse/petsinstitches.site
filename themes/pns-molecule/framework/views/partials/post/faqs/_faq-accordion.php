@@ -28,7 +28,7 @@ $answer = wp_kses_post( get_field( 'faq_answer', $output['faq_id'] ) );
 
 		<div itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer" class="e-p--common c-accordion--simple__content">
 
-			<span itemprop="text"<?php echo $answer; ?></span>
+			<span itemprop="text"><?php echo $answer; ?></span>
 			
 		</div>
 
