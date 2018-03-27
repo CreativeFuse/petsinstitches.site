@@ -8,6 +8,17 @@
  */
 
 // Intro Section after hero image
-Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'intro');
+?>
 
-Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'form');
+<div itemscope itemtype="http://schema.org/ScheduleAction">
+
+	<meta itemprop="name" content="Request an Appointment" />
+	<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( the_permalink() ); ?>" />
+
+	<?php
+	Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'intro');
+
+	Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'form');
+	?>
+
+</div>
