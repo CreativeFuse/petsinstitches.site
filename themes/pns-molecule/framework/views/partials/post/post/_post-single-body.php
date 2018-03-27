@@ -16,7 +16,7 @@
 
 						<meta itemprop="dateModified" content="<?php echo the_modified_date('c'); ?>" />
 
-						<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( the_permalink() ); ?>" />
+						<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( get_the_permalink() ); ?>" />
 
 						<meta itemprop="isFamilyFriendly" content="True" />
 
@@ -39,7 +39,7 @@
 
 						<?php } else { ?>
 
-							<meta itemprop="image" content="https:<?php Molecule_Router::get_img_meta( 'acf_options', 'url', 'blog_fallback_img' ); ?>" />
+							<meta itemprop="image" content="<?php Molecule_Router::get_img_meta( 'acf_options', 'url', 'blog_fallback_img' ); ?>" />
 
 						<?php } ?>
 
