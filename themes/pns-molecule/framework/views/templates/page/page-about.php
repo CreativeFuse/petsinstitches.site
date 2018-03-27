@@ -16,7 +16,7 @@
 
 	<meta itemprop="dateModified" content="<?php echo the_modified_date('c'); ?>" />
 
-	<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( the_permalink() ); ?>" />
+	<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( get_the_permalink() ); ?>" />
 
 	<meta itemprop="isFamilyFriendly" content="True" />
 

@@ -1,4 +1,4 @@
-<a itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="c-card c-card--post" href="<?php echo esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
+<a itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="c-card c-card--post" href="<?php echo esc_url( get_the_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
 
 	<meta itemprop="articleSection" content="<?php $c = get_the_category(); echo esc_html( $c[0]->name ); ?>" />
 
@@ -6,7 +6,7 @@
 
 	<meta itemprop="dateModified" content="<?php echo the_modified_date('c'); ?>" />
 
-	<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( the_permalink() ); ?>" />
+	<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( get_the_permalink() ); ?>" />
 
 	<meta itemprop="isFamilyFriendly" content="True" />
 
@@ -24,11 +24,11 @@
 
 	<?php if( has_post_thumbnail() ){ ?>
 
-		<meta itemprop="image thumbnailUrl" content="https:<?php Molecule_Router::get_img_meta( 'post', 'url' );  ?>" />
+		<meta itemprop="image thumbnailUrl" content="<?php Molecule_Router::get_img_meta( 'post', 'url' );  ?>" />
 
 	<?php } else { ?>
 
-		<meta itemprop="image" content="https:<?php Molecule_Router::get_img_meta( 'acf_options', 'url', 'blog_fallback_img'  );  ?>" />
+		<meta itemprop="image" content="<?php Molecule_Router::get_img_meta( 'acf_options', 'url', 'blog_fallback_img'  );  ?>" />
 
 	<?php } ?>
 	
