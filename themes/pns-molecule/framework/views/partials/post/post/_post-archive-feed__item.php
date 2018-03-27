@@ -24,11 +24,11 @@
 
 	<?php if( has_post_thumbnail() ){ ?>
 
-		<meta itemprop="image thumbnailUrl" content="http:<?php Molecule_Router::get_img_meta( 'post', 'url' );  ?>" />
+		<meta itemprop="image thumbnailUrl" content="https:<?php Molecule_Router::get_img_meta( 'post', 'url' );  ?>" />
 
 	<?php } else { ?>
 
-		<meta itemprop="image" content="http:<?php Molecule_Router::get_img_meta( 'acf_options', 'url', 'blog_fallback_img'  );  ?>" />
+		<meta itemprop="image" content="https:<?php Molecule_Router::get_img_meta( 'acf_options', 'url', 'blog_fallback_img'  );  ?>" />
 
 	<?php } ?>
 	
