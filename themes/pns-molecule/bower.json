@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "tabtab.js": "^0.1.3",
     "isotope": "^3.0.4"
   }
 }
