@@ -1,0 +1,22 @@
+.o-content--request-appointment-thank-you .o-col-md-8 .c-title-group,
+.o-content--contact-thank-you .o-col-md-8 .c-title-group{
+	
+	padding-right: 60px;
+
+	@include respond-max( $md_col_break ){
+
+		padding-right:0;
+
+	}
+
+}
+
+
+.o-content--request-appointment-thank-you .o-col-md-4,
+.o-content--contact-thank-you .o-col-md-4{
+	
+	@include respond-max( $md_col_break ){
+		margin-top: 80px;
+	}
+
+}

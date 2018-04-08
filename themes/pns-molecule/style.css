@@ -3951,14 +3951,17 @@ a[class*='lightcase-icon-'] {
 .p-post-op__row__video {
   margin-bottom: 70px; }
 
-.o-content--request-appointment-thank-you .o-col-md-8 .c-title-group {
+.o-content--request-appointment-thank-you .o-col-md-8 .c-title-group,
+.o-content--contact-thank-you .o-col-md-8 .c-title-group {
   padding-right: 60px; }
   @media only screen and (max-width: 990px) {
-    .o-content--request-appointment-thank-you .o-col-md-8 .c-title-group {
+    .o-content--request-appointment-thank-you .o-col-md-8 .c-title-group,
+    .o-content--contact-thank-you .o-col-md-8 .c-title-group {
       padding-right: 0; } }
 
 @media only screen and (max-width: 990px) {
-  .o-content--request-appointment-thank-you .o-col-md-4 {
+  .o-content--request-appointment-thank-you .o-col-md-4,
+  .o-content--contact-thank-you .o-col-md-4 {
     margin-top: 80px; } }
 
 .p-faq__section:not(:first-child) {
