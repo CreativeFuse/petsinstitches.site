@@ -18,7 +18,8 @@ $brandedColors : (
     blue-d  : #044792,
     purple  : #AA55D0,
 	gray    : #2D2A24,
-    
+    white   : #FFFFFF,
+
 );
 
 /**
@@ -110,6 +111,21 @@ $colors: (
         dark5    :   darken( map-get( $brandedColors, gray ), 5% ),
         dark10   :   darken( map-get( $brandedColors, gray ), 10% ),
         dark15   :   darken( map-get( $brandedColors, gray ), 15% ),
+
+
+    ),
+
+    white: (  
+
+        light15  :   lighten( map-get( $brandedColors, white ), 15% ),
+        light10  :   lighten( map-get( $brandedColors, white ), 10% ),
+        light5   :   lighten( map-get( $brandedColors, white ), 5% ),
+
+        base    :   map-get( $brandedColors, white ),
+        
+        dark5    :   darken( map-get( $brandedColors, white ), 5% ),
+        dark10   :   darken( map-get( $brandedColors, white ), 10% ),
+        dark15   :   darken( map-get( $brandedColors, white ), 15% ),
 
 
     ),
