@@ -5,14 +5,14 @@
 	</h2>
 
 	<p class="e-p--large u-max-width--800 u-center">
-		<?php esc_html_e( 'Consider gathering the following with you before visiting us at our clinic.' ); ?>
+		<?php esc_html_e( 'Consider gathering the following information before visiting us at our clinic.' ); ?>
 	</p>
 
 	<ul class="c-list-paws c-list-paws--blue">	
 
-		<li class="c-list-paws__item e-p--common"><?php esc_html_e( 'Most recent rabies vaccine is required if you\'re not purchasing rabies vaccines.'); ?></li>
+		<li class="c-list-paws__item e-p--common"><?php esc_html_e( 'Copy of recent rabies vaccine (required if you\'re not purchasing rabies vaccine)'); ?></li>
 
-		<li class="c-list-paws__item e-p--common"><?php esc_html_e( 'If you request the booster vaccines, a copy of recent vaccination records is required.'); ?></li>
+		<li class="c-list-paws__item e-p--common"><?php esc_html_e( 'Copy of recent vaccination records (required if you\'re requesting the booster vaccines)'); ?></li>
 
 		<li class="c-list-paws__item e-p--common"><?php esc_html_e( 'Completed and signed admissions and consent forms.'); ?></li>
 
