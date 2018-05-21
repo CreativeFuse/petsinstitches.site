@@ -20,7 +20,7 @@
 
 		<strong class="u-color--blue"><?php esc_html_e( 'Phone:'); ?></strong> <a class="c-text-link u-color--gray" href="tel:937-630-3320"><?php esc_html_e( '937-630-3320'); ?></a>
 		<br/>
-		<strong class="u-color--blue"><?php esc_html_e( 'Email:'); ?></strong> <a class="c-text-link u-color--gray" href="mailto:info@petsinstitches.com"><?php esc_html_e( 'info@petsinstitches.com'); ?></a>
+		<strong class="u-color--blue"><?php esc_html_e( 'Email:'); ?></strong> <a class="c-text-link u-color--gray" href="mailto:contact@petsinstitches.com"><?php esc_html_e( 'contact@petsinstitches.com'); ?></a>
 		
 	</h2>
 

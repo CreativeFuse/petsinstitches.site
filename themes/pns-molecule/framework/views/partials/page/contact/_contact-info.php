@@ -34,7 +34,7 @@
 
 						<strong class="u-color--blue">Phone:</strong> <a class="c-text-link u-color--gray" href="tel:937-630-3320"><span itemprop="telephone">937-630-3320</span></a>
 						<br/>
-						<strong class="u-color--blue">Email:</strong> <a class="c-text-link u-color--gray" href="mailto:info@petsinstitches.com"><span itemprop="email">info@petsinstitches.com</span></a>
+						<strong class="u-color--blue">Email:</strong> <a class="c-text-link u-color--gray" href="mailto:contact@petsinstitches.com"><span itemprop="email">contact@petsinstitches.com</span></a>
 						
 					</h2>
 
