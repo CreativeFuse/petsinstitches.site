@@ -98,13 +98,17 @@
 
 
 /**
- * Box Statee Classes
+ * Box State Classes
  */
 
 .c-box__content__holder.c-box--is-active{
 	height:100%;
 
 	.c-box__content__mask{
+
+		display: none;
+
 		@include opacity( 0 );
+		
 	}
 }
