@@ -16,7 +16,27 @@
                 "id": ""
             },
             "layout": "block",
-            "sub_fields": []
+            "sub_fields": [
+                {
+                    "key": "field_5b0fe40db73fe",
+                    "label": "Intro",
+                    "name": "intro_copy",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -43,5 +63,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1504116946
+    "modified": 1527782492
 }
