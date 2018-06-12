@@ -19,7 +19,7 @@ $output .= '<div class="o-col-md-4">';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/faqs/">FAQs</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/alternative-sterilization/">Alternative Sterilization</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/testimonials/dogs/">Testimonials</a></li>';
-			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/">Getting Started</a></li>';
+			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/">Prep for Surgery</a></li>';
 			
 
 		$output .= '</ul>';
