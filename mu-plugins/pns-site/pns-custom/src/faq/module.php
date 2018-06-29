@@ -111,6 +111,93 @@ ORDER BY tt.order, t.term_id, p.menu_order ASC;";
 	return $results;
 }
 
+/**
+ * get all Postoperative FAQs for animal type
+ * 
+ * to call this from a template: $var_name = CreativeFuse\PetsInStitches\FAQ\get_faqs_for_postop( $animal )
+ * 
+ * @param $animal
+ * 
+ * @return array
+ */
+function get_faqs_for_postop( $animal ) {
+	$faq_records = get_faqs_grouped_by_postop_animal( $animal );
+
+	$grouped_faqs = array();
+
+	foreach ( $faq_records AS $faq ) {
+		$topic_id = (int) $faq->term_id;
+		$faq_id   = (int) $faq->post_id;
+
+		$grouped_faqs[ $topic_id ] = array(
+			'topic_id'          => $topic_id,
+			'topic_name'        => $faq->term_name,
+			'topic_description' => $faq->description,
+			'topic_slug'        => $faq->term_slug,
+			'faqs'              => array(),
+		);
+
+		$grouped_faqs[ $topic_id ]['faqs'][ $faq_id ] = array(
+			'faq_id'      => $faq_id,
+			'faq_title'   => $faq->post_title,
+			'faq_content' => $faq->post_content,
+			'faq_order'   => $faq->menu_order,
+		);
+	}
+
+	return $grouped_faqs;
+}
+
+/**
+ * custom query to get the term_id for postoperative-care
+ * 
+ * @return string
+ */
+function get_postop_id() {
+	global $wpdb;
+
+	$faq_postop_id_query = "SELECT t.* FROM {$wpdb->terms} AS t
+	INNER JOIN {$wpdb->term_taxonomy} AS tt ON (t.term_id =tt.term_id)
+	WHERE tt.taxonomy = %s AND t.slug = %s";
+
+	$faq_postop_id_query = $wpdb->prepare( $faq_postop_id_query, 'topic', 'postoperative-care' );
+
+	$results = $wpdb->get_results( $faq_postop_id_query );
+
+	return $results[0]->term_id;
+}
+
+/**
+ * custom query to pull all FAQs grouping them by topic
+ *
+ * @return array|bool
+ */
+function get_faqs_grouped_by_postop_animal( $animal ) {
+	global $wpdb;
+
+	$faq_query = "SELECT t.term_id, t.name AS term_name, t.slug AS term_slug, tt.description, p.ID AS post_id, p.post_title, p.post_content, p.menu_order
+	FROM {$wpdb->term_taxonomy} AS tt
+	INNER JOIN {$wpdb->terms} AS t ON (tt.term_id = t.term_id)
+	INNER JOIN {$wpdb->term_relationships} AS tr ON (tt.term_taxonomy_id = tr.term_taxonomy_id)
+	INNER JOIN {$wpdb->posts} AS p ON (tr.object_id = p.ID)
+	WHERE p.post_status = 'publish' AND p.post_type = %s AND tt.taxonomy = %s AND t.slug = %s AND tt.parent = %s
+	GROUP BY t.term_id, p.ID
+	ORDER BY tt.order, t.term_id, p.menu_order ASC;";
+
+	$postop_id = get_postop_id();
+
+	$faq_query = $wpdb->prepare( $faq_query, 'faqs', 'topic', $animal, $postop_id );
+
+	$results = $wpdb->get_results( $faq_query );
+
+	if ( ! $results || ! is_array( $results ) ) {
+		return false;
+	}
+
+	return $results;
+}
+
+
 add_action( 'restrict_manage_posts', __NAMESPACE__ . '\add_topic_filter_to_admin_post_list' );
 
 function add_topic_filter_to_admin_post_list() {
