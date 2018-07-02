@@ -18,7 +18,7 @@ $output .= '<div class="o-col-md-4">';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/forms/#Rabbits">Forms</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/faqs/">FAQs</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/testimonials/rabbits/">Testimonials</a></li>';
-			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/" data-event-origin="Rabbits Menu">Prep for Surgery</a></li>';
+			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/" data-event-origin="rabbits-menu">Prep for Surgery</a></li>';
 
 
 		$output .= '</ul>';

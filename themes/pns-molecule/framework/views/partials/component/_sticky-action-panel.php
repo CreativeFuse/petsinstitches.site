@@ -41,7 +41,7 @@ $action_items = array(
 
 			<li class="c-action-panel__item">
 
-				<a class="c-action-panel__link c-action-panel__link--<?php echo esc_attr( $item['color'] ); ?>" href="<?php echo esc_url( $item['link'] ); ?>" data-event-origin="Sticky Side Buttons">
+				<a class="c-action-panel__link c-action-panel__link--<?php echo esc_attr( $item['color'] ); ?>" href="<?php echo esc_url( $item['link'] ); ?>" data-event-origin="sticky-side-button">
 
 
 					<h4 class="c-action-panel__link__text e-p--common u-text-up"><?php echo esc_html( $item['title'] ); ?></h4>
