@@ -112,7 +112,7 @@ ORDER BY tt.order, t.term_id, p.menu_order ASC;";
 }
 
 /**
- * get all Postoperative FAQs for animal type
+ * get all Postoperative FAQs for animal type (name)
  * 
  * to call this from a template: $var_name = CreativeFuse\PetsInStitches\FAQ\get_faqs_for_postop( $animal )
  * 
@@ -122,40 +122,29 @@ ORDER BY tt.order, t.term_id, p.menu_order ASC;";
  */
 function get_faqs_for_postop( $animal ) {
 
-	/** 
-	 * Get the children (animals)
-	 * of the 'postoperative-care' term
-	 * of the 'topic' taxonomy
-	 */
-	$taxonomy_name 			= 'topic';
-	$sub_taxonomy_name 		= 'postoperative-care';
-	$sub_taxonomy_id 		= get_term_by( 'slug', $sub_taxonomy_name, $taxonomy_name );
-	$sub_taxonomy_children 	= get_term_children( $sub_taxonomy_id->term_id, $taxonomy_name );
-
 	/**
-	 * Loop through the children (animals),
-	 * if the child matches the request,
-	 * create a WP_Query for that slug.
+	 * Query for the animal name that
+	 * is under the 'postoperative-care'
+	 * term parent.
 	 */
-	foreach ( $sub_taxonomy_children as $child ) {
-		$term = get_term_by( 'id', $child, $taxonomy_name );
+	$args = array(
+		'post_type' => 'faqs',
+		'tax_query' => array(
+			array (
+				'taxonomy' => 'topic',
+				'field' => 'name',
+				'terms' => $animal,
+			),
+			array (
+				'taxonomy' => 'topic',
+				'field' => 'slug',
+				'terms' => 'postoperative-care',
+				'operator' => 'IN'
+			)
+		),
+	);
 
-		if ( $term->slug == $animal ) {
-			$args = array(
-				'post_type' => 'faqs',
-				'tax_query' => array(
-					array (
-						'taxonomy' => 'topic',
-						'field' => 'slug',
-						'terms' => $term->slug
-					)
-				),
-			);
-
-			$query = new \WP_Query( $args );
-		}
-	}
-
+	$query = new \WP_Query( $args );
 	return $query;
 
 }
