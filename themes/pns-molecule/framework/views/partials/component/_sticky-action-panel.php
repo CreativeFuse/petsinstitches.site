@@ -38,14 +38,14 @@ $action_items = array(
 	<ul class="c-menu c-action-panel__wrapper">
 
 		<?php foreach( $action_items as $item ){ ?>
-	
+
 			<li class="c-action-panel__item">
 
-				<a class="c-action-panel__link c-action-panel__link--<?php echo esc_attr( $item['color'] ); ?>" href="<?php echo esc_url( $item['link'] ); ?>">
+				<a class="c-action-panel__link c-action-panel__link--<?php echo esc_attr( $item['color'] ); ?>" href="<?php echo esc_url( $item['link'] ); ?>" data-event-origin="Sticky Side Buttons">
 
 
 					<h4 class="c-action-panel__link__text e-p--common u-text-up"><?php echo esc_html( $item['title'] ); ?></h4>
-					
+
 
 				</a>
 
@@ -55,5 +55,5 @@ $action_items = array(
 		<?php } ?>
 
 	</ul>
-	
+
 </div>

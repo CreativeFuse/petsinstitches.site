@@ -2,7 +2,7 @@
 
 // Create our Button Group
 
-$buttons = array( 
+$buttons = array(
 
 
 	'appointment' => array(
@@ -19,7 +19,7 @@ $buttons = array(
 		'link' => '/getting-started',
 
 	),
-	
+
 
 	'forms' => array(
 
@@ -41,7 +41,7 @@ $buttons = array(
 
 			foreach( $buttons as $button ){ ?>
 
-				<a class="c-btn c-btn--small c-btn--outline c-btn--blue c-btn--hover-fill c-btn--topbar" href="<?php echo esc_url( $button['link'] ); ?>">
+				<a class="c-btn c-btn--small c-btn--outline c-btn--blue c-btn--hover-fill c-btn--topbar" href="<?php echo esc_url( $button['link'] ); ?>" data-event-origin="Top Nav Button">
 
 					<div class="c-btn__text">
 						<?php esc_html_e( $button['text'] ); ?>

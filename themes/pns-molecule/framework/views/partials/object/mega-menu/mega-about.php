@@ -5,7 +5,7 @@ $fields = get_field( 'about_menu', 'options');
 
 
 $output .= '<div class="o-col-md-4">';
-	
+
 	$output .= '<div class="o-mega__well">';
 
 		$output .= '<h4 class="e-h4 o-mega__well__title u-color--white">';
@@ -19,7 +19,7 @@ $output .= '<div class="o-col-md-4">';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/blog/take-a-tour/">Take a Tour</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/faqs/">FAQs</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/testimonials/">Testimonials</a></li>';
-			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/">Getting Started</a></li>';
+			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/" data-event-origin="About Menu">Getting Started</a></li>';
 
 		$output .= '</ul>';
 
@@ -30,7 +30,7 @@ $output .= '</div>';
 
 
 $output .= '<div class="o-col-md-3">';
-	
+
 	$output .= '<div class="o-mega__well o-mega__well--center">';
 
 		$output .= '<h4 class="e-h4 o-mega__well__title u-color--white">';
@@ -52,7 +52,7 @@ $output .= '</div>';
 
 
 $output .= '<div class="o-col-md-4">';
-	
+
 	$output .= '<div class="o-mega__well o-mega__well--center">';
 
 		$output .= '<h4 class="e-h4 o-mega__well__title u-color--white">';
