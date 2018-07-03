@@ -12,12 +12,12 @@
 
 					<p class="e-p--common c-title-group__sub">We care for you and your pet throughout the entire surgical procedure and hold your paw every step of the way.</p>
 
-					<a class="c-btn c-btn--fill c-btn--purple c-btn--hover-outline c-title-group__btn" href="<?php echo esc_url('/getting-started' )  ?>">
+					<a class="c-btn c-btn--fill c-btn--purple c-btn--hover-outline c-title-group__btn" href="<?php echo esc_url('/getting-started' )  ?>" data-event-origin="home-hero-button">
 
 						<div class="c-btn__text">
 							<?php esc_html_e( 'Get Started!' ); ?>
 						</div>
-						
+
 					</a>
 
 				</div>

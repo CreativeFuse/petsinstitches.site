@@ -8,11 +8,11 @@
 ?>
 
 <div class="o-col-md-4">
-	
+
 	<div itemscope itemtype="http://schema.org/VeterinaryCare" class="o-footer__well">
 
 		<h4 class="e-h4 o-footer__well__title u-color--white">
-			<?php esc_html_e( 'Let\'s Connect' ); ?>	
+			<?php esc_html_e( 'Let\'s Connect' ); ?>
 		</h4>
 
 		<img itemprop="image" class="u-vis-hide c-nav__logo__img c-nav__logo__img--desktop" src="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'url', 'nav_logo_desktop'); ?>" alt="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'alt', 'nav_logo_desktop'); ?>">
@@ -38,7 +38,7 @@
 			<?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-printer.svg' ); ?>
 			<a class="c-menu__link u-color--blue-l" href="tel:937-630-3325"><span itemprop="faxNumber">937-630-3325</span></a>
 		</p>
-        
+
         <p>
 
 			<a itemprop="sameAs" class="c-icon--social" href="https://www.facebook.com/PetsInStitches/" target="_blank"><?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-facebook.svg' ); ?></a>
@@ -52,7 +52,7 @@
 </div>
 
 <div class="o-col-md-4">
-	
+
 	<div class="o-footer__well">
 
 		<h4 class="e-h4 o-footer__well__title u-color--white">
@@ -61,7 +61,7 @@
 
 		<p class="o-footer__well__links u-color--blue-l">
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/request-appointment/">Request an Appointment</a></br>
-			<a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/">Getting Started</a></br>
+			<a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/" data-event-origin="footer-nav">Getting Started</a></br>
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/forms/">Download Forms</a></br>
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/testimonials/">Testimonials</a></br>
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/blog/">Blog</a></br>
@@ -74,7 +74,7 @@
 </div>
 
 <div class="o-col-md-4">
-	
+
 	<div class="o-footer__well">
 
 		<h4 class="e-h4 o-footer__well__title u-color--white">
@@ -84,7 +84,7 @@
 		<p class="e-p--large u-color--blue-l">
 			Subscribe to our newsletter and we promise not to spam, unless of course your pet likes spam, ha!
 		</p>
-		
+
 		<?php echo do_shortcode( '[mc4wp_form id="1613"]' ); ?>
 
 	</div>
