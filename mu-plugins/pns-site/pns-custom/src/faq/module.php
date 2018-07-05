@@ -111,6 +111,44 @@ ORDER BY tt.order, t.term_id, p.menu_order ASC;";
 	return $results;
 }
 
+/**
+ * get all Postoperative FAQs for animal type (name)
+ * 
+ * to call this from a template: $var_name = CreativeFuse\PetsInStitches\FAQ\get_faqs_for_postop( $animal )
+ * 
+ * @param $animal
+ * 
+ * @return object
+ */
+function get_faqs_for_postop( $animal ) {
+
+	/**
+	 * Query for the animal name that
+	 * is under the 'postoperative-care'
+	 * term parent.
+	 */
+	$args = array(
+		'post_type' => 'faqs',
+		'tax_query' => array(
+			array (
+				'taxonomy' => 'topic',
+				'field' => 'name',
+				'terms' => $animal,
+			),
+			array (
+				'taxonomy' => 'topic',
+				'field' => 'slug',
+				'terms' => 'postoperative-care',
+				'operator' => 'IN'
+			)
+		),
+	);
+
+	$query = new \WP_Query( $args );
+	return $query;
+
+}
+
 add_action( 'restrict_manage_posts', __NAMESPACE__ . '\add_topic_filter_to_admin_post_list' );
 
 function add_topic_filter_to_admin_post_list() {
