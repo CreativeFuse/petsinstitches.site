@@ -96,7 +96,7 @@ FROM {$wpdb->term_taxonomy} AS tt
 INNER JOIN {$wpdb->terms} AS t ON (tt.term_id = t.term_id)
 INNER JOIN {$wpdb->term_relationships} AS tr ON (tt.term_taxonomy_id = tr.term_taxonomy_id)
 INNER JOIN {$wpdb->posts} AS p ON (tr.object_id = p.ID)
-WHERE p.post_status = 'publish' AND p.post_type = %s AND tt.taxonomy = %s
+WHERE p.post_status = 'publish' AND p.post_type = %s AND tt.taxonomy = %s AND tt.parent = 0
 GROUP BY t.term_id, p.ID
 ORDER BY tt.order, t.term_id, p.menu_order ASC;";
 
