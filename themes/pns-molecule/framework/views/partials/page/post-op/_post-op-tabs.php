@@ -15,7 +15,7 @@ $tabs = array(
 	'female',
 	'male',
 	'faqs',
-	'blog'
+	'blogs'
 
 );
 
@@ -63,9 +63,9 @@ $tabs = array(
 
 						Molecule_Router::render( 'page/post-op', '_post-op', 'panel__faqs');
 
-					} else if ($tab == 'blog') {
+					} else if ($tab == 'blogs') {
 
-						Molecule_Router::render( 'page/post-op', '_post-op', 'panel__blog');
+						Molecule_Router::render( 'page/post-op', '_post-op', 'panel__blogs');
 
 					}
 
