@@ -11,7 +11,7 @@ $taxonomy = 'category';
 $terms = get_field( 'post_op_animal_type' );
 
 // Query for all postop blogs for a specific animal type
-$postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop( $post_type, $taxonomy, $terms);
+$postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop( $post_type, $taxonomy, $terms );
 
 ?>
 
@@ -45,7 +45,11 @@ $postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop(
 
 									}
 
-								} ?>
+								}
+								
+								wp_reset_postdata();
+								
+								?>
 
 							</div>
 
