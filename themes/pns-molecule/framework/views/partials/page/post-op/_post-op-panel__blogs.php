@@ -24,7 +24,7 @@ $postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop(
 
 			<div class="o-row o-row--sub-page p-post-op__row">
 
-				<div itemscope itemtype="http://schema.org/Blog" class="o-section o-section--post-archive">
+				<div class="o-section o-section--post-archive">
 
 					<div class="o-container o-container--max">
 
@@ -41,7 +41,7 @@ $postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop(
 										$postop_blog->the_post();
 
 										// Load Our Post Item
-										Molecule_Router::render( 'post/post', '_post', 'archive-feed__item' );
+										Molecule_Router::render( 'page/post-op', 'c', 'card--postop' );
 
 									}
 
