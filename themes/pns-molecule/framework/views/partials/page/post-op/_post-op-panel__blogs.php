@@ -20,38 +20,34 @@ $postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop(
 
 	<div class="o-section o-section--sub-page">
 
-		<div class="o-container o-container--max--small">
+		<div class="o-row o-row--sub-page p-post-op__row">
 
-			<div class="o-row o-row--sub-page p-post-op__row">
+			<div class="o-section o-section--post-archive">
 
-				<div class="o-section o-section--post-archive">
+				<div class="o-container o-container--max">
 
-					<div class="o-container o-container--max">
+					<div class="o-row">
 
-						<div class="o-row">
+						<div class="c-card__feed">
 
-							<div class="c-card__feed">
+							<?php
 
-								<?php
+							if ( $postop_blog->have_posts() ) {
 
-								if ( $postop_blog->have_posts() ) {
+								while ( $postop_blog->have_posts() ) {
 
-									while ( $postop_blog->have_posts() ) {
+									$postop_blog->the_post();
 
-										$postop_blog->the_post();
-
-										// Load Our Post Item
-										Molecule_Router::render( 'page/post-op', 'c', 'card--postop' );
-
-									}
+									// Load Our Post Item
+									Molecule_Router::render( 'page/post-op', 'c', 'card--postop' );
 
 								}
-								
-								wp_reset_postdata();
-								
-								?>
 
-							</div>
+							}
+							
+							wp_reset_postdata();
+							
+							?>
 
 						</div>
 
