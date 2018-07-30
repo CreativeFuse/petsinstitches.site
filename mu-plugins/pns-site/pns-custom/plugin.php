@@ -22,6 +22,7 @@ function autoload() {
 		'helpers/helpers.php',
 		'faq/module.php',
 		'partners/module.php',
+		'post-op-content/module.php',
 		'services/module.php',
 		'testimonials/module.php',
 		'shared_taxonomies/helper.php',

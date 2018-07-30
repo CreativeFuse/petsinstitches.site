@@ -96,7 +96,7 @@ FROM {$wpdb->term_taxonomy} AS tt
 INNER JOIN {$wpdb->terms} AS t ON (tt.term_id = t.term_id)
 INNER JOIN {$wpdb->term_relationships} AS tr ON (tt.term_taxonomy_id = tr.term_taxonomy_id)
 INNER JOIN {$wpdb->posts} AS p ON (tr.object_id = p.ID)
-WHERE p.post_status = 'publish' AND p.post_type = %s AND tt.taxonomy = %s
+WHERE p.post_status = 'publish' AND p.post_type = %s AND tt.taxonomy = %s AND tt.parent = 0
 GROUP BY t.term_id, p.ID
 ORDER BY tt.order, t.term_id, p.menu_order ASC;";
 
@@ -109,44 +109,6 @@ ORDER BY tt.order, t.term_id, p.menu_order ASC;";
 	}
 
 	return $results;
-}
-
-/**
- * get all Postoperative FAQs for animal type (name)
- * 
- * to call this from a template: $var_name = CreativeFuse\PetsInStitches\FAQ\get_faqs_for_postop( $animal )
- * 
- * @param $animal
- * 
- * @return object
- */
-function get_faqs_for_postop( $animal ) {
-
-	/**
-	 * Query for the animal name that
-	 * is under the 'postoperative-care'
-	 * term parent.
-	 */
-	$args = array(
-		'post_type' => 'faqs',
-		'tax_query' => array(
-			array (
-				'taxonomy' => 'topic',
-				'field' => 'name',
-				'terms' => $animal,
-			),
-			array (
-				'taxonomy' => 'topic',
-				'field' => 'slug',
-				'terms' => 'postoperative-care',
-				'operator' => 'IN'
-			)
-		),
-	);
-
-	$query = new \WP_Query( $args );
-	return $query;
-
 }
 
 add_action( 'restrict_manage_posts', __NAMESPACE__ . '\add_topic_filter_to_admin_post_list' );

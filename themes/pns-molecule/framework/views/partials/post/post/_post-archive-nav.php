@@ -26,7 +26,10 @@
 
 				<?php
 					// Loop through and display Cats, Dogs, Rabits as Menu items
-					$categories = get_terms( array( 'taxonomy' => 'category' ) );
+					$categories = get_terms( array( 
+						'taxonomy' 	=> 'category',
+						'parent'	=> 0
+					) );
 
 					foreach ( $categories AS $category ) :
 				?>
