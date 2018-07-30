@@ -22,7 +22,7 @@ $postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop(
 
 		<div class="o-row o-row--sub-page p-post-op__row">
 
-			<div class="o-section o-section--post-archive">
+			<div class="o-section">
 
 				<div class="o-container o-container--max">
 
