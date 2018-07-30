@@ -24,9 +24,9 @@ $postop_faqs = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop(
 
 			<div class="o-row o-row--sub-page p-post-op__row">
 
-				<div class="p-faq__section">
+				<h2 class="e-h2 p-post-op__row__title u-color--blue">Postoperative Care FAQs</h2>
 
-					<h2 class="e-h2 p-post-op__row__title u-color--blue">Postoperative Care FAQs</h2>
+				<div class="p-faq__section">
 
 					<?php
 
