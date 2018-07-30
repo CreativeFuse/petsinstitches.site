@@ -158,7 +158,8 @@ section {
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
- *  * @author Christopher Hahn
+ * \
+ * @author Christopher Hahn
  * 
  */
 h1 {
@@ -2171,7 +2172,7 @@ hr {
 .c-card--flip__front {
   background-color: #ffffff;
   border: 4px solid #EDEDED;
-  box-shadow: 0 0px 0px transparent;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   color: #0066CC;
   text-transform: uppercase;
   transform: rotateX(0) rotateY(0);
@@ -2868,7 +2869,7 @@ html[data-lc-type=image] #lightcase-content .lightcase-contentInner {
   #lightcase-loading, #lightcase-loading:focus {
     text-decoration: none;
     color: #fff;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-transition: color, opacity, ease-in-out 0.25s;
     -moz-transition: color, opacity, ease-in-out 0.25s;
     -o-transition: color, opacity, ease-in-out 0.25s;
@@ -2891,7 +2892,7 @@ a[class*='lightcase-icon-'] {
   a[class*='lightcase-icon-'], a[class*='lightcase-icon-']:focus {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-transition: color, opacity, ease-in-out 0.25s;
     -moz-transition: color, opacity, ease-in-out 0.25s;
     -o-transition: color, opacity, ease-in-out 0.25s;
@@ -3951,6 +3952,9 @@ a[class*='lightcase-icon-'] {
 
 .p-post-op__row__video {
   margin-bottom: 70px; }
+
+.p-post-op__row__title {
+  margin-top: 0px; }
 
 .o-content--request-appointment-thank-you .o-col-md-8 .c-title-group,
 .o-content--contact-thank-you .o-col-md-8 .c-title-group {

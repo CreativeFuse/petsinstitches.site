@@ -28,6 +28,8 @@ $postop_blog = CreativeFuse\PetsInStitches\PostopContent\get_content_for_postop(
 
 					<div class="o-row">
 
+						<h2 class="e-h2 p-post-op__row__title u-color--blue">Postoperative Care Blogs</h2>
+
 						<div class="c-card__feed">
 
 							<?php
