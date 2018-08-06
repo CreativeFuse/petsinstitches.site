@@ -13,7 +13,9 @@
 $tabs = array(
 
 	'female',
-	'male'
+	'male',
+	'faqs',
+	'blogs'
 
 );
 
@@ -53,15 +55,23 @@ $tabs = array(
 					 * on available Post Op tabs
 					 */
 
-					
-					Molecule_Router::render( 'page/post-op', '_post-op', 'panel__gender', $tab );
+					if ($tab == 'female' || $tab == 'male') {
 
-					
-					
+						Molecule_Router::render( 'page/post-op', '_post-op', 'panel__gender', $tab );
+
+					} else if ($tab == 'faqs') {
+
+						Molecule_Router::render( 'page/post-op', '_post-op', 'panel__faqs');
+
+					} else if ($tab == 'blogs') {
+
+						Molecule_Router::render( 'page/post-op', '_post-op', 'panel__blogs');
+
+					}
+
 				}
 
 			?>
-
 
 	</div>
 
