@@ -20,7 +20,7 @@ class Molecule_Enqueue {
 	 *
 	 * @since  1.0.0
 	 */
-	
+
 	public function __construct(){
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_fonts' ), 1 );
@@ -37,19 +37,28 @@ class Molecule_Enqueue {
 
 	public function load_fonts(){
 
-		$family = "Delius:400|Assistant:300,400,600,700";
-		$query_args = array('family' => $family);
+		$base = 'https://fonts.googleapis.com/css?family=';
 
+		$families = 'Delius:400|Assistant:300,400,600,700';
 
-		wp_register_style( 'molecule-fonts', add_query_arg( $query_args,
-'//fonts.googleapis.com/css' ), array(), null );
+		$full_font_request_url = $base . $families;
 
-		// Load font if not in admin area
-		if( ! is_admin() ){
+		$fonts = [
 
-			wp_enqueue_style( 'molecule-fonts' );
+			'handle' 			=> 'app-fonts',
+			'src'				=> $full_font_request_url,
+			'dependencies'		=> null,
+			'version'			=> null,
+			'media'				=> 'all',
 
-		}
+		];
+
+		// Don't enqueue if we don't define font families to load
+		if( ! $families )
+			return;
+
+		wp_register_style( $fonts['handle'], $fonts['src'], $fonts['dependencies'], $fonts['version'], $fonts['media'] );
+		wp_enqueue_style( $fonts['handle'] );
 
 	}
 
@@ -108,7 +117,7 @@ class Molecule_Enqueue {
 		wp_register_script( 'molecule-lightcase', molecule()->get_setting( 'asset_uri' ) . 'dist/js/pns-lightcase.min.js', array( 'jquery' ), molecule()->get_setting( 'version' ) , true );
 
 
-		// Build an array for our Post Op Parent Page ID				
+		// Build an array for our Post Op Parent Page ID
 		$post_op_parent_id = array(
 
 			'152' 	=> 'dev',
@@ -124,7 +133,7 @@ class Molecule_Enqueue {
 		}
 
 		// Load if not in admin and if we are on the stray cats page
-		
+
 		if( ! is_admin() && is_page( 'stray-cats' ) ){
 
 			wp_enqueue_script( 'molecule-lightcase' );
