@@ -13,7 +13,6 @@ module.exports = {
     	'postcss-minify-font-values': {},
     	'postcss-merge-longhand': {},
 		'autoprefixer': {},
-		'postcss-clean': { format: devMode ? 'beautify' : '' },
-		'css-mqpacker': { sort: true },
+		'postcss-clean': { format: devMode ? 'beautify' : '' }
     }
 }
