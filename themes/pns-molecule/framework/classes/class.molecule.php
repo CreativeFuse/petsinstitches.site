@@ -54,7 +54,7 @@ class Molecule {
 	 *
 	 * @since    1.0.0
 	 */
-	
+
 	public function __construct() {
 
 	}
@@ -66,13 +66,13 @@ class Molecule {
 	 * 1. Define settings for our theme.
 	 * 2. Loads all deondencies
 	 * 3. Instantiates other necessary classes.
-	 * 
+	 *
 	 * @since  1.0.0
 	 */
 
 	public function initialize(){
 
-			
+
 		/**
 		 * Our Array of theme settings to be used across this project.
 		 *
@@ -91,20 +91,22 @@ class Molecule {
 			'framework_path'		=> get_template_directory() . '/framework/',
 			'class_path'			=> get_template_directory() . '/framework/classes/',
 			'asset_path'			=> get_template_directory() . '/framework/assets/',
-		    'asset_uri'				=> get_template_directory_uri() . '/framework/assets/',
+			'asset_uri'				=> get_template_directory_uri() . '/framework/assets/',
+			'prod_uri'				=> get_template_directory_uri() . '/_dist/',
+			'manifest_path'			=> get_theme_file_path() . '/_dist/manifest.json',
 		    'img_path'				=> get_template_directory_uri() . '/framework/assets/dist/imgs/',
 		    'svg_path'				=> get_template_directory_uri() . '/framework/assets/dist/svgs/icons.svg',
 		    'svg_dir'				=> get_template_directory_uri() . '/framework/assets/dist/svgs/',
 			'view_partial_path'		=> '/framework/views/partials/',
 			'view_template_path'	=> '/framework/views/templates/',
-			
+
 			//utility
 			'timezone'				=> 'America/New_York',
 			'stylesheet_cachebust'	=> filemtime( get_stylesheet_directory() . '/style.css' ),
 
 		);
 
-		
+
 		// Load all of the things!
 		$this->load_dependencies();
 
@@ -134,10 +136,11 @@ class Molecule {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	
+
 	private function load_dependencies() {
 
 		// setup classes
+		require_once $this->settings['class_path'] . '1_setup/class.manifest.php';
 		require_once $this->settings['class_path'] . '1_setup/class.setup-theme.php';
 		require_once $this->settings['class_path'] . '1_setup/class.setup-custom.php';
 
@@ -153,7 +156,7 @@ class Molecule {
 
 		/**
 		 * site classes
-		 * 
+		 *
 		 * Any additional classes created for this theme should be added to
 		 * the classes/3_site folder and required here.
 		 *
@@ -187,7 +190,7 @@ class Molecule {
 
 		/**
 		 * 3_site
-		 * 
+		 *
 		 * Any additional classes created for this theme should be added to
 		 * the classes/3_site folder and instantiated here if neeed.
 		 *

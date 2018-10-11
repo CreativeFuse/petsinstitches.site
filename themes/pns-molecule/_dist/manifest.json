@@ -1,0 +1,10 @@
+{
+  "app.css": "css/app.css",
+  "app.js": "js/app.js",
+  "fonts/lightcase.eot": "fonts/lightcase.eot",
+  "fonts/lightcase.ttf": "fonts/lightcase.ttf",
+  "fonts/lightcase.woff": "fonts/lightcase.woff",
+  "lightbox.js": "js/lightbox.js",
+  "partners.js": "js/partners.js",
+  "sprite.svg": "sprite.svg"
+}

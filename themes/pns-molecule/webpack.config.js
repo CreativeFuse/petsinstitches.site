@@ -25,7 +25,6 @@ const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const ExtractCssChunks = require( 'extract-css-chunks-webpack-plugin' );
 const FriendlyErrorsWebpackPlugin = require( 'friendly-errors-webpack-plugin' );
 const SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' );
-const StyleLintPlugin = require( 'stylelint-webpack-plugin' );
 const WebpackAssetsManifest = require( 'webpack-assets-manifest' );
 const WebpackMd5Hash = require( 'webpack-md5-hash' );
 
@@ -51,8 +50,9 @@ const projectSettings = {
 
     jsEntryFiles: {
 
-        app: './resources/assets/js/app.js',
-        critical: './resources/assets/js/critical.js',
+        app: './framework/assets/src/js/app.js',
+        partners: './framework/assets/src/js/partners.js',
+        lightbox: './framework/assets/src/js/lightbox.js',
 
     },
 
@@ -77,6 +77,13 @@ const config = {
 
     },
 
+    // Define libraries loaded outside our webpack environment
+    externals: {
+
+        jquery: 'jQuery'
+
+    },
+
     module: {
 
         rules: [
@@ -95,7 +102,7 @@ const config = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                use: ['babel-loader', 'eslint-loader'],
+                use: ['babel-loader'],
             },
 
             /**
@@ -126,14 +133,14 @@ const config = {
              * Font Loader
              */
             {
-                test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
                             outputPath: 'fonts/',
-                            publicPath: '../wp-content/themes/fuse/_dist/fonts/',
+                            publicPath: '../fonts/',
                         },
                     },
                 ],
@@ -155,7 +162,7 @@ const config = {
                 test: /\.svg$/,
                 include: [
 
-                    path.resolve( __dirname, 'resources/assets/icons' ),
+                    path.resolve( __dirname, 'framework/assets/src/icons' ),
 
                 ],
                 use: [{
@@ -178,7 +185,7 @@ const config = {
                             { removeUselessStrokeAndFill: true },
                             { convertColors: { shorthex: false } },
                             { convertShapeToPath: true },
-                            { removeAttrs: { attrs: '(stroke|fill)' } },
+                            { removeAttrs: { attrs: '(stroke)' } },
                             { removeMetadata: true },
                         ],
                     },
@@ -220,14 +227,14 @@ const config = {
          * @since 1.0.0
          *
          */
-        new StyleLintPlugin({
+        // new StyleLintPlugin({
 
-            configFile: '.stylelintrc',
-            failOnError: false,
-            files: '**/*.scss',
-            quiet: false,
+        //     configFile: '.stylelintrc',
+        //     failOnError: false,
+        //     files: '**/*.scss',
+        //     quiet: false,
 
-        }),
+        // }),
 
         /**
          * WebpackMd5Hash
@@ -324,14 +331,14 @@ const config = {
 
             // Copy images to dist
             {
-                from: './resources/assets/images/**/*',
+                from: './framework/assets/src/images/**/*',
                 to: './images/',
                 flatten: true,
             },
 
             // Copy fonts to dist
             {
-                from: './resources/assets/fonts/**/*',
+                from: './framework/assets/src/fonts/**/*',
                 to: './fonts/',
                 flatten: true,
             },

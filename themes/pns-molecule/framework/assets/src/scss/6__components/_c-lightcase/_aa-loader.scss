@@ -9,22 +9,22 @@
  */
 
 // Import settings
-@import 'components/settings';
+@import "components/settings";
 
 // Import icon font
-@import 'components/fonts/font-lightcase';
+@import "components/fonts/font-lightcase";
 
 // Import mixins
-@import 'components/mixins/presets';
-@import 'components/mixins/utilities';
+@import "components/mixins/presets";
+@import "components/mixins/utilities";
 
 // Import modules
-@import 'components/modules/animations';
-@import 'components/modules/case';
-@import 'components/modules/content';
-@import 'components/modules/error';
-@import 'components/modules/global';
-@import 'components/modules/info';
-@import 'components/modules/loading';
-@import 'components/modules/navigation';
-@import 'components/modules/overlay';
+@import "components/modules/animations";
+@import "components/modules/case";
+@import "components/modules/content";
+@import "components/modules/error";
+@import "components/modules/global";
+@import "components/modules/info";
+@import "components/modules/loading";
+@import "components/modules/navigation";
+@import "components/modules/overlay";

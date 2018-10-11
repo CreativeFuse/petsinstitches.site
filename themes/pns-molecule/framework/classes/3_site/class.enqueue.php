@@ -24,9 +24,9 @@ class Molecule_Enqueue {
 	public function __construct(){
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_fonts' ), 1 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'load_script_bundle' ), 1 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'load_lightcase' ), 2 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'load_isotope' ), 2);
+		add_action( 'wp_enqueue_scripts', array( $this, 'load_app_scripts' ), 1 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'load_partners_scripts' ), 2 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'load_lightbox_scripts' ), 2);
 	}
 
 	/**
@@ -69,14 +69,22 @@ class Molecule_Enqueue {
 	 * @since  1.0.0
 	 */
 
-	public function load_script_bundle(){
+	public function load_app_scripts(){
 
-		wp_register_script( 'molecule-script-bundle', molecule()->get_setting( 'asset_uri' ) . 'dist/js/core.bundle.min.js', array( 'jquery' ), molecule()->get_setting( 'version' ) , true );
+		$script = [
 
-		// Load if not in admin area
+			'handle' 			=> 'app-script',
+			'src'				=> Manifest::get_asset( 'app.js' ),
+			'dependencies'		=> ['jquery'],
+			'version'			=> null,
+			'load_in_footer'	=> true,
+
+		];
+
 		if( ! is_admin() ){
 
-			wp_enqueue_script( 'molecule-script-bundle' );
+			wp_register_script( $script['handle'], $script['src'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
+			wp_enqueue_script( $script['handle'] );
 
 		}
 
@@ -89,14 +97,24 @@ class Molecule_Enqueue {
 	 * @since  1.0.0
 	 */
 
-	public function load_isotope(){
+	public function load_partners_scripts(){
 
-		wp_register_script( 'molecule-isotope', molecule()->get_setting( 'asset_uri' ) . 'dist/js/pns-isotope.min.js', array( 'jquery' ), molecule()->get_setting( 'version' ) , true );
+		$script = [
+
+			'handle' 			=> 'partners-script',
+			'src'				=> Manifest::get_asset( 'partners.js' ),
+			'dependencies'		=> ['jquery'],
+			'version'			=> null,
+			'load_in_footer'	=> true,
+
+		];
+
 
 		// Load if not in admin area
 		if( ! is_admin() && is_post_type_archive( 'partners' ) ){
 
-			wp_enqueue_script( 'molecule-isotope' );
+			wp_register_script( $script['handle'], $script['src'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
+			wp_enqueue_script( $script['handle'] );
 
 		}
 
@@ -109,12 +127,10 @@ class Molecule_Enqueue {
 	 * @since  1.0.0
 	 */
 
-	public function load_lightcase(){
+	public function load_lightbox_scripts(){
 
 		// Bring in our post global
 		global $post;
-
-		wp_register_script( 'molecule-lightcase', molecule()->get_setting( 'asset_uri' ) . 'dist/js/pns-lightcase.min.js', array( 'jquery' ), molecule()->get_setting( 'version' ) , true );
 
 
 		// Build an array for our Post Op Parent Page ID
@@ -124,11 +140,22 @@ class Molecule_Enqueue {
 			'274' 	=> 'live'
 		);
 
+		$script = [
+
+			'handle' 			=> 'lightbox-script',
+			'src'				=> Manifest::get_asset( 'lightbox.js' ),
+			'dependencies'		=> ['jquery'],
+			'version'			=> null,
+			'load_in_footer'	=> true,
+
+		];
+
 		// Load if not in admin area and if we are on a post parent page
 
 		if( ! is_admin() && array_key_exists( $post->post_parent, $post_op_parent_id ) ){
 
-			wp_enqueue_script( 'molecule-lightcase' );
+			wp_register_script( $script['handle'], $script['src'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
+			wp_enqueue_script( $script['handle'] );
 
 		}
 
@@ -136,7 +163,8 @@ class Molecule_Enqueue {
 
 		if( ! is_admin() && is_page( 'stray-cats' ) ){
 
-			wp_enqueue_script( 'molecule-lightcase' );
+			wp_register_script( $script['handle'], $script['src'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
+			wp_enqueue_script( $script['handle'] );
 
 		}
 

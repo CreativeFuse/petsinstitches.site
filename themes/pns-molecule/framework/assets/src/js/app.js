@@ -1,0 +1,52 @@
+/**
+ * The main script file for our application.
+ * This script will be loaded globally.
+ */
+import '../scss/app.scss';
+
+/**
+ * Handle SVG Icons
+ */
+import './app/icons';
+
+
+/**
+ * Import Project Libraries
+ */
+
+ // Slider Library
+ import './app/libs/unslider';
+
+ // Velocity Animation Library
+ import './app/libs/velocity';
+
+ // Tab builder + tab animation library. (modified from original codebase)
+ // Depends on velocity.js
+ import './app/libs/tabtab';
+
+/**
+ * Import Project Patterns
+ */
+
+ // Accordions
+ import './app/components/accordion--simple';
+ import './app/components/accordion--fancy';
+
+  // c-box
+  import './app/components/c-box';
+
+ // Flip  Card
+ import './app/components/flip-card';
+
+ // Menus
+ import './app/components/mega-menu';
+ import './app/components/mobile-menu';
+
+ // Action Bars
+ import './app/components/sticky-action-panel';
+
+// Tabs
+ import './app/components/tabs';
+
+// Slider
+ import './app/components/slider';
