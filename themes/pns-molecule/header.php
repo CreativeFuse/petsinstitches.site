@@ -31,11 +31,11 @@
 		/**
 		 * Load site header and main navigation bar
 		 */
-			
+
 		?>
 
 		<header class="o-header" role="banner">
-		
+
 			<?php Molecule_Router::render( 'core', '_topbar', 'site' ) ?>
 			<?php Molecule_Router::render( 'core', '_navbar', 'primary' ) ?>
 
@@ -50,12 +50,12 @@
 		<div class="o-main" role="main">
 
 
-			<?php 
+			<?php
 
 
 				do_action( 'molecule_after_main_begins' );
 
-				
+
 				/**
 				 * load the Sticky Action Items
 				 */

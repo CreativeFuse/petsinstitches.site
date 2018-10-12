@@ -29,7 +29,7 @@ class Molecule_Router{
 	 * @param		$extension	The trailing part of the view file name
 	 * @param		$output		Makes the current output variable available to the view to be loaded
 	 *
-	 * @access	public 
+	 * @access	public
 	 *
 	 * @since  1.0.0
 	 */
@@ -57,7 +57,7 @@ class Molecule_Router{
 
 				 * - The $load parameter default to false because we are wrapping it in an include().
 				 *   If we do not set it to false, the view will output twice
-				 *                    
+				 *
 				 * @since  1.0.0
 				 */
 
@@ -65,7 +65,7 @@ class Molecule_Router{
 
 
 			// Returns the output variable from the template file if needed
-				
+
 			return $output;
 
 
@@ -92,7 +92,7 @@ class Molecule_Router{
 	 * @param		$base		The first part of the view file name
 	 * @param		$extension	The trailing part of the view file name
 	 *
-	 * @access	public 
+	 * @access	public
 	 *
 	 * @since  1.0.0
 	 */
@@ -120,7 +120,7 @@ class Molecule_Router{
 
 			 * - The $load parameter default to false because we are wrapping it in an include().
 			 *   If we do not set it to false, the view will output twice
-			 *                    
+			 *
 			 * @since  1.0.0
 			 */
 
@@ -168,8 +168,8 @@ class Molecule_Router{
 	 * @param  string $size     Size of the image to be requested ( default = full )
 	 *
 	 * @return string           Either the URL or alt of the image, both appropriately sanatized.
-	 * @access	public 
-	 * 
+	 * @access	public
+	 *
 	 * @since 1.0.0
 	 */
 
@@ -178,7 +178,7 @@ class Molecule_Router{
 		// declare $post global if used outside of the loop
 		global $post;
 
-		
+
 
 		//Set a blank Value to preven errors
 		$value = '';
@@ -308,7 +308,7 @@ class Molecule_Router{
 
 			global $post;
 
-			
+
 			/**
 			 * Build arrays of parent pages we need to create
 			 * custom routing for. The parent ID needs to be
@@ -316,7 +316,7 @@ class Molecule_Router{
 			 */
 
 				// Build an array for our Post Op Parent Page ID
-				
+
 				$post_op_parent_id = array(
 
 					'152' 	=> 'dev',
@@ -331,18 +331,18 @@ class Molecule_Router{
 
 				$folder = 'page';
 				$extension = 'post-op';
-				
+
 
 			} else {
 
-				
+
 				// Set Defaults for page handling
 				$folder = 'page';
 				$extension = Molecule_Display::page_title( false );
 
 			}
 
-		
+
 
 
 		} elseif( is_tax() ){
@@ -352,7 +352,7 @@ class Molecule_Router{
 			$extension = Molecule_Display::post_type_name( false );
 			$extension .= '-';
 			$extension .= Molecule_Display::term_name( false );
-			
+
 
 		} elseif( is_category() ){
 
@@ -361,7 +361,7 @@ class Molecule_Router{
 
 
 		} elseif( is_archive() ){
-			
+
 			// If we are on the standard Post Archive
 			// Load our Post Template
 			if ( is_post_type_archive( 'posts' ) ){
@@ -392,7 +392,7 @@ class Molecule_Router{
 
 
 		Molecule_Router::render_template( $folder, $extension );
-		
+
 
 	}
 
@@ -401,13 +401,13 @@ class Molecule_Router{
 	 * The method that is responsible for loading hero sections ( headers ) accross the site.
 	 * It runs through various conditional to see what page or post we are on, and then loads
 	 * the defined hero file.
-	 * 
+	 *
 	 * To add and load a new hero, simply define the desired post type conditionals and create
 	 * the appropriate hero file in FRAMEWORk/VIEWS/HERO/_hero-( 'your hero name' )
-	 * 
+	 *
 	 * @uses Molecule_Router::render to render the appropriate hero file
-	 * @access	public 
-	 * 
+	 * @access	public
+	 *
 	 * @since 1.0
 	 */
 
@@ -460,7 +460,7 @@ class Molecule_Router{
 
 
 				Molecule_Router::render( 'object/hero', '_hero', 'services-archive' );
-				
+
 
 			} elseif ( is_post_type_archive( 'partners' ) ){
 
@@ -490,7 +490,7 @@ class Molecule_Router{
 
 			if( is_singular( 'post' ) ) {
 
-		
+
 			} else {}
 
 
@@ -511,13 +511,13 @@ class Molecule_Router{
 	/**
 	 * Similar to the load_hero method, this is the method that is responsible for conditionally
 	 * loading Call to Actions on the site.
-	 * 
+	 *
 	 * To add and load a new CTA, simply define the desired post type conditionals and create
 	 * the appropriate CTA file in FRAMEWORk/VIEWS/CTA/_cta-( 'your cta name' )
 	 *
 	 * @uses Molecule_Router::render to render the appropriate hero file
-	 * @access	public 
-	 * 
+	 * @access	public
+	 *
 	 * @since 1.0
 	 */
 

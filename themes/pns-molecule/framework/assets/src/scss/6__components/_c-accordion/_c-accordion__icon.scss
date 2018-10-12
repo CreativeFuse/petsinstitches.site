@@ -4,7 +4,6 @@
 
 // Settings
 
-
 // Icon Wrapper
 .c-accordion__icon{
 
@@ -12,9 +11,8 @@
   position: absolute;
   transition: transition( accordion );
   transform-origin: 50% 50%;
-  
-}
 
+}
 
 // Icon Bar Default Styles
 .c-accordion__icon-bar{
@@ -35,15 +33,13 @@
  * Simple Accordion Icon
  */
 
-
  $accordion_icon_size_simple : 20px;
-
 
 // Wrapper
   .c-accordion__icon--simple{
 
     height: $accordion_icon_size_simple;
-    top: calc( 47% - ( #{$accordion_icon_size_simple} / 2 );
+    top: calc( 47% - ( #{$accordion_icon_size_simple} / 2 ) );
     width: $accordion_icon_size_simple;
     right: 15px;
 
@@ -74,22 +70,18 @@
 // Simple Variation 1
 .c-accordion--simple--1 .c-accordion__icon--simple .c-accordion__icon-bar{
 
-    background-color: color( blue );   
+    background-color: color( blue );
 
 }
 
 // Simple Variation 2
-// 
+//
   .c-accordion--simple--2 .c-accordion__icon--simple .c-accordion__icon-bar{
 
-    background-color: color( blue-m );    
-    
+    background-color: color( blue-m );
+
 
   }
-
-
-
-
 
  /**
   * Fancy Accordion Icon
@@ -101,7 +93,7 @@
 //Wrapper
   .c-accordion__icon--fancy{
     height: $accordion_icon_size_fancy;
-    top: calc( 50% - ( #{$accordion_icon_size_fancy} / 2 );
+    top: calc( 50% - ( #{$accordion_icon_size_fancy} / 2 ) );
     width: $accordion_icon_size_fancy;
     right: 0px;
 
@@ -114,15 +106,12 @@
 // Icon Bars
   .c-accordion__icon--fancy .c-accordion__icon-bar{
 
-      background-color: color( blue );    
+      background-color: color( blue );
       right: 7px;
       top: 20px;
       width:30px;
 
   }
-
-
-
 
 /**
  * Handle the animation of the accordion icon wrapper and bars
