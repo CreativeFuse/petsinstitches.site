@@ -14,18 +14,21 @@
 
 				<div class="c-partners__grid__sizer"></div>
 
-				<?php 
+				<?php
 
 					while( have_posts() ) : the_post();
 
 						// Each item rendered uses the following card component
 						Molecule_Router::render( 'post/partners', '_partner', 'card' );
 
-						
+
 					endwhile;
 				?>
 
 			</div>
 
+		</div>
+
 	</div>
+
 </div>
