@@ -5,7 +5,7 @@
  *
  *
  * @link       http://creativefuse.org/
- * @since      1.0.0
+ * @since      1.1.0
  *
  * @package    Molecule
  * @subpackage Molecule/workers

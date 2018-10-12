@@ -1,3 +1,5 @@
+import velocity from 'velocity-animate';
+
 (function($) {
 
     'use strict';
@@ -48,13 +50,13 @@
 		 */
 
 		$accordionBody.velocity ( slideDir, {
-			
+
 		// Our accordion has been clicked
 		  begin: function(){
 		  	$(this).closest( $accordion ).toggleClass( active );
 		  },
 
-	      easing: 'ease', 
+	      easing: 'ease',
 
 	      duration: dur,
 

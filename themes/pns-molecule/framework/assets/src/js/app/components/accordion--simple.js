@@ -1,4 +1,6 @@
-(function($) {
+import velocity from 'velocity-animate';
+
+;(function( $, window, document, undefined ){
 
     'use strict';
 
@@ -37,20 +39,19 @@
 		var	slideDir = isOpen ? 'slideUp' : 'slideDown';
 		var	dur = isOpen ? 300 : 300;
 
-
 		/**
 		 * Using Velocity JS, we will handle the animation
 		 * of our accordion!
 		 */
 
-		$accordionBody.velocity ( slideDir, {
-			
+		$accordionBody.velocity( slideDir, {
+
 		// Our accordion has been clicked
 		  begin: function(){
 		  	$(this).closest( $accordion ).toggleClass( active );
 		  },
 
-	      easing: 'ease', 
+	      easing: 'ease',
 
 	      duration: dur,
 
@@ -65,4 +66,4 @@
 	});
 
 
-}(jQuery));
+})( jQuery, window, document );

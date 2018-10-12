@@ -5,7 +5,7 @@
  * for a modern Wordpress build process.
  *
  * @author  CreativeFuse
- * @since   1.0.0
+ * @since   1.1.0
  *
  * WP JS Coding Standards Reference:
  * @see https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/
@@ -97,7 +97,7 @@ const config = {
              *
              * @kind    loader
              * @see     https://github.com/babel/babel-loader
-             * @since   1.0.0
+             * @since   1.1.0
              */
             {
                 test: /\.js$/,
@@ -109,7 +109,7 @@ const config = {
              * SCSS Loader w/ POSTCss
              *
              * @kind    loader
-             * @since   1.0.0
+             * @since   1.1.0
              * @uses    ExtractCssChunks
              */
             {
@@ -155,7 +155,7 @@ const config = {
              * @see https://github.com/kisenka/svg-sprite-loader
              * @see https://github.com/rpominov/svgo-loader
              * @see https://github.com/svg/svgo
-             * @since   1.0.0
+             * @since   1.1.0
              */
 
             {
@@ -206,7 +206,7 @@ const config = {
          * @description Create CSS files from our SCSS files and bundle them together. Note that we
          * are using hashing on production only for cache busting.
          * @see   https://github.com/faceyspacey/extract-css-chunks-webpack-plugin
-         * @since 1.0.0
+         * @since 1.1.0
          *
          */
 
@@ -219,30 +219,12 @@ const config = {
         }),
 
         /**
-         * StyleLintPlugin.
-         *
-         * A Stylelint plugin for webpack.
-         *
-         * @see   https://github.com/webpack-contrib/stylelint-webpack-plugin
-         * @since 1.0.0
-         *
-         */
-        // new StyleLintPlugin({
-
-        //     configFile: '.stylelintrc',
-        //     failOnError: false,
-        //     files: '**/*.scss',
-        //     quiet: false,
-
-        // }),
-
-        /**
          * WebpackMd5Hash
          *
          * @description Plugin to replace a standard webpack chunkhash with md5. This
          * hashing is used for our production files ONLY.
          *
-         * @since  1.0.0
+         * @since  1.1.0
          * @see https://github.com/erm0l0v/webpack-md5-hash
          */
         new WebpackMd5Hash(),
@@ -250,7 +232,7 @@ const config = {
         /**
          * BrowserSyncPlugin
          *
-         * @since  1.0.0
+         * @since  1.1.0
          *
          * @see https://github.com/Va1/browser-sync-webpack-plugin
          * @description Implement BrowserSync to use live reloading auto style-injecting
@@ -285,7 +267,7 @@ const config = {
          * @description recognizes certain classes of webpack errors and cleans, aggregates
          * and prioritizes them to provide a better Developer Experience.
          *
-         * @since  1.0.0
+         * @since  1.1.0
          * @see https://github.com/geowarin/friendly-errors-webpack-plugin
          */
         new FriendlyErrorsWebpackPlugin({}),
@@ -297,7 +279,7 @@ const config = {
          * before our build process runs. If the build process throws a fatal error, the site will break. When this happens,
          * the error must be fixed, and we must stop terminal and re-initialize the build process.
          *
-         * @since  1.0.0
+         * @since  1.1.0
          * @see https://github.com/johnagan/clean-webpack-plugin/
          */
         new CleanWebpackPlugin( '_dist', {}),
@@ -311,7 +293,7 @@ const config = {
          * and would leave all the old files behind when new ones are recompiled
          * with new hashes.
          *
-         * @since  1.0.0
+         * @since  1.1.0
          * @see https://github.com/GProst/webpack-clean-obsolete-chunks
          */
         new CleanObsoleteChunks({}),
@@ -324,7 +306,7 @@ const config = {
          * to be copied to our dist folder. This plugin
          * handles those instances.
          *
-         * @since 1.0.0
+         * @since 1.1.0
          * @see https://github.com/webpack-contrib/copy-webpack-plugin
          */
         new CopyWebpackPlugin([
@@ -354,7 +336,7 @@ const config = {
          * can simply reference the key of the file name and get the hashed file.
          * This allows us to implement a better cache busting system (no more query string cache issues).
          *
-         * @since  1.0.0
+         * @since  1.1.0
          * @see https://github.com/webdeveric/webpack-assets-manifest
          */
         new WebpackAssetsManifest({}),
@@ -365,7 +347,7 @@ const config = {
          * Takes SVGs processed by `svg-sprite-loader` and extracts
          * them into a sprite.
          *
-         * @since 1.0.0
+         * @since 1.1.0
          * @see https://github.com/kisenka/svg-sprite-loader
          */
         new SpriteLoaderPlugin({ plainSprite: true }),
@@ -379,7 +361,7 @@ const config = {
      * @description I like the way Roots/Sage looks when running a build,
      * so I grabbed their stats settings.
      *
-     * @since  1.0.0
+     * @since  1.1.0
      * @see https://github.com/roots/sage/blob/master/resources/assets/build/webpack.config.js#L25
      */
     stats: {

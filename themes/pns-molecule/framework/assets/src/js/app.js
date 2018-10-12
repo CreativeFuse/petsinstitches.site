@@ -17,11 +17,7 @@ import './app/icons';
  // Slider Library
  import './app/libs/unslider';
 
- // Velocity Animation Library
- import './app/libs/velocity';
-
  // Tab builder + tab animation library. (modified from original codebase)
- // Depends on velocity.js
  import './app/libs/tabtab';
 
 /**

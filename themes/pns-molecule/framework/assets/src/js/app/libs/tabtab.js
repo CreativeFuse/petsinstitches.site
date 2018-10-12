@@ -1,4 +1,6 @@
 /*! tabtab.js - v0.1.3 | (c) 2015 @gijsroge | MIT license | https://github.com/gijsroge/tabtab.js */
+import velocity from 'velocity-animate';
+
 (function($) {
 
     'use strict';
@@ -458,7 +460,7 @@
                             duration: settings.speed,
                             queue: false
                         });
-                        
+
                     } else if(settings.animateHeight === false && settings.fixedHeight === false){
                         _this.find('.js-tabs-height').css('height', $(contentItem).eq(selectedItem).outerHeight());
                     }
