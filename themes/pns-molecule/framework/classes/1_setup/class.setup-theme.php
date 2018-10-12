@@ -31,7 +31,6 @@ class Molecule_Theme_Setup{
 		add_action( 'after_setup_theme', array( $this, 'add_theme_support' ));
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_stylesheet' ), 10 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'load_shiv' ));
 
 	}
 
@@ -72,9 +71,7 @@ class Molecule_Theme_Setup{
 
 	public function add_theme_support(){
 
-
 		add_theme_support( 'post-thumbnails' );
-
 
 	}
 
@@ -82,29 +79,25 @@ class Molecule_Theme_Setup{
 	 * Register & Enqueue style.css
 	 *
 	 * @uses a setting defined in Molecule for cachebusting with filetime versioning.
-	 * 
+	 *
 	 * @since  1.0.0
 	 */
 
 	public function load_stylesheet(){
 
-		wp_register_style( molecule()->get_setting('theme_name'), get_template_directory_uri() . '/style.css', array() , molecule()->get_setting('stylesheet_cachebust') , 'all' );
-		wp_enqueue_style( molecule()->get_setting('theme_name') );
+		$stylesheet = [
 
-	}
+			'handle' 			=> 'app-styles',
+			'src'				=> Manifest::get_asset( 'app.css' ),
+			'dependencies'		=> null,
+			'version'			=> null,
+			'media'				=> 'all',
 
-	/**
-	 * Register and enqueue HTML5 Shiv in our project if
-	 * if we are in IE 8 or 9
-	 *
-	 * @since  1.0.0
-	 */
+		];
 
-	public function load_shiv(){
+		wp_register_style( $stylesheet['handle'], $stylesheet['src'], $stylesheet['dependencies'], $stylesheet['version'], $stylesheet['media'] );
+		wp_enqueue_style( $stylesheet['handle'] );
 
-		wp_register_script( 'html5-shiv', molecule()->get_setting('asset_uri') . 'dist/js/html5shiv.min.js', array() , '1.0' , false );
-		wp_enqueue_script( 'html5-shiv' );
-		wp_script_add_data( 'html5-shiv', 'conditional', 'lt IE 9' );
 
 	}
 

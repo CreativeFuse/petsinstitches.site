@@ -69,6 +69,9 @@ wp-cache-config.php
 
 !themes/pns-molecule/
 
+## Ignore our DIST
+themes/pns-molecule/_dist
+
 
 # --------------------------------------------------------
 # ALL custom plugins are MU plugins. Let's whitelist them.
