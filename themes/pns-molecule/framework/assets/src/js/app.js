@@ -14,8 +14,11 @@ import './app/icons';
  * Import Project Libraries
  */
 
- // Slider Library
- import './app/libs/unslider';
+ // Allows direct reference to svg `#` identifier in our codebase without breaking things
+import './app/libs/svg-poyfill';
+
+// Slider Library
+import './app/libs/unslider';
 
  // Tab builder + tab animation library. (modified from original codebase)
  import './app/libs/tabtab';

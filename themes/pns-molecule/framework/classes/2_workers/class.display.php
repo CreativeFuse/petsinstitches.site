@@ -3,7 +3,7 @@
 /**
  * This class contains methods that output information & Content for
  * the front end of the site.
- * 
+ *
  *
  *
  * @link       http://creativefuse.org/
@@ -23,13 +23,13 @@ class Molecule_Display {
 
 	/**
 	 * Get and return the page title to use in our theme.
-	 * 
+	 *
 	 * @access public
 	 * @return string 	a lowercased, hyphenated version of the current page's page title
-	 * 
+	 *
 	 * @since  1.0.0
 	 */
-	
+
 	public static function page_title( $echo = true ){
 
 		// Get the page title
@@ -61,7 +61,7 @@ class Molecule_Display {
 	 *
 	 * @access public
 	 * @return		string 		lower case name of post type with space separated by hyphens
-	 * 
+	 *
 	 * @since  1.0.0
 	 */
 
@@ -91,7 +91,7 @@ class Molecule_Display {
 
 		}
 
-			
+
 	}
 
 
@@ -100,7 +100,7 @@ class Molecule_Display {
 	 *
 	 * @access public
 	 * @return		string 		lower case name of post type with space separated by hyphens
-	 * 
+	 *
 	 * @since  1.0.0
 	 */
 
@@ -128,16 +128,16 @@ class Molecule_Display {
 
 		}
 
-	
+
 	}
 
 
 	/**
 	 * Always output the current year!
-	 * 
+	 *
 	 * @access public
 	 *
-	 * @author CSS Tricks          
+	 * @author CSS Tricks
 	 * @since 1.0.0
 	 */
 
@@ -174,10 +174,10 @@ class Molecule_Display {
 
 	/**
 	 * Build the site Copyright
-	 * 
+	 *
 	 * @access public
 	 *
-	 * @author CSS Tricks          
+	 * @author CSS Tricks
 	 * @since 1.0.0
 	 */
 
@@ -205,12 +205,12 @@ class Molecule_Display {
 
 
 	/**
-	 * Build a function to handle the output of svg icons acros the site
+	 * Build a function to handle the output of svg icons across the site
 	 *
 	 * This integrates tightly with our GULP build process for SVG Icons
 	 *
 	 * @access public
-	 * 
+	 *
 	 * @param string $name the name of the icon
 	 * @param sring $class a custom class entered by the user
 	 *
@@ -219,16 +219,14 @@ class Molecule_Display {
 
 	public static function svg( $name, $class = '' ){
 
-		$sprite = molecule()->get_setting('svg_path');
-
 		// A custom class
         if( $class ){
             $class = 'c-icon--' . $class;
         }
 
 
-        $svg = '<svg class="c-icon c-icon--'.$name.' '.esc_attr( $class ).'" xmlns=http://www.w3.org/2000/svg role="img" >';
-           	$svg .= '<use xlink:href="'.$sprite.'#icon--' . $name .'"></use>';
+        $svg = '<svg class="c-icon c-icon--'.$name.' '.esc_attr( $class ).'" xmlns="http://www.w3.org/2000/svg" role="img" >';
+           	$svg .= '<use xlink:href="#icon--' . $name .'"></use>';
         $svg .= '</svg>';
 
         echo $svg;

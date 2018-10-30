@@ -92,7 +92,8 @@ class Molecule {
 			'class_path'			=> get_template_directory() . '/framework/classes/',
 			'asset_path'			=> get_template_directory() . '/framework/assets/',
 			'asset_uri'				=> get_template_directory_uri() . '/framework/assets/',
-			'prod_uri'				=> get_template_directory_uri() . '/_dist/',
+			'prod_uri'				=> get_theme_file_uri() . '/_dist/',
+			'prod_path'				=> get_theme_file_path() . '/_dist/',
 			'manifest_path'			=> get_theme_file_path() . '/_dist/manifest.json',
 		    'img_path'				=> get_template_directory_uri() . '/framework/assets/dist/imgs/',
 		    'svg_path'				=> get_theme_file_path() . '/framework/assets/dist/svgs/icons.svg',
@@ -163,6 +164,7 @@ class Molecule {
 		 */
 
 		require_once $this->settings['class_path'] . '3_site/class.enqueue.php';
+		require_once $this->settings['class_path'] . '3_site/class.svg.php';
 		require_once $this->settings['class_path'] . '3_site/class.query.php';
 		require_once $this->settings['class_path'] . '3_site/class.mega-menu.php';
 
