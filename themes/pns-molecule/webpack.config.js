@@ -46,7 +46,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const projectSettings = {
 
     // Replace with the local dev URL for your site
-    proxy: 'https://pns.dev',
+    proxy: 'https://pns.local',
 
     jsEntryFiles: {
 
