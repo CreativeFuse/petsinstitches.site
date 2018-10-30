@@ -95,8 +95,8 @@ class Molecule {
 			'prod_uri'				=> get_template_directory_uri() . '/_dist/',
 			'manifest_path'			=> get_theme_file_path() . '/_dist/manifest.json',
 		    'img_path'				=> get_template_directory_uri() . '/framework/assets/dist/imgs/',
-		    'svg_path'				=> get_template_directory_uri() . '/framework/assets/dist/svgs/icons.svg',
-		    'svg_dir'				=> get_template_directory_uri() . '/framework/assets/dist/svgs/',
+		    'svg_path'				=> get_theme_file_path() . '/framework/assets/dist/svgs/icons.svg',
+		    'svg_dir'				=> get_theme_file_path() . '/framework/assets/dist/svgs/',
 			'view_partial_path'		=> '/framework/views/partials/',
 			'view_template_path'	=> '/framework/views/templates/',
 
@@ -105,7 +105,6 @@ class Molecule {
 			'stylesheet_cachebust'	=> filemtime( get_stylesheet_directory() . '/style.css' ),
 
 		);
-
 
 		// Load all of the things!
 		$this->load_dependencies();

@@ -18,7 +18,7 @@ if( $group ){ ?>
 					<div class="c-text-block u-align--center">
 
 						<p itemprop="description" class="e-p--large u-color--white u-max-width--800 u-center">
-							<?php esc_html_e( $group[ 'intro_copy' ] ); ?>
+							<?= $group[ 'intro_copy' ]; ?>
 						</p>
 
 					</div>
