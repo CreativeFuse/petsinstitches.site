@@ -1,13 +1,4 @@
-<?php
-
-$page = 'request_appointment';
-$group = get_field( $page );
-
-
-if( $group ){ ?>
-
-
-	<div class="c-intro o-section u-gradient--blue u-arrow--bottom">
+	<div class="o-section o-section--request-apt-intro">
 
 		<div class="o-container o-container--max">
 
@@ -15,10 +6,16 @@ if( $group ){ ?>
 
 				<div class="o-col-md-12">
 
-					<div class="c-text-block u-align--center">
+					<div class="c-title-group c-text-block u-align--center">
 
-						<p itemprop="description" class="e-p--large u-color--white u-max-width--800 u-center">
-							<?= $group[ 'intro_copy' ]; ?>
+						<img class="c-logo" src="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'url', 'nav_logo_desktop'); ?>" alt="<?php echo Molecule_Router::get_img_meta( 'acf_options', 'alt', 'nav_logo_desktop'); ?>">
+
+						<h1 class="e-h1 c-title-group__title u-color--blue">
+							Request an Appointment
+						</h1>
+
+						<p itemprop="description" class="c-title-group__sub e-p--large u-max-width--800 u-center">
+							<?= get_field('request_appointment_intro_copy' ); ?>
 						</p>
 
 					</div>
@@ -27,5 +24,3 @@ if( $group ){ ?>
 			</div>
 		</div>
 	</div>
-
-<?php } ?>
