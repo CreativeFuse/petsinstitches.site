@@ -1,33 +1,144 @@
-/**
- * This styles the "container" of Gravity Forms
- */
 
-.c-form .gform_fields .ginput_container,
-.c-form .gform_wrapper ul li.gfield{
-    
-    margin-bottom: 15px !important;
-    
+
+.c-form{
+    background-color: color( grayscale, white );
+    border-radius: 10px;
+    padding: 24px;
 }
-
 
 
 /**
  * This styles the "footer" of Gravity Forms
  */
-.c-form .gfooter,
-.c-form .gform_footer{
-    
-    text-align: center;
-    
-}
-
 
 
 /**
- * This styles the "button" of Gravity Forms
+ * Gravity Forms Layout
  */
-.gform_button{
-    border: $btn_border_width solid color(purple);
+
+ .c-form .gform_fields{
+
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 48px 0 32px 0;
+
+    > .gfield{
+
+        margin-bottom: 40px;
+
+    }
+
+ }
+
+ .c-form .gfield{
+
+    flex-direction: column;
+
+ }
+
+ .c-form .ginput_container,
+ .c-form .ginput_complex{
+
+    display: flex;
+
+ }
+
+ .c-form .ginput_complex span{
+
+    display: block;
+    flex: 1;
+
+ }
+
+ .c-form .name_first{
+
+    margin-right: 4%;
+
+ }
+
+.c-form .name_first label,
+.c-form .name_last label,
+.c-form .gfield_description{
+
+    color: color( grayscale, 60 );
+    display: block;
+    margin-left: 12px;
+    margin-top: 12px;
+
+}
+
+/**
+ * Gravity Forms Input Layouts
+ */
+
+ // Any form field not given a special GF class is full width
+ .c-form .gfield:not(.gf_right_half):not(.gf_left_half){
+
+    flex: 100%;
+
+ }
+
+ // Handle half width gform classes
+ .c-form .gf_left_half,
+ .c-form .gf_right_half{
+
+    flex: 0 0 48%;
+
+ }
+
+/**
+ * Gravity Forms Inline List Layout
+ */
+
+ .c-form .gf_list_inline .ginput_container .gfield_radio{
+
+    display: flex;
+    padding: 0;
+
+ }
+
+ /**
+  * GForms Radio Buttons
+  */
+
+  .c-form .gfield_radio [class*="gchoice"]{
+
+    align-items: center;
+    background-color: color( blue-l, light10 );
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-right: 16px;
+    padding: 16px;
+
+    > [type="radio"]{
+
+        margin-right: 8px;
+
+    }
+
+    > [for*="choice"]{
+
+        position: relative;
+        top: 1px;
+
+    }
+
+
+  }
+
+
+/**
+ * This styles the "submit button" for Gravity Forms
+ */
+.gform_button,
+.gform_next_button,
+.gform_previous_button{
+
+
 	border-radius: $btn_border_rad;
     cursor: pointer !important;
 	letter-spacing: 1px;
@@ -36,37 +147,129 @@
 	padding: $btn_pad;
 	text-transform: uppercase;
     text-align:center;
-    color: color( grayscale, white );
-    background-color: color( purple );
     transition: transition( btn_bg );
+
+    &:focus,
+    &:active{
+        outline: none;
+    }
+
 }
 
+.gform_next_button,
+.gform_button{
+
+    margin-right: 12px;
+
+}
+
+.gform_button{
+
+    border: $btn_border_width solid color(purple);
+    background-color: color( purple );
+    color: color( grayscale, white );
+
+}
 
 .gform_button:hover{
-    
-    background-color: color( grayscale, white );
-	border-color: color( purple );
-    color:  color( purple );
-    
+
+    background-color: color( purple, dark5 );
+	border-color: color( purple, dar5 );
+
 }
 
+.gform_next_button{
 
+    border: $btn_border_width solid color( blue );
+    background-color: color( blue );
+    color: color( grayscale, white );
+
+}
+
+.gform_next_button:hover{
+
+    background-color: color( blue-m );
+	border-color: color( blue-m );
+    color:  color( grayscale, white );
+
+}
+
+.gform_previous_button{
+
+    border: $btn_border_width solid color( grayscale, 50 );
+    background-color: color( grayscale, white );
+    color: color( grayscale, 50 );
+    margin-right: 16px;
+
+}
+
+.gform_previous_button:hover{
+
+	border-color: color( grayscale, 30 );
+	color: color( grayscale, 50 );
+
+}
 
 /**
  * This styles the "text area and input" of Gravity Forms
  */
 .c-form .gform_fields .ginput_container textarea,
-.c-form .gform_fields .ginput_container input{
+.c-form .gform_fields .ginput_container input[type="text"],
+.c-form .gform_fields .ginput_container input[type="name"],
+.c-form .gform_fields .ginput_container input[type="email"],
+.c-form .gform_fields .ginput_container input[type="tel"],
+.c-form .gform_fields .ginput_container input[type="number"]{
 
+    background-color: color( grayscale, white );
     border: none;
-    border-radius: 6px;
-    background-color: color( grayscale, 95 );
-    color: color( grayscale, 40 );
-    padding: 10px !important;
-    font-size: 13px !important;
+    box-shadow: inset 0px 0px 0px 1px color( grayscale, 95 );
+    color: color( grayscale, 30 );
+    display: block;
+    padding: 10px 15px !important;
+    font-size: 16px !important;
     transition: transition( form );
-    
+    width: 100%;
+
 }
+
+.c-form .gform_fields .ginput_container input[type="text"],
+.c-form .gform_fields .ginput_container input[type="name"],
+.c-form .gform_fields .ginput_container input[type="email"],
+.c-form .gform_fields .ginput_container input[type="tel"],
+.c-form .gform_fields .ginput_container input[type="number"]{
+
+    border-radius: 50px;
+
+}
+
+.c-form .gform_fields .ginput_container textarea{
+
+    border-radius: 10px;
+
+}
+
+
+/**
+ * This styles error states for gravity forms
+ */
+
+ .c-form .gfield_error .ginput_container textarea:focus,
+ .c-form .gfield_error .ginput_container input[type="text"],
+ .c-form .gfield_error .ginput_container input[type="name"],
+ .c-form .gfield_error .ginput_container input[type="email"],
+ .c-form .gfield_error .ginput_container input[type="number"],
+ .c-form .gfield_error .ginput_container input[type="tel"]{
+
+     box-shadow: inset 0px 0px 0px 2px color( error );
+
+ }
+
+ .c-form .gfield_error .validation_message{
+
+     color: color( error );
+
+ }
+
 
 
 
@@ -74,23 +277,27 @@
  * This styles the "input and text area focus states" of Gravity Forms
  */
 .c-form .gform_fields .ginput_container textarea:focus,
-.c-form .gform_fields .ginput_container input:focus{
+.c-form .gform_fields .ginput_container input[type="text"]:focus,
+.c-form .gform_fields .ginput_container input[type="name"]:focus,
+.c-form .gform_fields .ginput_container input[type="email"]:focus,
+.c-form .gform_fields .ginput_container input[type="number"]:focus,
+.c-form .gform_fields .ginput_container input[type="tel"]:focus{
 
-    background-color: color( blue-l );
+    box-shadow: inset 0px 0px 0px 2px color( blue );
     outline: none;
-    
+
 }
-
-
 
 /**
  * This styles the "field label" of Gravity Forms
  */
-.c-form .gform_fields label.gfield_label{
+.c-form .gform_fields .gfield_label{
 
     color: color( grayscale, 30 );
-    
-} 
+    display: block;
+    margin-bottom: 8px;
+
+}
 
 
 
@@ -101,20 +308,125 @@
 .c-form .gform_fields label.gfield_label .gfield_required{
 
     color: color( purple );
-    
-} 
 
-
-
-/**
- * This styles the "field label and description" of Gravity Forms
- */
-.c-form .gform_fields .name_first label,
-.c-form .gform_fields .name_last label,
-.c-form .gform_fields .gfield_description{
-    
-    padding: 5px 0px 0px !important;
-    color: color(grayscale, 45) !important;
-    
 }
 
+/**
+ * Gravity Forms Progress Bar
+ */
+ .c-form .gf_progressbar{
+
+    background-color: color( blue-l, light10 );
+    border-radius: 50px;
+    border: 1px solid color( grayscale, 95 );
+
+ }
+
+ .c-form .gf_progressbar_percentage{
+
+    border-radius: 50px;
+    padding: 4px 8px;
+
+ }
+
+
+ /**
+  * Gravity Forms Section Groups
+  */
+
+  .c-form__section-group--border-top{
+
+    border-top: solid 1px color( grayscale, 95 );
+    margin-top: 24px;
+    padding-top: 48px;
+
+  }
+
+  .c-form .gsection_title{
+
+    color: color( blue-m );
+
+  }
+
+  .c-form__hidden{
+
+    display: none;
+
+  }
+
+/**
+ * Style Datepicker!!
+ */
+
+  .ui-datepicker{
+
+    background-color: color( white );
+    border: 2px solid color( grayscale, 90 );
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 8px;
+
+  }
+
+  .ui-datepicker td,
+  .ui-datepicker th{
+
+    padding: 2px;
+    text-align: center;
+
+  }
+
+  .ui-datepicker-header{
+
+    margin-bottom: 16px;
+
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next{
+
+    color: color( blue-m );
+
+  }
+
+  .ui-datepicker-prev{
+
+    margin-right: 12px;
+
+  }
+
+  .ui-datepicker-month{
+
+    margin-right: 12px;
+
+  }
+
+  .ui-datepicker-week-end{
+
+    background-color: color( blue-l, light5 );
+
+  }
+
+  .ui-state-hover{
+
+    color: color( grayscale, 60 );
+
+  }
+
+  .ui-state-active{
+
+    background-color: color( blue-m );
+    color: color( white );
+    padding: 2px;
+
+  }
+
+
+  /**
+   * Gforms Ajax Spinner
+   */
+   .gform_ajax_spinner{
+
+    filter: grayscale( 1 );
+
+   }

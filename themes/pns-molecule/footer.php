@@ -32,3 +32,8 @@ if( ! is_page_template( 'templates/landing.php' ) ){
     Molecule_Router::render( 'core', '_footer', 'end' );
 
 }
+
+wp_footer(); ?>
+
+</body>
+</html>

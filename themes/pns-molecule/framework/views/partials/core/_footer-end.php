@@ -10,7 +10,7 @@
 // Copyright Variables
 
 ?>
-	
+
 	<div class="o-col-md-12">
 
 	    <div class="c-copyright">
@@ -30,8 +30,3 @@
  </div> <!-- END #site.top -->
 
  <?php do_action( 'molecule_after_site_end' ); ?>
-
-<?php wp_footer(); ?>
-
-</body>
-</html>

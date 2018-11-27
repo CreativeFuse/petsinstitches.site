@@ -62,7 +62,7 @@
 			<div class="o-col-md-6">
 
 				<div class="c-map">
-					<?php echo do_shortcode( '[wpgmza id="1"]' ); ?>
+					<img src="https://placehold.it/550x400" alt="An image of the map location that links to GMaps">
 				</div>
 			</div>
 
