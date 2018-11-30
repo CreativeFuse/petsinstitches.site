@@ -127,7 +127,8 @@ strong{
 .e-h6,
 .o-post h6,
 .c-menu--secondary > .c-menu__item > a,
-.c-menu--secondary > button.c-menu__item{
+.c-menu--secondary > button.c-menu__item,
+.c-form .gfield_label{
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 25px;
@@ -161,8 +162,7 @@ input{
 	line-height: 30px;
 }
 
-.e-p--large--semi,
-.c-form .gfield_label{
+.e-p--large--semi {
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 30px;

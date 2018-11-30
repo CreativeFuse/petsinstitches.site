@@ -324,6 +324,7 @@
 .c-form .gf_progressbar_title{
 
     color: color( grayscale, 30 );
+    font-size: 24px;
     margin-top: 0px;
 
 }
@@ -371,6 +372,16 @@
 /**
  * Style Datepicker!!
  */
+
+  .c-appointment-request-date .ginput_container_date{
+
+    flex-direction: row-reverse;
+
+    > * {
+        cursor: pointer !important;
+    }
+
+  }
 
   .ui-datepicker{
 
@@ -436,6 +447,16 @@
 
   }
 
+  // Calendar Icon
+  .ui-datepicker-trigger {
+
+    margin-right: 16px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 7px;
+
+  }
 
   /**
    * Gforms Ajax Spinner
