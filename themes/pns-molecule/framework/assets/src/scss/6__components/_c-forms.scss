@@ -459,7 +459,7 @@ $form_breakpoint: $phone-s;
   .ui-datepicker td,
   .ui-datepicker th{
 
-    padding: 2px;
+    padding: 6px;
     text-align: center;
 
   }
@@ -495,9 +495,16 @@ $form_breakpoint: $phone-s;
 
   }
 
+  .ui-state-default{
+
+    color: color( grayscale, 20 );
+
+  }
+
+
   .ui-state-hover{
 
-    color: color( grayscale, 60 );
+    color: color( grayscale, 50 );
 
   }
 
@@ -508,13 +515,6 @@ $form_breakpoint: $phone-s;
     padding: 2px;
 
   }
-
-  .ui-state-default{
-
-    color: color( grayscale, 30 );
-
-  }
-
   // Calendar Icon
   .ui-datepicker-trigger {
 
