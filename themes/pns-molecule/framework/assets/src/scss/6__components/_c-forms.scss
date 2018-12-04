@@ -15,7 +15,6 @@ $form_breakpoint: $phone-s;
 
 }
 
-
 /**
  * This styles the "footer" of Gravity Forms
  */
@@ -53,14 +52,14 @@ $form_breakpoint: $phone-s;
 
  }
 
- .c-form .gfield{
+.c-form .gfield{
 
     flex-direction: column;
 
- }
+}
 
- .c-form .ginput_container,
- .c-form .ginput_complex{
+.c-form .ginput_container,
+.c-form .ginput_complex{
 
     display: flex;
     flex-direction: column;
@@ -71,7 +70,7 @@ $form_breakpoint: $phone-s;
 
     }
 
- }
+}
 
  .c-form .ginput_complex span{
 
@@ -282,7 +281,6 @@ $form_breakpoint: $phone-s;
 .c-form .gform_fields .ginput_container input[type="tel"],
 .c-form .gform_fields .ginput_container input[type="number"]{
 
-    -webkit-appearance: none;
     background-color: color( grayscale, white ) !important;
     border: none;
     box-shadow: inset 0px 0px 0px 1px color( grayscale, 95 );
@@ -293,6 +291,8 @@ $form_breakpoint: $phone-s;
     font-size: 16px !important;
     transition: transition( form );
     width: 100%;
+
+    -webkit-appearance: none;
 
 }
 
@@ -357,8 +357,6 @@ $form_breakpoint: $phone-s;
 
 }
 
-
-
 /**
  * This styles the "field label" of Gravity Forms
  */
@@ -369,8 +367,6 @@ $form_breakpoint: $phone-s;
     margin-bottom: 12px;
 
 }
-
-
 
 
 /**
@@ -532,3 +528,13 @@ $form_breakpoint: $phone-s;
     filter: grayscale( 1 );
 
    }
+
+   /**
+    * Validations
+    */
+
+    .gform_validation_container{
+
+        display: none !important;
+
+    }
