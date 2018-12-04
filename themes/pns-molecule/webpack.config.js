@@ -28,6 +28,9 @@ const SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' );
 const WebpackAssetsManifest = require( 'webpack-assets-manifest' );
 const WebpackMd5Hash = require( 'webpack-md5-hash' );
 
+// Used to get user home directory in Browsersync for custom SSL cert
+const userHome = require('user-home');
+
 /**
  * Define relative path for resolving outputs
  */
@@ -46,7 +49,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const projectSettings = {
 
     // Replace with the local dev URL for your site
-    proxy: 'https://pns.dev',
+    proxy: 'https://pns.build',
 
     jsEntryFiles: {
 
@@ -215,6 +218,8 @@ const config = {
             filename: devMode ? 'css/[name].css' : 'css/[name].[contenthash].bundle.css',
             chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[contenthash].bundle.css',
             hot: true, // optional is the plugin cannot automatically detect if you are using HOT, not for production use
+            orderWarning: true, // Disable to remove warnings about conflicting order between imports
+            reloadAll: true, // when desperation kicks in - this is a brute force HMR flag
 
         }),
 
@@ -244,11 +249,33 @@ const config = {
          */
         new BrowserSyncPlugin({
 
-            injectCss: true,
-
+            // The server to proxy to our localhost
             proxy: projectSettings.proxy,
 
-            // Which files trigger a page reload when modified?
+            // browse to https://localhost:8000/ during development
+            host: 'localhost',
+            port: 8000,
+
+            // Auto-inject css changes
+            injectCss: true,
+
+            /**
+             * Developers please follow these articles to get your SSL installed locally and become your own CA:
+             * https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/
+             * https://blogjunkie.net/2017/04/enable-https-localhost-browsersync/
+             *
+             * Note 1 - Replace any domain reference with `localhost`
+             *
+             * Note 2 - When creating the localhost.ext file, use `localhost:3000` and `localhost:8000`
+             * for DNS 2 and 3.
+             *
+             * Note 3 - Be sure to create a `.localhost-ssl` folder in your user root to hold your files.
+             */
+            https: {
+                "key": userHome + "/.localhost-ssl/localhost.key",
+                "cert": userHome + "/.localhost-ssl/localhost.crt",
+            },
+
             files: [
                 '**/*.php',
                 '_dist/*.js',
@@ -259,6 +286,7 @@ const config = {
 
             open: false,
             reloadDelay: false,
+
         }),
 
         /**

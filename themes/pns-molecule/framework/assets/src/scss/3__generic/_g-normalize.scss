@@ -13,6 +13,7 @@ html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  margin-top: 0;
 }
 
 /* Sections
@@ -36,7 +37,7 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  * \
  * @author Christopher Hahn
- * 
+ *
  */
 
 h1 {
@@ -238,6 +239,7 @@ optgroup,
 select,
 textarea {
   margin: 0;
+  box-sizing: border-box;
 }
 
 /**

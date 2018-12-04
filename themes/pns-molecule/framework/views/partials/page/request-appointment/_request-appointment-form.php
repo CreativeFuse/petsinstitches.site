@@ -6,7 +6,9 @@
 			<div class="o-col-md-12">
 
 				<div itemprop="target" class="c-form u-max-width--700 u-center">
-					<?php echo do_shortcode( '[gravityform id=1 title=false description=false ajax=true]' ); ?>
+
+					<?php echo do_shortcode( '[gravityform id=3 ajax=true title=false description=false]' ); ?>
+
 				</div>
 			</div>
 		</div>

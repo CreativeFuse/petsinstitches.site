@@ -1,42 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 158.91 152.29">
-  <defs>
-    <style>
-      #icon-cat .cls-1 {
-        fill: url(#linear-gradient);
-      }
-
-      #icon-cat .cls-2 {
-        fill: url(#linear-gradient-2);
-      }
-
-      #icon-cat .cls-3 {
-        fill: url(#linear-gradient-3);
-      }
-
-      #icon-cat .cls-4 {
-        fill: url(#linear-gradient-4);
-      }
-
-      #icon-cat .cls-5 {
-        fill: url(#linear-gradient-5);
-      }
-
-      #icon-cat .cls-6 {
-        fill: url(#linear-gradient-6);
-      }
-    </style>
-    <linearGradient id="linear-gradient" x1="40.03" y1="-22.56" x2="171.03" y2="66.44" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#369cdc"/>
-      <stop offset="1" stop-color="#aa56d0"/>
-    </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="12.25" y1="18.33" x2="143.25" y2="107.33" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-3" x1="1" y1="34.9" x2="132" y2="123.9" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-4" x1="17.72" y1="10.27" x2="148.72" y2="99.27" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-5" x1="-10.03" y1="51.13" x2="120.97" y2="140.13" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-6" x1="8.55" y1="23.78" x2="139.55" y2="112.78" xlink:href="#linear-gradient"/>
-  </defs>
   <title>cat</title>
-    <g id="icon-cat"> 
+    <g id="icon-cat">
       <path class="cls-1" d="M109.82,39a3.28,3.28,0,0,0,4.11-2.24,35.66,35.66,0,0,1,5.29-10.66,34.13,34.13,0,0,1,6.58,20.21,3.31,3.31,0,0,0,6.62,0,41.55,41.55,0,0,0-10.74-27.69,3.31,3.31,0,0,0-2.47-1.1h0a3.31,3.31,0,0,0-2.47,1.11,43,43,0,0,0-9.16,16.26A3.31,3.31,0,0,0,109.82,39Z"/>
       <path class="cls-2" d="M49.09,39a3.31,3.31,0,0,0,2.24-4.11,43,43,0,0,0-9.16-16.26,3.31,3.31,0,0,0-2.47-1.11h0a3.31,3.31,0,0,0-2.47,1.1A41.55,41.55,0,0,0,26.48,46.35a3.31,3.31,0,1,0,6.62,0,34.13,34.13,0,0,1,6.58-20.21A35.66,35.66,0,0,1,45,36.8,3.29,3.29,0,0,0,49.09,39Z"/>
       <path class="cls-3" d="M46.35,72.83a6.62,6.62,0,1,1,13.24,0,3.31,3.31,0,1,0,6.62,0,13.24,13.24,0,1,0-26.48,0,3.31,3.31,0,1,0,6.62,0Z"/>

@@ -7,6 +7,7 @@
 ?>
 <body <?php body_class(); ?>>
   <?php do_action( 'molecule_after_body_begin' ); ?>
+  <?php Molecule_SVG::inject_sprite(); ?>
   <?php do_action( 'molecule_before_site_begin' ); ?>
 
   <div class="o-site">

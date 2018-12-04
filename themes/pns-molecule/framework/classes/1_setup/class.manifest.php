@@ -57,7 +57,10 @@ class Manifest {
 			// Either use URI or PATH for the returned file.
 			// Default is URI. Passing in false will result in returning the path
 
-			$file_path = molecule()->get_setting( 'prod_uri' );
+			$file_path = $use_uri_for_returned_file == true
+
+				? molecule()->get_setting( 'prod_uri' )
+				: molecule()->get_setting( 'prod_path' );
 
 			// Return the hashed file
 			return  $file_path . $manifest[ $filename ];
