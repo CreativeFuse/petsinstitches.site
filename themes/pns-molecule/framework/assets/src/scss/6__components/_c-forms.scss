@@ -1,15 +1,35 @@
 
 
+$form_breakpoint: $phone-s;
+
 .c-form{
     background-color: color( grayscale, white );
     border-radius: 10px;
-    padding: 32px 24px;
+    padding: 32px 12px;
+
+    @include respond-min( $form_breakpoint ){
+
+        padding: 32px 24px;
+
+    }
+
 }
 
 
 /**
  * This styles the "footer" of Gravity Forms
  */
+
+.c-form .gform_page_footer{
+    text-align: center;
+
+    @include respond-min( $form_breakpoint ){
+
+        text-align: left;
+
+    }
+
+}
 
 
 /**
@@ -43,19 +63,41 @@
  .c-form .ginput_complex{
 
     display: flex;
+    flex-direction: column;
+
+    @include respond-min( $form_breakpoint ){
+
+        flex-direction: row;
+
+    }
 
  }
 
  .c-form .ginput_complex span{
 
     display: block;
-    flex: 1;
+
+    flex: 0 0 100%;
+
+    @include respond-min( $form_breakpoint ){
+
+        flex: 1;
+
+    }
 
  }
 
  .c-form .name_first{
 
-    margin-right: 4%;
+    margin-bottom: 24px;
+    margin-right: 0%;
+
+    @include respond-min( $form_breakpoint ){
+
+        margin-right: 4%;
+        margin-bottom: 0px;
+
+    }
 
  }
 
@@ -85,7 +127,13 @@
  .c-form .gf_left_half,
  .c-form .gf_right_half{
 
-    flex: 0 0 48%;
+    flex: 0 0 100%;
+
+    @include respond-min( $form_breakpoint ){
+
+        flex: 0 0 48%;
+
+    }
 
  }
 
@@ -96,6 +144,7 @@
  .c-form .gf_list_inline .ginput_container .gfield_radio{
 
     display: flex;
+    flex-flow: row wrap;
     padding: 0;
 
  }
@@ -112,7 +161,14 @@
     display: flex;
     justify-content: center;
     margin-right: 16px;
+    margin-top: 16px;
     padding: 16px;
+
+    @include respond-min( $form_breakpoint ){
+
+        margin-top: 0px;
+
+    }
 
     > [type="radio"]{
 
@@ -137,7 +193,6 @@
 .gform_button,
 .gform_next_button,
 .gform_previous_button{
-
 
 	border-radius: $btn_border_rad;
     cursor: pointer !important;
@@ -199,7 +254,14 @@
     border: $btn_border_width solid color( grayscale, 50 );
     background-color: color( grayscale, white );
     color: color( grayscale, 50 );
+    margin-bottom: 12px;
     margin-right: 16px;
+
+    @include respond-min( $form_breakpoint ){
+
+        margin-bottom: 0px;
+
+    }
 
 }
 
@@ -301,7 +363,7 @@
 
     color: color( grayscale, 30 );
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 
 }
 
@@ -340,6 +402,7 @@
  .c-form .gf_progressbar_percentage{
 
     border-radius: 50px;
+    box-sizing: border-box;
     padding: 4px 8px;
 
  }

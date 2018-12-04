@@ -20,7 +20,7 @@
 //Use the VARS for the desired breakpoint
 
 @mixin respond-min($breakpoint-min) {
-	@media only screen and (min-width: $breakpoint-min ) { @content; }
+	@media (min-width: $breakpoint-min ) { @content; }
 }
 
 
