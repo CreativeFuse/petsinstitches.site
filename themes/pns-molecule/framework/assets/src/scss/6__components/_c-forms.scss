@@ -282,9 +282,11 @@ $form_breakpoint: $phone-s;
 .c-form .gform_fields .ginput_container input[type="tel"],
 .c-form .gform_fields .ginput_container input[type="number"]{
 
-    background-color: color( grayscale, white );
+    -webkit-appearance: none;
+    background-color: color( grayscale, white ) !important;
     border: none;
     box-shadow: inset 0px 0px 0px 1px color( grayscale, 95 );
+    -webkit-box-shadow: inset 0px 0px 0px 1px color( grayscale, 95 );
     color: color( grayscale, 30 );
     display: block;
     padding: 10px 15px !important;
@@ -310,6 +312,20 @@ $form_breakpoint: $phone-s;
 
 }
 
+/**
+ * This styles the "input and text area focus states" of Gravity Forms
+ */
+.c-form .gform_fields .ginput_container textarea:focus,
+.c-form .gform_fields .ginput_container input[type="text"]:focus,
+.c-form .gform_fields .ginput_container input[type="name"]:focus,
+.c-form .gform_fields .ginput_container input[type="email"]:focus,
+.c-form .gform_fields .ginput_container input[type="number"]:focus,
+.c-form .gform_fields .ginput_container input[type="tel"]:focus{
+
+    box-shadow: inset 0px 0px 0px 2px color( blue );
+    -webkit-box-shadow: inset 0px 0px 0px 2px color( blue );
+    outline: none;
+}
 
 /**
  * This styles error states for gravity forms
@@ -323,6 +339,7 @@ $form_breakpoint: $phone-s;
  .c-form .gfield_error .ginput_container input[type="tel"]{
 
      box-shadow: inset 0px 0px 0px 2px color( error );
+     -webkit-box-shadow: inset 0px 0px 0px 2px color( error );
 
  }
 
@@ -341,20 +358,6 @@ $form_breakpoint: $phone-s;
 }
 
 
-/**
- * This styles the "input and text area focus states" of Gravity Forms
- */
-.c-form .gform_fields .ginput_container textarea:focus,
-.c-form .gform_fields .ginput_container input[type="text"]:focus,
-.c-form .gform_fields .ginput_container input[type="name"]:focus,
-.c-form .gform_fields .ginput_container input[type="email"]:focus,
-.c-form .gform_fields .ginput_container input[type="number"]:focus,
-.c-form .gform_fields .ginput_container input[type="tel"]:focus{
-
-    box-shadow: inset 0px 0px 0px 2px color( blue );
-    outline: none;
-
-}
 
 /**
  * This styles the "field label" of Gravity Forms
