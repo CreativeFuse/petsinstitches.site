@@ -35,7 +35,7 @@
 						<strong class="u-color--blue">Phone:</strong> <a class="c-text-link u-color--gray" href="tel:937-630-3320"><span itemprop="telephone">937-630-3320</span></a>
 						<br/>
 						<strong class="u-color--blue">Email:</strong> <a class="c-text-link u-color--gray" href="mailto:contact@petsinstitches.com"><span itemprop="email">contact@petsinstitches.com</span></a>
-						
+
 					</h2>
 
 
@@ -59,19 +59,19 @@
                         <strong>Wellness Walk-In</strong>
                         <br/>
                         3:00pm - 4:00pm (Tu &amp; W)
-                        
+
 					</p>
 
 				</div>
 
-				
+
 			</div>
 
 			<div class="o-col-md-6">
 
-				<div class="c-map">
-					<?php echo do_shortcode( '[wpgmza id="1"]' ); ?>
-				</div>
+				<a class="c-map" href="https://www.google.com/maps/place/Pets+In+Stitches/@39.6306803,-84.2302138,17z/data=!3m1!4b1!4m5!3m4!1s0x884089007e771bbd:0x70b4d22ce61cd225!8m2!3d39.6306803!4d-84.2280251" target="_blank">
+					<img src="/wp-content/uploads/2018/12/pets-in-stitches-request-an-appointment-map-img.png" alt="An image of the map location for Pets in Stitches that links to Google Maps">
+				</a>
 			</div>
 
 		</div>

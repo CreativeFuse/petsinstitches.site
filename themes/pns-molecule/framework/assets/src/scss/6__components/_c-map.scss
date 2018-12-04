@@ -1,0 +1,11 @@
+.c-map{
+
+    transition: transition( btn_img );
+
+}
+
+.c-map:hover{
+
+    @include opacity( .7 );
+
+}
