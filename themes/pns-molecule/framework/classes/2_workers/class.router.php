@@ -432,8 +432,8 @@ class Molecule_Router{
 				Molecule_Router::render( 'object/hero', '_hero', 'home' );
 
 
-			// If we are on any other page
-			} else{
+			// If we are on any other page other than a landing page
+			} elseif( ! is_page_template( 'templates/landing.php' ) ) {
 
 				Molecule_Router::render( 'object/hero', '_hero', 'page' );
 

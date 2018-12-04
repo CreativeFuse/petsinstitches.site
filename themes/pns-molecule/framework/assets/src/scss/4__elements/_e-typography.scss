@@ -23,6 +23,8 @@
 .o-post h4,
 .o-post h5,
 .o-post h6,
+.c-form,
+.ui-datepicker,
 p,
 blockquote,
 a,
@@ -107,7 +109,7 @@ strong{
 }
 
 .e-h4,
-.o-post h4{	
+.o-post h4{
 	font-size:23px;
 	font-weight: 300;
 	letter-spacing: 1px;
@@ -125,7 +127,8 @@ strong{
 .e-h6,
 .o-post h6,
 .c-menu--secondary > .c-menu__item > a,
-.c-menu--secondary > button.c-menu__item{
+.c-menu--secondary > button.c-menu__item,
+.c-form .gfield_label{
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 25px;
@@ -159,7 +162,7 @@ input{
 	line-height: 30px;
 }
 
-.e-p--large--semi{
+.e-p--large--semi {
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 30px;

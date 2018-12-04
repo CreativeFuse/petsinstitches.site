@@ -1,9 +1,9 @@
 /**
- * Distinct variables for colors are fine, but it can become messy when you have dozens of those. Having a 
+ * Distinct variables for colors are fine, but it can become messy when you have dozens of those. Having a
  * map just for colors, divided into sub-maps for various element states, is a good idea.
  *
  * @ref http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
- * 
+ *
  */
 
 /**
@@ -19,6 +19,7 @@ $brandedColors : (
     purple  : #AA55D0,
 	gray    : #2D2A24,
     white   : #FFFFFF,
+    error   : #EF4D65,
 
 );
 
@@ -29,7 +30,7 @@ $brandedColors : (
 
 $colors: (
 
-    blue-l: (  
+    blue-l: (
 
         light15  :   lighten( map-get( $brandedColors, blue-l ), 15% ),
         light10  :   lighten( map-get( $brandedColors, blue-l ), 10% ),
@@ -40,10 +41,10 @@ $colors: (
         dark5    :   darken( map-get( $brandedColors, blue-l ), 5% ),
         dark10   :   darken( map-get( $brandedColors, blue-l ), 10% ),
         dark15   :   darken( map-get( $brandedColors, blue-l ), 15% ),
-    	
+
     ),
 
-    blue-m: (  
+    blue-m: (
 
         light15  :   lighten( map-get( $brandedColors, blue-m ), 15% ),
         light10  :   lighten( map-get( $brandedColors, blue-m ), 10% ),
@@ -54,10 +55,10 @@ $colors: (
         dark5    :   darken( map-get( $brandedColors, blue-m ), 5% ),
         dark10   :   darken( map-get( $brandedColors, blue-m ), 10% ),
         dark15   :   darken( map-get( $brandedColors, blue-m ), 15% ),
-        
+
     ),
 
-    blue: (  
+    blue: (
 
         light15  :   lighten( map-get( $brandedColors, blue ), 15% ),
         light10  :   lighten( map-get( $brandedColors, blue ), 10% ),
@@ -68,10 +69,10 @@ $colors: (
         dark5    :   darken( map-get( $brandedColors, blue ), 5% ),
         dark10   :   darken( map-get( $brandedColors, blue ), 10% ),
         dark15   :   darken( map-get( $brandedColors, blue ), 15% ),
-        
+
     ),
 
-    blue-d: (  
+    blue-d: (
 
         light15  :   lighten( map-get( $brandedColors, blue-d ), 15% ),
         light10  :   lighten( map-get( $brandedColors, blue-d ), 10% ),
@@ -82,17 +83,17 @@ $colors: (
         dark5    :   darken( map-get( $brandedColors, blue-d ), 5% ),
         dark10   :   darken( map-get( $brandedColors, blue-d ), 10% ),
         dark15   :   darken( map-get( $brandedColors, blue-d ), 15% ),
-        
+
     ),
 
-    purple: (  
+    purple: (
 
         light15  :   lighten( map-get( $brandedColors, purple ), 15% ),
         light10  :   lighten( map-get( $brandedColors, purple ), 10% ),
         light5   :   lighten( map-get( $brandedColors, purple ), 5% ),
 
         base    :   map-get( $brandedColors, purple ),
-        
+
         dark5    :   darken( map-get( $brandedColors, purple ), 5% ),
         dark10   :   darken( map-get( $brandedColors, purple ), 10% ),
         dark15   :   darken( map-get( $brandedColors, purple ), 15% ),
@@ -100,14 +101,14 @@ $colors: (
 
     ),
 
-    gray: (  
+    gray: (
 
         light15  :   lighten( map-get( $brandedColors, gray ), 15% ),
         light10  :   lighten( map-get( $brandedColors, gray ), 10% ),
         light5   :   lighten( map-get( $brandedColors, gray ), 5% ),
 
         base    :   map-get( $brandedColors, gray ),
-        
+
         dark5    :   darken( map-get( $brandedColors, gray ), 5% ),
         dark10   :   darken( map-get( $brandedColors, gray ), 10% ),
         dark15   :   darken( map-get( $brandedColors, gray ), 15% ),
@@ -115,14 +116,14 @@ $colors: (
 
     ),
 
-    white: (  
+    white: (
 
         light15  :   lighten( map-get( $brandedColors, white ), 15% ),
         light10  :   lighten( map-get( $brandedColors, white ), 10% ),
         light5   :   lighten( map-get( $brandedColors, white ), 5% ),
 
         base    :   map-get( $brandedColors, white ),
-        
+
         dark5    :   darken( map-get( $brandedColors, white ), 5% ),
         dark10   :   darken( map-get( $brandedColors, white ), 10% ),
         dark15   :   darken( map-get( $brandedColors, white ), 15% ),
@@ -130,8 +131,23 @@ $colors: (
 
     ),
 
+    error: (
+
+        light15  :   lighten( map-get( $brandedColors, error ), 15% ),
+        light10  :   lighten( map-get( $brandedColors, error ), 10% ),
+        light5   :   lighten( map-get( $brandedColors, error ), 5% ),
+
+        base    :   map-get( $brandedColors, error ),
+
+        dark5    :   darken( map-get( $brandedColors, error ), 5% ),
+        dark10   :   darken( map-get( $brandedColors, error ), 10% ),
+        dark15   :   darken( map-get( $brandedColors, error ), 15% ),
+
+
+    ),
+
     /**
-     * We use a SASSY Grayscale courtesy of the 
+     * We use a SASSY Grayscale courtesy of the
      * awesome people at Sparkbox.
      *
      * https://seesparkbox.com/foundry/sassy_grayscale
@@ -144,15 +160,15 @@ $colors: (
         97      : #f7f7f7,
         96      : #f2f2f2,
         95      : #EDEDED,
-        90      : #E5E5E5, 
+        90      : #E5E5E5,
         85      : #D9D9D9,
         80      : #CCCCCC,
-        75      : #C0C0C0, 
+        75      : #C0C0C0,
         70      : #B0B0B0,
         60      : #999999,
         50      : #808080,
         45      : #727272,
-        40      : #696969, 
+        40      : #696969,
         30      : #4D4D4D,
         20      : #363636,
         15      : #262626,

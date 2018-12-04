@@ -17,8 +17,23 @@
 <?php
 
 Molecule_Router::load_cta();
-
 Molecule_Router::render( 'core', '_site', 'end' );
-Molecule_Router::render( 'core', '_footer', 'start' );
-Molecule_Router::render( 'core', '_footer', 'content' );
-Molecule_Router::render( 'core', '_footer', 'end' );
+
+
+/**
+ * Load site footer and footer content as long as we
+ * are not using a landing page template.
+ */
+
+if( ! is_page_template( 'templates/landing.php' ) ){
+
+    Molecule_Router::render( 'core', '_footer', 'start' );
+    Molecule_Router::render( 'core', '_footer', 'content' );
+    Molecule_Router::render( 'core', '_footer', 'end' );
+
+}
+
+wp_footer(); ?>
+
+</body>
+</html>

@@ -2,9 +2,8 @@
 	background-color: white;
 	background-image: linear-gradient( color( grayscale, 99 ), color( grayscale, 97 ) ) ;
 
-
 	@include respond-max( $nav-swap ){
-		display: block; 
+		display: block;
 		padding: 10px 0;
 		position: fixed;
 		width: 100%;
@@ -13,5 +12,3 @@
 	}
 
 }
-
-

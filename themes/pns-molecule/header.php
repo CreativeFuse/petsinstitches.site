@@ -27,21 +27,25 @@
 
 
 		<?php
-
 		/**
-		 * Load site header and main navigation bar
+		 * Load site header and navigation bars as long as we
+		 * are not using a landing page template.
 		 */
+
+		if( ! is_page_template( 'templates/landing.php' ) ){
 
 		?>
 
-		<header class="o-header" role="banner">
+			<header class="o-header" role="banner">
 
-			<?php Molecule_Router::render( 'core', '_topbar', 'site' ) ?>
-			<?php Molecule_Router::render( 'core', '_navbar', 'primary' ) ?>
+				<?php Molecule_Router::render( 'core', '_topbar', 'site' ) ?>
+				<?php Molecule_Router::render( 'core', '_navbar', 'primary' ) ?>
 
-			<?php Molecule_Router::render( 'object/mobile-menu', 'mobile-menu', 'main' ) ?>
+				<?php Molecule_Router::render( 'object/mobile-menu', 'mobile-menu', 'main' ) ?>
 
-		</header>
+			</header>
+
+		<?php } ?>
 
 
 		<?php do_action( 'molecule_before_main_begins' ); ?>

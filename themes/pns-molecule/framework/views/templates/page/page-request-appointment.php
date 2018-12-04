@@ -3,7 +3,7 @@
 /**
  * Template • Getting Started
  *
- * The template file to render all parts of the 
+ * The template file to render all parts of the
  * Getting Started Page
  */
 
@@ -16,9 +16,13 @@
 	<meta itemprop="mainEntityOfPage url" content="<?php echo esc_url( get_the_permalink() ); ?>" />
 
 	<?php
-	Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'intro');
+		Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'intro');
 
-	Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'form');
+		Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'form');
+
+		Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'contact');
+
+		Molecule_Router::render( 'page/request-appointment', '_request-appointment', 'home');
 	?>
 
 </div>
