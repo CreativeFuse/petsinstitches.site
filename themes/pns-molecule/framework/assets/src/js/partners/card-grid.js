@@ -15,12 +15,14 @@ require('imports-loader?$=jquery!isotope-layout/dist/isotope.pkgd');
 	  itemSelector: '.c-card--partner',
 	  percentPosition: true,
 	  masonry: {
+
 	    // use outer width of grid-sizer for columnWidth
 	    columnWidth: 550,
-	    gutter: 0
+			gutter: 0
+
 	  },
 	  stagger: 0,
-	  transitionDuration: '0.3s',
+	  transitionDuration: '0.25s',
 	});
 
 	// filter items on button click

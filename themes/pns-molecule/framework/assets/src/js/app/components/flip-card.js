@@ -2,7 +2,7 @@
 
     'use strict';
 
-    var card     = $( '.c-card--flip' );
+    var card = $( '.c-card--flip' );
 
     card.hover(function(){
 
