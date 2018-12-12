@@ -27,9 +27,6 @@ $group = strtolower( $pet_singular );
 // Replace spaces and dashes with underscores
 $group = str_replace( array( ' ', '-' ), '_', $group );
 
-// Append _forms to it
-$group = $group . '_forms';
-
 ?>
 
 <div id="panel--<?php esc_html_e( $panel_class ); ?>" class="o-panel o-panel--post">
@@ -40,6 +37,8 @@ $group = $group . '_forms';
 
 			<div class="o-row o-row__tee-up">
 
+				<!-- Begin main tee-up for this form group -->
+
 				<div class="o-col-md-12">
 
 					<div class="c-title-group u-max-width--900">
@@ -49,13 +48,12 @@ $group = $group . '_forms';
 
 					</div>
 
-
 				</div>
 
 				<?php
 
-				//If we have list item data, let's show it
-				
+				// If the intro repeater for this animal has data, let's dive in
+
 				if( have_rows( $group . '_intro' ) ){ ?>
 
 						<div class="o-col-md-12">
@@ -64,7 +62,7 @@ $group = $group . '_forms';
 
 								<?php
 
-									// Loop over all list items
+									// Loop over all intro items
 
 									while( have_rows( $group . '_intro' ) ){
 
@@ -85,75 +83,102 @@ $group = $group . '_forms';
 
 						</div>
 
-				<?php } ?>
+				<?php } // End Form Intro Repeater ?>
 
-			</div>
+				</div>
+				<!-- End Form Group Tee-up -->
 
 				<?php
-				// handle Required and Optional Forms
-				// we start by setting an arroy of
-				// our form types
-				
-				$form_types = array(
 
-					'required',
-					'optional',
-					'wellness'
+				/**
+				 * Each set of animal forms is broken down into multiple sections.
+				 * Let's start by getting the forms section repeater data
+				 * for the current animal group.
+				 */
 
-				);
+				$form_sections = get_field( $group . '_forms' );
 
-				// For each type of form
-				foreach( $form_types as $form_type ){
+				// Loop over each form section
+				foreach( $form_sections as $section ){
 
-					// Set the current form type group ( should be the acf field )
-					$form_type_group = $group . '_' . $form_type . '_forms';
-					
-					// If we have data
-					if( have_rows( $form_type_group ) ){ ?>
+					// Get the forms repeater within the forms section
+					$forms = $section['forms'];
 
-						<div class="o-row o-row--sub-page p-forms__row--<?php esc_html_e( $form_type ); ?>">
+					// If we have forms added to the reapeater, let's continue
+					if( $forms ){ ?>
+
+						<div class="o-row o-row--sub-page p-forms__row">
 
 							<div class="o-col-md-12">
 
+								<!-- Form Section Title -->
+
 								<div class="c-title-group">
 
-									<h3 class="e-h3 c-title-group__title u-text-up "><?php esc_html_e( $form_type . ' Forms'  ); ?></h3>
+									<h3 class="e-h3 c-title-group__title u-text-up "><?php esc_html_e( $section['title'] ); ?></h3>
 
 								</div>
 
-								<?php
+								<div class="c-collection--download-cards">
 
-								// Loop Over the data
-								while( have_rows( $form_type_group ) ){
+									<!-- Display each available form -->
+									<?php foreach( $forms as $form_object ){
 
-									the_row();
+										/**
+										 * From this point forward, we are relying on a plugin called
+										 * Download Monitor to be active and for the necessary files
+										 * to be loaded in within ACF. ACF is returning a post object instance
+										 * of each download and we are tapping into it here :)
+										 */
 
-									// Get ACF data from our Form Type Group
-									$link = get_sub_field( 'link' );
-									$desc = get_sub_field( 'description', false, false );
+										if( $form_object && class_exists( 'WP_DLM' ) ){
 
-									?>
+											// Build our download URL
+											$download_link = esc_url( site_url("/download/{$form_object['form']->post_name}") );
 
-									<div class="c-text-group u-max-width--900">
+											?>
 
-										<a class="e-p--common c-text-group__title c-text-link" href="<?php esc_html_e( $link['url'] ); ?>" target="<?php esc_html_e( $link['target'] ); ?>"><?php esc_html_e( $link['title'] ); ?></a>
+											<div class="c-download-card__item">
 
-										<p class="e-p--common c-text-group__copy"><?php esc_html_e( $desc ); ?></p>
+												<a class="c-download-card" target="_blank" href="<?= $download_link; ?>">
 
-									</div>
+													<div class="c-download-card__header">
 
+													</div>
 
-								<?php }?>
+													<div class="c-download-card__body">
+														<h4 class="e-p--large c-download-card__title"><strong><?php esc_html_e( $form_object['form']->post_title ); ?></strong></h4>
+														<p class="e-p--common c-download-card__copy">
+															<?php esc_html_e( $form_object['form']->post_content ); ?>
+														</p>
+													</div>
+
+													<div class="c-download-card__footer">
+														<p class="e-p--common c-download-card__download-text"><strong><?= esc_html( 'Download Form' ); ?></strong></p>
+													</div>
+
+												</a>
+
+											</div>
+										<?php } // End if
+
+										} // End For Each
+
+										wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
+
+										?>
+
+								</div>
 
 							</div>
 
 						</div>
 
-					<?php }				
+					<?php }
 
 
 				}?>
-			
+
 
 		</div>
 
