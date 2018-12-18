@@ -4,7 +4,10 @@
 
 .o-section--form {
 	background-color: color( grayscale, 95 );
+	overflow: hidden;
 	padding: 80px 0 80px 0;
+	position: relative;
+	z-index: z(front);
 }
 
 .o-section--404 {
