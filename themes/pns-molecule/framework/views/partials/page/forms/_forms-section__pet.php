@@ -98,87 +98,90 @@ $group = str_replace( array( ' ', '-' ), '_', $group );
 
 				$form_sections = get_field( $group . '_forms' );
 
-				// Loop over each form section
-				foreach( $form_sections as $section ){
+				if( $form_sections ){
 
-					// Get the forms repeater within the forms section
-					$forms = $section['forms'];
+					// Loop over each form section
+					foreach( $form_sections as $section ){
 
-					// If we have forms added to the reapeater, let's continue
-					if( $forms ){ ?>
+						// Get the forms repeater within the forms section
+						$forms = $section['forms'];
 
-						<div class="o-row o-row--sub-page p-forms__row">
+						// If we have forms added to the reapeater, let's continue
+						if( $forms ){ ?>
 
-							<div class="o-col-md-12">
+							<div class="o-row o-row--sub-page p-forms__row">
 
-								<!-- Form Section Title -->
+								<div class="o-col-md-12">
 
-								<div class="c-title-group">
+									<!-- Form Section Title -->
 
-									<h3 class="e-h3 c-title-group__title u-text-up "><?php esc_html_e( $section['title'] ); ?></h3>
+									<div class="c-title-group">
 
-								</div>
+										<h3 class="e-h3 c-title-group__title u-text-up "><?php esc_html_e( $section['title'] ); ?></h3>
 
-								<div class="c-collection--download-cards">
+									</div>
 
-									<!-- Display each available form -->
-									<?php foreach( $forms as $form_object ){
+									<div class="c-collection--download-cards">
 
-										/**
-										 * From this point forward, we are relying on a plugin called
-										 * Download Monitor to be active and for the necessary files
-										 * to be loaded in within ACF. ACF is returning a post object instance
-										 * of each download and we are tapping into it here :)
-										 */
+										<!-- Display each available form -->
+										<?php foreach( $forms as $form_object ){
 
-										if( $form_object && class_exists( 'WP_DLM' ) ){
+											/**
+											 * From this point forward, we are relying on a plugin called
+											 * Download Monitor to be active and for the necessary files
+											 * to be loaded in within ACF. ACF is returning a post object instance
+											 * of each download and we are tapping into it here :)
+											 */
 
-											// Build our download URL
-											$download_link = esc_url( site_url("/download/{$form_object['form']->post_name}") );
+											if( $form_object && class_exists( 'WP_DLM' ) ){
+
+												// Build our download URL
+												$download_link = esc_url( site_url("/download/{$form_object['form']->post_name}") );
+
+												?>
+
+												<div class="c-download-card__item">
+
+													<a class="c-download-card" target="_blank" href="<?= $download_link; ?>">
+
+														<div class="c-download-card__header">
+
+														</div>
+
+														<div class="c-download-card__body">
+															<h4 class="e-p--large c-download-card__title"><strong><?php esc_html_e( $form_object['form']->post_title ); ?></strong></h4>
+															<p class="e-p--common c-download-card__copy">
+																<?php esc_html_e( $form_object['form']->post_content ); ?>
+															</p>
+														</div>
+
+														<div class="c-download-card__footer">
+															<p class="e-p--common c-download-card__download-text"><strong><?= esc_html( 'Download Form' ); ?></strong></p>
+														</div>
+
+													</a>
+
+												</div>
+											<?php } // End if
+
+											} // End For Each
+
+											wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
 
 											?>
 
-											<div class="c-download-card__item">
-
-												<a class="c-download-card" target="_blank" href="<?= $download_link; ?>">
-
-													<div class="c-download-card__header">
-
-													</div>
-
-													<div class="c-download-card__body">
-														<h4 class="e-p--large c-download-card__title"><strong><?php esc_html_e( $form_object['form']->post_title ); ?></strong></h4>
-														<p class="e-p--common c-download-card__copy">
-															<?php esc_html_e( $form_object['form']->post_content ); ?>
-														</p>
-													</div>
-
-													<div class="c-download-card__footer">
-														<p class="e-p--common c-download-card__download-text"><strong><?= esc_html( 'Download Form' ); ?></strong></p>
-													</div>
-
-												</a>
-
-											</div>
-										<?php } // End if
-
-										} // End For Each
-
-										wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
-
-										?>
+									</div>
 
 								</div>
 
 							</div>
 
-						</div>
-
-					<?php }
+						<?php }
 
 
-				}?>
+					}
 
+			}?>
 
 		</div>
 
