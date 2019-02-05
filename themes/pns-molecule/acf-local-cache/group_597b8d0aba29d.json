@@ -251,7 +251,7 @@
                     "collapsed": "",
                     "min": 0,
                     "max": 0,
-                    "layout": "",
+                    "layout": "block",
                     "button_label": "Add Form",
                     "sub_fields": [
                         {
@@ -273,7 +273,7 @@
                             "taxonomy": "",
                             "allow_null": 0,
                             "multiple": 0,
-                            "return_format": "",
+                            "return_format": "object",
                             "ui": 1
                         }
                     ]
@@ -390,7 +390,7 @@
                     "collapsed": "",
                     "min": 0,
                     "max": 0,
-                    "layout": "",
+                    "layout": "block",
                     "button_label": "Add Form",
                     "sub_fields": [
                         {
@@ -412,7 +412,7 @@
                             "taxonomy": "",
                             "allow_null": 0,
                             "multiple": 0,
-                            "return_format": "",
+                            "return_format": "object",
                             "ui": 1
                         }
                     ]
@@ -584,5 +584,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1549393796
+    "modified": 1549394814
 }
