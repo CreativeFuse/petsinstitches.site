@@ -8,14 +8,33 @@
  *
  */
 
-@function color($color, $tone: "base") {
+@function color($color, $tone: "base", $escaped: false) {
 	@if not map-has-key($colors, $color) {
 		@warn "No color found for `#{$color}` and tone `#{$tone}` in $colors map. Property omitted.";
 
 		@return null;
 	}
 
-	@return map-get(map-get($colors, $color), $tone);
+	// Use when interpolating colors in SVGs within CSS
+	@if ($escaped == true){
+
+		// Convert color value to a string s we can work with it:
+		// https://sass-lang.com/documentation/functions/string
+		$raw_color: quote( map-get(map-get($colors, $color), $tone) );
+
+		// Replace the `#` with the escaped value `%23`
+		$escaped_color: str-replace( $raw_color, '#', '%23' );
+
+		@return $escaped_color;
+
+	}
+
+	@if ($escaped == false){
+
+		@return map-get(map-get($colors, $color), $tone);
+
+	}
+
 }
 
 // Example Usage
