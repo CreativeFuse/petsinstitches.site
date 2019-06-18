@@ -1,6 +1,6 @@
 
-$list-paw--blue-l: color( blue-l );
-$list-paw--blue: color( blue );
+$list-paw--blue-l: color( blue-l, $escaped: true );
+$list-paw--blue: color( blue, $escaped: true );
 
 
 .c-list-paws,
