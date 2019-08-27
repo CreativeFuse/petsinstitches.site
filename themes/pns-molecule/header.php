@@ -59,13 +59,6 @@
 
 				do_action( 'molecule_after_main_begins' );
 
-
-				/**
-				 * load the Sticky Action Items
-				 */
-
-				Molecule_Router::render( 'component', '_sticky', 'action-panel' );
-
 				/**
 				 * Load the appropriate site hero view
 				 */

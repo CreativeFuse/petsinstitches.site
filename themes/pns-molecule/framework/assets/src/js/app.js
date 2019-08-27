@@ -42,6 +42,7 @@ import './app/libs/unslider';
  import './app/components/mobile-menu';
 
  // Action Bars
+ import './app/components/sticky-action-bar';
  import './app/components/sticky-action-panel';
 
 // Tabs
