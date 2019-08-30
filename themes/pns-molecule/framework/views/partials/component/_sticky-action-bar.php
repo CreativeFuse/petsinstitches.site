@@ -31,18 +31,22 @@ $action_items = [
 
 <div class="c-action-bar">
 
-	<?php foreach( $action_items as $item ){ ?>
+	<div class="c-action-bar__container">
 
-		<a class="c-action-bar__item" href="<?php echo esc_url( $item['link'] ); ?>" data-event-origin="sticky-action-bar-button">
+		<?php foreach( $action_items as $item ){ ?>
 
-			<div class="c-action-bar__item__icon">
-				<?= Molecule_Display::svg( $item['icon'], 'action-bar' ); ?>
-			</div>
+			<a class="c-action-bar__item" href="<?php echo esc_url( $item['link'] ); ?>" data-event-origin="sticky-action-bar-button">
 
-			<h4 class="c-action-bar__item__text e-p--common u-text-up"><?php echo esc_html( $item['title'] ); ?></h4>
+				<div class="c-action-bar__item__icon">
+					<?= Molecule_Display::svg( $item['icon'], 'action-bar' ); ?>
+				</div>
 
-		</a>
+				<h4 class="e-p--large--semi c-action-bar__item__text"><?php echo esc_html( $item['title'] ); ?></h4>
 
-	<?php } ?>
+			</a>
+
+		<?php } ?>
+
+	</div>
 
 </div>

@@ -1,0 +1,136 @@
+/**
+ * Sticky Action bBr Component
+ */
+
+$action-bar-item-desktop-width : 250px;
+$action-bar-item-mobile-width : 275px;
+
+.c-action-bar{
+
+	background-color: color( grayscale, 97 );
+	bottom: 0;
+	border-top: 1px solid color( grayscale, 80 );
+	display: block;
+	left: 0;
+	position: sticky;
+	transition: transition( nav );
+	width: 100%;
+	z-index: z( front );
+
+}
+
+// Displaying the sticky bar
+.c-action-bar.--is-active{
+
+	transform: translateY( 0% );
+
+}
+
+
+.c-action-bar__container{
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: grid( max-width );
+
+}
+
+/**
+ * Action Bar Items
+ */
+
+.c-action-bar__item{
+
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 16px 0;
+	width: $action-bar-item-desktop-width;
+
+}
+
+.c-action-bar__item:not( :last-child ){
+
+	border-right: 1px solid color( grayscale, 80 );
+
+}
+
+// Item Colors
+// .c-action-bar__item:nth-child( 1 ){
+// 	color: color( blue-m );
+// }
+
+// .c-action-bar__item:nth-child( 2 ){
+// 	color: color( blue, light5 );
+// }
+
+// .c-action-bar__item:nth-child( 3 ){
+// 	color: color( blue, dark5 );
+// }
+
+
+// Item hover
+.c-action-bar__item:hover{
+
+	.c-action-bar__item__icon{
+		transform: translateY( -2px );
+	}
+
+	.c-action-bar__item__icon .c-icon{
+		stroke: color( blue-m );
+	}
+
+	.c-action-bar__item__text{
+		color: color( blue-m );
+		transform: translateY( 2px );
+	}
+
+}
+
+
+
+/**
+ * Icon
+ */
+
+.c-action-bar__item__icon,
+.c-action-bar__item__icon .c-icon{
+
+	transition: transition( sticky-bar-item );
+
+}
+
+.c-action-bar__item__icon .c-icon,
+.c-action-bar__item__icon .c-icon svg{
+
+	height: 32px;
+	width: 32px;
+
+
+	@include respond-min( $phone ){
+
+		height: 36px;
+		width: 36px;
+
+	}
+
+}
+
+.c-action-bar__item__icon .c-icon{
+	stroke: color( grayscale, 60 );
+}
+
+/**
+ * Text
+ */
+.c-action-bar__item__text{
+
+	color: color( grayscale, 60 );
+	margin-bottom: 0px;
+	margin-top: 0px;
+	transition: transition( sticky-bar-item );
+
+}
