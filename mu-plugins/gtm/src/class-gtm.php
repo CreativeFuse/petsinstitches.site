@@ -5,12 +5,12 @@
  * @since  1.0.0
  * @package CFi\Module\GTM
  * @author CreativeFuse
- * 
+ *
  * The main class responsible for loading the config file and instantiating GTM.
  *
  */
 
-namespace CFi\Module\GTM;
+namespace CreativeFuse\PetsInStitches\GTM;
 
 class GTM{
 
@@ -73,7 +73,7 @@ class GTM{
 		add_action( 'init', array( $this, 'set_current_theme_name'), 1);
 		add_action( 'init', array( $this, 'set_custom_hook'), 1);
 		add_action( 'init', array( $this, 'set_gtm_body_hook'), 1);
-		
+
 		/**
 		 * The main function that dynamically loads the GTM Scripts
 		 * into the appropriate spots
@@ -114,7 +114,7 @@ class GTM{
 	 *
 	 * @since 1.0.0
 	 * @return string $key the key to use for the key => value pair in the array
-	 * 
+	 *
 	 */
 	private function get_config( $key = '' ){
 
@@ -124,11 +124,11 @@ class GTM{
 
 		// If we have a key, let's use it to get a value
 		if( $key ){
-			
+
 			$_config = $this->config[ $key ];
 
-		} 
-		
+		}
+
 		return $_config;
 
 	}
@@ -220,7 +220,7 @@ class GTM{
 			$this->gtm_body_hook = $this->supported_theme_hooks[ $this->get_current_theme_name() ];
 
 		} else {
-			
+
 			/**
 			 * If the current theme is not supported,
 			 * then we will use the custom hook as defined in the config
@@ -294,14 +294,14 @@ class GTM{
 /**
  * Instantiate our one true instance of GTM
  *
- * We can use this function to retrieve the main instance of 
- * GTM after it has been instantiated. It will NEVER 
+ * We can use this function to retrieve the main instance of
+ * GTM after it has been instantiated. It will NEVER
  * instantiate 2 instances of GTM. This can be useful for
  * getting data from a GTM property without having to decalre
  * a global and see if $gtm is already set each time.
  *
  * @since  1.0.0
- * 
+ *
  */
 
 function gtm(){
@@ -319,5 +319,3 @@ function gtm(){
 }
 
 gtm();
-
-

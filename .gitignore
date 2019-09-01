@@ -74,9 +74,10 @@ themes/pns-molecule/_dist
 
 
 # --------------------------------------------------------
-# ALL custom plugins are MU plugins. Let's whitelist them.
+# Additional Ignores
 # --------------------------------------------------------
 
-
-
+db.php
+aa-load-debug-tools.php
+mu-plugins/__debug
 mu-plugins/local-by-flywheel-demo-urls.php

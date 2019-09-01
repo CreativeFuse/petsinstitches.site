@@ -1,20 +1,24 @@
 <?php
-namespace CreativeFuse\PetsInStitches;
+namespace CreativeFuse\PetsInStitches\Blog;
+use CreativeFuse\PetsInStitches\Toolkit\View;
 
 class Blog{
 
     private $id;
+
+    private $views_dir;
 
     private $related_posts;
 
     public function __construct( int $id ){
 
         $this->id = $id;
+        $this->views_dir = dirname( __DIR__ ) . '/views/';
+        $this->view = new View( $this->views_dir );
 
         $this->related_posts = new Related_Posts(
             $this->id,
-            new View_Handler,
-            new Cache( 'pns_related_posts' )
+            $this->view
         );
 
     }
@@ -26,7 +30,7 @@ class Blog{
     public function display_related_posts(){
 
         if( $this->related_posts->has_related() ){
-            $this->related_posts->display();
+            return $this->related_posts->display();
         }
 
     }
