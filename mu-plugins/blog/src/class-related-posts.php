@@ -110,7 +110,7 @@ class Related_Posts{
         $props = [
 
             'current_post_id' => $this->get_current_post_id(),
-            'title' => 'Continue Reading',
+            'title' => 'Related Posts',
             'posts' => $this->get_related()
 
         ];
