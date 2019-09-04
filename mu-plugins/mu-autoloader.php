@@ -12,8 +12,7 @@
  * @license      GNU-2.0+
  */
 
-namespace CFi;
-
+namespace CreativeFuse\PetsInStitches;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -38,7 +37,7 @@ class Autoloader{
 
 	/**
 	 * The path to our config file
-	 * 
+	 *
 	 * @var string
 	 * @since  1.0.0
 	 */
@@ -93,11 +92,11 @@ class Autoloader{
 
 		return $_config;
 	}
- 
+
 
 
 	/**
-	 * Loop through our defined array of 
+	 * Loop through our defined array of
 	 * modules, load them, and insantiate them
 	 *
 	 * @since 1.0.0
@@ -151,7 +150,7 @@ class Autoloader{
 			}
 
 		}
-		
+
 
 	}
 
@@ -165,7 +164,7 @@ class Autoloader{
  * our autoloader twice!
  *
  * @return OBJECT $autoloader
- * 
+ *
  */
 function autoloader(){
 

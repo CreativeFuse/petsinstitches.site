@@ -8,7 +8,7 @@
  * @license      GNU-2.0+
  */
 
-namespace CreativeFuse\PetsInStitches;
+namespace CreativeFuse\PetsInStitches\Custom;
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
 

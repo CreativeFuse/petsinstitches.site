@@ -1,5 +1,5 @@
 <?php
-namespace CreativeFuse\PetsInStitches\GTM;
+namespace CreativeFuse\PetsInStitches\Toolkit;
 
 /**
  * GTM's Bootstrap File
@@ -25,7 +25,14 @@ class Bootstrap{
 	// Here we go.
 	public function launch(){
 
-		require_once ( __DIR__ . '/src/class-gtm.php' );
+        // Cache
+		require_once ( __DIR__ . '/cache/i-cache.php' );
+        require_once ( __DIR__ . '/cache/class-cache.php' );
+
+        // View
+		require_once ( __DIR__ . '/view/i-view.php' );
+        require_once ( __DIR__ . '/view/class-view.php' );
+        require_once ( __DIR__ . '/view/class-view-fragment.php' );
 
 	}
 
