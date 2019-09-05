@@ -1,5 +1,5 @@
 <?php
-namespace CreativeFuse\PetsInStitches\GTM;
+namespace CreativeFuse\PetsInStitches\Blog;
 
 /**
  * GTM's Bootstrap File
@@ -18,14 +18,17 @@ if ( ! defined( 'WPINC' ) ) {
 	die( 'You cannot access this file!' );
 }
 
-
-
 class Bootstrap{
 
 	// Here we go.
 	public function launch(){
 
-		require_once ( __DIR__ . '/src/class-gtm.php' );
+        // Dependencies
+		require_once ( __DIR__ . '/src/class-related-posts.php' );
+
+		// Main Class
+		require_once ( __DIR__ . '/src/class-blog.php' );
+
 
 	}
 
