@@ -3,14 +3,15 @@
 $action_items = [
 
 	[
-		'title' => 'Make an Appointment',
+		'desktop_title' => 'Make an Appointment',
+		'mobile_title' => 'Appointment',
 		'link'	=> home_url( '/request-appointment/' ),
 		'icon' 	=> 'calendar',
-		'color' => 'blue-m'
 	],
 
 	[
-		'title' => 'Getting Started',
+		'desktop_title' => 'Getting Started',
+		'mobile_title' => 'Get Started',
 		'link'	=> home_url( '/getting-started/' ),
 		'icon' 	=> 'start',
 		'color' => 'blue'
@@ -18,7 +19,8 @@ $action_items = [
 	],
 
 	[
-		'title' => 'Download Forms',
+		'desktop_title' => 'Download Forms',
+		'mobile_title' => 'Forms',
 		'link'	=> home_url( '/forms/' ),
 		'icon' 	=> 'form',
 		'color' => 'blue-d'
@@ -41,7 +43,10 @@ $action_items = [
 					<?= Molecule_Display::svg( $item['icon'], 'action-bar' ); ?>
 				</div>
 
-				<h4 class="e-p--large--semi c-action-bar__item__text"><?php echo esc_html( $item['title'] ); ?></h4>
+				<h4 class="e-p--large--semi c-action-bar__item__text">
+					<span class="__desktop-content"><?= esc_html( $item['desktop_title'] ); ?></span>
+					<span class="__mobile-content"><?= esc_html( $item['mobile_title'] ); ?></span>
+				</h4>
 
 			</a>
 

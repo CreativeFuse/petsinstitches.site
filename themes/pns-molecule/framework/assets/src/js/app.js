@@ -43,7 +43,6 @@ import './app/libs/unslider';
 
  // Action Bars
  import './app/components/sticky-action-bar';
- import './app/components/sticky-action-panel';
 
 // Tabs
  import './app/components/tabs';
