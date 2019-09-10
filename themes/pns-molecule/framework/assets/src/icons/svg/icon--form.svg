@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="icons" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .pns-icon-form-path{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+    </style>
+  </defs>
+  <path d="M21.36 37.21h-9.92M11.44 21.37h17.59M14.96 5.53v8.8h-8.8l8.8-8.8zM34.31 41.64v2.6H6.16v-2.6" class="pns-icon-form-path"/>
+  <path d="M6.16 41.63v-27.3l8.8-8.8h19.35v13.16M23.51 31.93H11.44M26.37 26.65H11.44M46.1 24.87L33.76 37.21l-6.49-6.49 12.34-12.34a1.83 1.83 0 0 1 2.59 0l3.9 3.9a1.83 1.83 0 0 1 0 2.59z" class="pns-icon-form-path"/>
+  <path d="M27.27 30.72L23.48 41l10.28-3.8-6.49-6.48zM27.77 39.42l-2.71-2.71" class="pns-icon-form-path"/>
+</svg>

@@ -1,0 +1,169 @@
+/**
+ * Sticky Action bBr Component
+ */
+
+$action-bar-item-desktop-width : 250px;
+$action-bar-item-mobile-width : 275px;
+$action-bar-breakpoint: $phone;
+
+.c-action-bar{
+
+	background-color: color( blue );
+	bottom: 0;
+	display: block;
+	left: 0;
+	position: sticky;
+	transition: transition( nav );
+	transform: translateY( 100% );
+	width: 100%;
+	z-index: z( front );
+
+}
+
+// Display the sticky bar
+.c-action-bar.--is-active{
+
+	transform: translateY( 0% );
+
+}
+
+
+.c-action-bar__container{
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: grid( max-width );
+
+}
+
+/**
+ * Action Bar Items
+ */
+
+.c-action-bar__item{
+
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px 0 12px 0;
+	width: $action-bar-item-desktop-width;
+
+	@include respond-min( $action-bar-breakpoint ){
+		padding: 16px 0 14px 0;
+	}
+
+}
+
+.c-action-bar__item:not( :last-child ){
+
+	border-right: 1px solid color( blue-m );
+
+}
+
+// Item hover - Desktop Only
+.c-action-bar__item:hover{
+
+	@include respond-min( $action-bar-breakpoint ){
+		.c-action-bar__item__icon{
+			transform: translateY( -2px );
+		}
+
+		.c-action-bar__item__icon .c-icon{
+			stroke: color( grayscale, white );
+		}
+
+		.c-action-bar__item__text{
+			color: color( grayscale, white );
+			transform: translateY( 2px );
+		}
+	}
+
+}
+
+// Set active & focus to give style on mobile taps
+.c-action-bar__item:active,
+.c-action-bar__item:focus{
+
+	.c-action-bar__item__icon .c-icon{
+		stroke: color( grayscale, white );
+	}
+
+	.c-action-bar__item__text{
+		color: color( grayscale, white );
+	}
+
+}
+
+
+/**
+ * Icon
+ */
+
+.c-action-bar__item__icon,
+.c-action-bar__item__icon .c-icon{
+
+	transition: transition( sticky-bar-item );
+
+}
+
+.c-action-bar__item__icon .c-icon,
+.c-action-bar__item__icon .c-icon svg{
+
+	height: 30px;
+	width: 30px;
+
+
+	@include respond-min( $action-bar-breakpoint ){
+
+		height: 36px;
+		width: 36px;
+
+	}
+
+}
+
+.c-action-bar__item__icon .c-icon{
+	stroke: color( blue-m );
+}
+
+/**
+ * Text
+ */
+.c-action-bar__item__text{
+
+	color: color( blue-l );
+	line-height: 16px;
+	margin-bottom: 0px;
+	margin-top: 4px;
+	transition: transition( sticky-bar-item );
+
+	@include respond-min( $action-bar-breakpoint ){
+		line-height: 30px;
+		margin-top: 4px;
+	}
+
+}
+
+.c-action-bar__item__text .__desktop-content{
+
+	display: none;
+
+	@include respond-min( $action-bar-breakpoint ){
+		display: block;
+	}
+
+}
+
+
+.c-action-bar__item__text .__mobile-content{
+
+	display: block;
+
+	@include respond-min( $action-bar-breakpoint ){
+		display: none;
+	}
+
+}

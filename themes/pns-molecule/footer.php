@@ -33,6 +33,12 @@ if( ! is_page_template( 'templates/landing.php' ) ){
 
 }
 
+/**
+ * Load the Sticky Action Bar
+ */
+
+Molecule_Router::render( 'component', '_sticky', 'action-bar' );
+
 wp_footer(); ?>
 
 </body>

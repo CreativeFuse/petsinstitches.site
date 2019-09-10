@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="icons" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .pns-icon-start-path{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+    </style>
+  </defs>
+  <path d="M16.69 15.21V5.53M16.69 44.24v-9.67M16.69 5.53h26.4v38.71h-26.4M6.13 24.89h26.4" class="pns-icon-start-path"/>
+  <path d="M25.49 17.85l7.04 7.04-7.04 7.04" class="pns-icon-start-path"/>
+</svg>

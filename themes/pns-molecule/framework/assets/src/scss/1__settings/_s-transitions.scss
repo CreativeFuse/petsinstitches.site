@@ -21,14 +21,15 @@ $transitions : (
 	partners			: 	all .4s ease-in-out,
 	post_item			: 	all .2s ease,
 
-	icon_fancy			:	all .2s ease,		
+	icon_fancy			:	all .2s ease,
 	icon_fancy_border	:	all .3s ease,
 	icon_bg				:	all .2s ease,
 	mobile_icon			:	all .25s ease-in-out,
 
 	nav					:	all .25s ease,
+	sticky-bar-item		:   all .25s cubic-bezier(.52,.16,.24,1),
 
 	service_card		:	all .25s ease-in,
 
-	
+
 );
