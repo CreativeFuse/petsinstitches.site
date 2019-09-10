@@ -8,9 +8,8 @@ $action-bar-breakpoint: $phone;
 
 .c-action-bar{
 
-	background-color: color( grayscale, 97 );
+	background-color: color( blue );
 	bottom: 0;
-	border-top: 1px solid color( grayscale, 80 );
 	display: block;
 	left: 0;
 	position: sticky;
@@ -49,18 +48,18 @@ $action-bar-breakpoint: $phone;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 8px 0;
+	padding: 10px 0 12px 0;
 	width: $action-bar-item-desktop-width;
 
 	@include respond-min( $action-bar-breakpoint ){
-		padding: 16px 0;
+		padding: 16px 0 14px 0;
 	}
 
 }
 
 .c-action-bar__item:not( :last-child ){
 
-	border-right: 1px solid color( grayscale, 80 );
+	border-right: 1px solid color( blue-m );
 
 }
 
@@ -73,11 +72,11 @@ $action-bar-breakpoint: $phone;
 		}
 
 		.c-action-bar__item__icon .c-icon{
-			stroke: color( blue-m );
+			stroke: color( grayscale, white );
 		}
 
 		.c-action-bar__item__text{
-			color: color( blue-m );
+			color: color( grayscale, white );
 			transform: translateY( 2px );
 		}
 	}
@@ -89,15 +88,14 @@ $action-bar-breakpoint: $phone;
 .c-action-bar__item:focus{
 
 	.c-action-bar__item__icon .c-icon{
-		stroke: color( blue-m );
+		stroke: color( grayscale, white );
 	}
 
 	.c-action-bar__item__text{
-		color: color( blue-m );
+		color: color( grayscale, white );
 	}
 
 }
-
 
 
 /**
@@ -128,7 +126,7 @@ $action-bar-breakpoint: $phone;
 }
 
 .c-action-bar__item__icon .c-icon{
-	stroke: color( grayscale, 60 );
+	stroke: color( blue-m );
 }
 
 /**
@@ -136,7 +134,7 @@ $action-bar-breakpoint: $phone;
  */
 .c-action-bar__item__text{
 
-	color: color( grayscale, 60 );
+	color: color( blue-l );
 	line-height: 16px;
 	margin-bottom: 0px;
 	margin-top: 4px;
@@ -144,7 +142,7 @@ $action-bar-breakpoint: $phone;
 
 	@include respond-min( $action-bar-breakpoint ){
 		line-height: 30px;
-		margin-top: 0px;
+		margin-top: 4px;
 	}
 
 }
