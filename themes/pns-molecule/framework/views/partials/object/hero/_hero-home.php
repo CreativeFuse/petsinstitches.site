@@ -10,7 +10,7 @@
 
 					<h1 class="e-h1 c-title-group__title u-color--blue">Your Pet, Our Priority</h1>
 
-					<p class="e-p--common c-title-group__sub">We care for you and your pet throughout the entire surgical procedure and hold your paw every step of the way.</p>
+					<p class="e-p--common c-title-group__sub">We care for you and your pet throughout the entire surgical or dental procedure and hold your paw every step of the way.</p>
 
 					<a class="c-btn c-btn--fill c-btn--purple c-btn--hover-outline c-title-group__btn" href="<?php echo esc_url('/getting-started' )  ?>" data-event-origin="home-hero-button">
 
