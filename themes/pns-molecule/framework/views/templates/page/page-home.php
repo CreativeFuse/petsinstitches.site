@@ -2,13 +2,16 @@
 /**
  * Template • Home
  *
- * The template file to render all parts of the 
+ * The template file to render all parts of the
  * Home Page
  */
 
 
 // Intro Section after hero image
 Molecule_Router::render( 'page/home', '_home', 'intro');
+
+// Low Price Guarantee
+Molecule_Router::render( 'page/home', '_home', 'low-price');
 
 // Petcare with Passion
 Molecule_Router::render( 'page/home', '_home', 'petcare-passion');
