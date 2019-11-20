@@ -8,6 +8,37 @@
 
 
 /**
+ * SECTION • Low Price Guarantee
+ */
+ .p-home--low-price{
+
+	padding: 120px 0 0 0;
+
+}
+
+.p-home--low-price__title{
+	margin-bottom: 32px;
+}
+
+.p-home--low-price__value-prop{
+	margin-bottom: 24px;
+}
+
+.p-home--low-price__value-prop strong{
+	color: color( blue-m );
+}
+
+.p-home--low-price__value-prop-sub{
+	color: color( gray );
+}
+
+.p-home--low-price__restrictions{
+	margin-top: 48px !important;
+}
+
+
+
+/**
  * SECTION • Petcare with Passion
  */
 .p-home--petcare-passion{
