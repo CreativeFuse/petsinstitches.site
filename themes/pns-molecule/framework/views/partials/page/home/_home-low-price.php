@@ -21,7 +21,7 @@ $restrictions = get_field( 'home_low_price_guarantee_restrictions' );
 
 			<div class="o-col-md-12">
 
-				<div class="c-title-group u-max-width--800 u-center">
+				<div class="c-title-group u-max-width--700 u-center">
 
 						<h2 class="p-home--low-price__title c-title-group__title e-h2 u-color--blue u-align--center">
 							<?php esc_html_e( $title ); ?>
@@ -37,7 +37,7 @@ $restrictions = get_field( 'home_low_price_guarantee_restrictions' );
 
 				</div>
 
-				<div class="p-home--low-price__restrictions c-accordion c-accordion--simple c-accordion--simple--1 js-expand-accordion u-max-width--700 u-center">
+				<div class="p-home--low-price__restrictions c-accordion c-accordion--simple c-accordion--simple--1 js-expand-accordion u-max-width--600 u-center">
 
 					<div class="c-accordion--simple__header u-clearfix">
 
