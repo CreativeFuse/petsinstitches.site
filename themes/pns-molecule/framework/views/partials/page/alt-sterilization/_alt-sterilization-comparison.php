@@ -94,7 +94,7 @@ if ( $group ) { ?>
 											$link_target = $link['target'] ? $link['target'] : '_self';
 										?>
 										<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-											<div class="image"><?php if( $image ) { echo wp_get_attachment_image( $image, 'thumbnail' ); } ?></div>
+											<div class="image"><?php if( $image ) { echo wp_get_attachment_image( $image, [300,300] ); } ?></div>
 											<div class="title"><?php echo esc_html( $link['title'] ); ?></div>
 										</a>
 									</div>
