@@ -79,8 +79,8 @@ if ( $group ) { ?>
 					<?php } else if ( 'latest_articles' === get_row_layout() ) { ?>
 						<div class="c-latest-articles">
 							<div class="header">
-								<h2 class="title c-title-group__title e-h2 u-color--blue u-align--center"><?php esc_html_e( get_sub_field( 'title' ) ); ?></h2>
-								<p class="c-title-group__sub__sub e-p--common u-max-width--600"><?php esc_html_e( get_sub_field( 'description' ) ); ?></p>
+								<h2 class="p-alt-sterilization--latest-articles__title c-title-group__title e-h2 u-color--blue u-align--center"><?php esc_html_e( get_sub_field( 'title' ) ); ?></h2>
+								<p class="p-alt-sterilization--latest-articles__sub c-title-group__sub e-h4"><?php esc_html_e( get_sub_field( 'description' ) ); ?></p>
 							</div>
 							<div class="articles">
 								<?php
@@ -95,7 +95,7 @@ if ( $group ) { ?>
 										?>
 										<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 											<div class="image"><?php if( $image ) { echo wp_get_attachment_image( $image, [300,300] ); } ?></div>
-											<div class="title"><?php echo esc_html( $link['title'] ); ?></div>
+											<h3 class="title"><?php echo esc_html( $link['title'] ); ?></h3>
 										</a>
 									</div>
 								<?php } ?>

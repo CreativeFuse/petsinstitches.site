@@ -14,7 +14,7 @@ Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'intro'
 Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'low-price');
 
 // Main Section, list of different surgeries
-Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'section');
+// Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'section');
 
 // Main Section, list of different surgeries
 Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'comparison');
