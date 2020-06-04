@@ -7,7 +7,7 @@ $buttons = array(
 
 	'appointment' => array(
 
-		'text' => 'Make An Appointment',
+		'text' => 'Request An Appointment',
 		'link' => '/request-appointment',
 
 	),
