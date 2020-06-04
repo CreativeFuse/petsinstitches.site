@@ -3,7 +3,7 @@
 $action_items = [
 
 	[
-		'desktop_title' => 'Make an Appointment',
+		'desktop_title' => 'Request an Appointment',
 		'mobile_title' => 'Appointment',
 		'link'	=> home_url( '/request-appointment/' ),
 		'icon' 	=> 'calendar',

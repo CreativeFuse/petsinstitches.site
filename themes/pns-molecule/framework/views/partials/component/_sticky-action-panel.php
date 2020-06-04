@@ -4,7 +4,7 @@ $action_items = array(
 
 	1 => array(
 
-		'title' => 'Make an Appointment',
+		'title' => 'Request an Appointment',
 		'link'	=> '/request-appointment/',
 		'icon' 	=> 'calendar',
 		'color' => 'blue-m'
