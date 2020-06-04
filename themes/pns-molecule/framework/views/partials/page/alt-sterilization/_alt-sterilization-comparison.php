@@ -95,7 +95,7 @@ if ( $group ) { ?>
 										?>
 										<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 											<div class="image"><?php if( $image ) { echo wp_get_attachment_image( $image, [300,300] ); } ?></div>
-											<h3 class="title"><?php echo esc_html( $link['title'] ); ?></h3>
+											<h3 class="title c-text-link"><?php echo esc_html( $link['title'] ); ?></h3>
 										</a>
 									</div>
 								<?php } ?>
