@@ -21,7 +21,7 @@
 		<strong class="u-color--blue"><?php esc_html_e( 'Phone:'); ?></strong> <a class="c-text-link u-color--gray" href="tel:937-630-3320"><?php esc_html_e( '937-630-3320'); ?></a>
 		<br/>
 		<strong class="u-color--blue"><?php esc_html_e( 'Email:'); ?></strong> <a class="c-text-link u-color--gray" href="mailto:contact@petsinstitches.com"><?php esc_html_e( 'contact@petsinstitches.com'); ?></a>
-		
+
 	</h2>
 
 
@@ -38,12 +38,7 @@
 		<strong><?php esc_html_e( 'By Appointment Only'); ?></strong>
         <br/>
         <?php esc_html_e( 'Open at 7:30am (M - Th)'); ?>
-        <br/>
-        <br/>
-        <strong><?php esc_html_e( 'Wellness Walk-In'); ?></strong>
-        <br/>
-        <?php esc_html_e( '3:00pm - 4:00pm (Tu &amp; W)'); ?>
-        
+
 	</p>
 
 </div>
