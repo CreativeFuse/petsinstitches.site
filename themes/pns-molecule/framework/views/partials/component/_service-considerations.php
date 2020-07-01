@@ -28,7 +28,7 @@
 
 		<p class="e-p--common u-color--purple">
 
-		<?php echo wp_kses_post( 'Note that <strong>Wellness</strong> services need to be scheduled along with your surgery or you are welcome to visit our clinic during our wellness walk-in hours (Tu & W from 3-4pm).' ); ?>
+		<?php echo wp_kses_post( 'Note that <strong>Wellness</strong> services need to be scheduled along with your surgery or as an afternoon appointment.' ); ?>
 
 		</p>
 
