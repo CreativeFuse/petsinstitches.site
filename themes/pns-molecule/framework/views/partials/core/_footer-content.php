@@ -43,7 +43,8 @@
 
 			<a itemprop="sameAs" class="c-icon--social" href="https://www.facebook.com/PetsInStitches/" target="_blank"><?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-facebook.svg' ); ?></a>
             <a itemprop="sameAs" class="c-icon--social" href="https://www.youtube.com/user/PetsInStitchesClinic" target="_blank"><?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-youtube.svg' ); ?></a>
-            <a itemprop="sameAs" class="c-icon--social" href="https://www.pinterest.com/petsinstitches/" target="_blank"><?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-pinterest.svg' ); ?></a>
+            <a itemprop="sameAs" class="c-icon--social" href="https://www.instagram.com/petsinstitches/?hl=en" target="_blank"><?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-instagram.svg' ); ?></a>
+            <a itemprop="sameAs" class="c-icon--social" href="https://www.linkedin.com/company/pets-in-stitches-llc/" target="_blank"><?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-linkedin.svg' ); ?></a>
 
 		</p>
 
