@@ -4,23 +4,31 @@
  * *******************
  */
 
-.c-icon{
-
-	display: block;
-	
+.c-icon {
+  display: block;
 }
 
-.c-icon--inline{
-	display: inline-block;
+.c-icon--inline {
+  display: inline-block;
 }
 
 .c-icon--social svg {
-    max-width: 30px;
-    margin-right: 5px;
-    fill: color( blue );
-    transition: transition( icon_bg )
+  max-width: 30px;
+  margin-right: 5px;
+  fill: color(blue);
+  transition: transition(icon_bg);
 }
 
 .c-icon--social svg:hover {
-    fill: color( blue, light5 );
+  fill: color(blue, light5);
+}
+
+.o-topbar .c-icon--social svg {
+  margin-left: 5px;
+  margin-right: 0;
+  fill: #369cdc;
+  width: 30px;
+}
+.o-topbar .c-icon--social svg:hover {
+  fill: #06c;
 }
