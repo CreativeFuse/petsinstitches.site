@@ -54,11 +54,6 @@
 						<strong>By Appointment Only</strong>
                         <br/>
                         Open at 7:30am (M - Th)
-                        <br/>
-                        <br/>
-                        <strong>Wellness Walk-In</strong>
-                        <br/>
-                        3:00pm - 4:00pm (Tu &amp; W)
 
 					</p>
 
