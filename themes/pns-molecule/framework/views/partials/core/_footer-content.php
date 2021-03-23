@@ -63,7 +63,7 @@
 		<p class="o-footer__well__links u-color--blue-l">
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/request-appointment/">Request an Appointment</a></br>
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/" data-event-origin="footer-nav">Getting Started</a></br>
-			<a class="c-menu__link e-p--large u-color--blue-l" href="/forms/">Download Forms</a></br>
+			<a class="c-menu__link e-p--large u-color--blue-l" href="/admission-form/">Admission Form</a></br>
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/blog/">Blog</a></br>
 			<a class="c-menu__link e-p--large u-color--blue-l" href="/faqs/">FAQs</a>
 		</p>

@@ -5,12 +5,12 @@
 $buttons = array(
 
 
-	'appointment' => array(
+	// 'appointment' => array(
 
-		'text' => 'Appointment',
-		'link' => '/request-appointment',
+	// 	'text' => 'Appointment',
+	// 	'link' => '/request-appointment',
 
-	),
+	// ),
 
 
 	'getting-started' => array(

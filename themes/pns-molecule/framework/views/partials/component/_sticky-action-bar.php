@@ -19,9 +19,9 @@ $action_items = [
 	],
 
 	[
-		'desktop_title' => 'Download Forms',
-		'mobile_title' => 'Forms',
-		'link'	=> home_url( '/forms/' ),
+		'desktop_title' => 'Admission Form',
+		'mobile_title' => 'Admission Form',
+		'link'	=> home_url( '/admission-form/' ),
 		'icon' 	=> 'form',
 		'color' => 'blue-d'
 	]
