@@ -44,8 +44,8 @@
 
 					<p class="c-title-group__sub e-p--common">
 						<strong>By Appointment Only</strong>
-                        <br/>
-                        Open at 7:30am (M - Th)
+            <br/>
+            Open at 7:30am <br/>Monday, Tuesday, Thursday and Friday
 
 					</p>
 

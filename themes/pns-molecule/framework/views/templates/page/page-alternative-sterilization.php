@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Template • Alternative Sterilization
@@ -11,13 +10,16 @@
 Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'intro');
 
 // Low Price Guarantee
-Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'low-price');
+// Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'low-price');
 
 // Main Section, list of different surgeries
 // Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'section');
 
 // Main Section, list of different surgeries
 Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'comparison');
+
+// Faqs
+Molecule_Router::render( 'page/alt-sterilization', '_alt-sterilization', 'faqs');
 
 // Request an Appointment
 Molecule_Router::render( 'object/cta', '_request', 'appointment');

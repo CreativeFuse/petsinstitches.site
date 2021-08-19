@@ -7,8 +7,11 @@ $group = get_field( $page );
 if ( $group ) { ?>
 
 	<div class="o-section o-section--sub-page">
-		<div class="o-container o-container--max--small">
+		<!-- <div class="o-container o-container--max--small"> -->
+		<div class="o-container o-container--max">
 		<?php
+			// header index
+			$header_index = 0;
 			// Build Page Sections
 			if( have_rows( $page ) ) {
 				while( have_rows( $page ) ) {
@@ -49,38 +52,48 @@ if ( $group ) { ?>
 						}
 						?></div><?php
 					} else if ( 'collapsible_list' === get_row_layout() ) { ?>
-						<div class="c-accordion c-accordion--simple c-accordion--simple--1">
-							<div class="c-accordion--simple__header">
-								<h5 class="e-h6 c-accordion--simple__header__title u-text-up"><?php esc_html_e( get_sub_field( 'title' ) ); ?></h5>
-								<div class="c-accordion__icon c-accordion__icon--simple">
-									<div class="c-accordion__icon-bar c-accordion__icon-bar--1"></div>
-									<div class="c-accordion__icon-bar c-accordion__icon-bar--2"></div>
+						<div class="o-container o-container--max--small">
+							<?php if($header_index == 0) { ?>
+								<div class="header">
+									<h2 class="p-alt-sterilization--latest-articles__title c-title-group__title e-h2 u-color--blue u-align--center">Additional Information</h2>
+								</div>
+							<?php } ?>
+							<div class="c-accordion c-accordion--simple c-accordion--simple--1">
+								<div class="c-accordion--simple__header">
+									<h5 class="e-h6 c-accordion--simple__header__title u-text-up"><?php esc_html_e( get_sub_field( 'title' ) ); ?></h5>
+									<div class="c-accordion__icon c-accordion__icon--simple">
+										<div class="c-accordion__icon-bar c-accordion__icon-bar--1"></div>
+										<div class="c-accordion__icon-bar c-accordion__icon-bar--2"></div>
+									</div>
+								</div>
+								<div class="c-accordion--simple__body u-clearfix">
+									<?php
+									// If there is detail
+									$detail = get_sub_field( 'detail' );
+									if ( $detail ) { ?>
+										<p class="e-p--common c-title-group__sub"><?php echo wp_kses_post( $detail ); ?></p>
+									<?php } ?>
+									<div class="o-col-md-12">
+										<ul class="c-list-paws c-list-paws--blue">
+											<?php while( have_rows( 'items' ) ) {
+												the_row();
+												// Set variables in loop
+												$item = get_sub_field( 'list_item', false, false ); ?>
+												<li class="e-p--common c-list-paws__item u-max-width--700"><?php echo wp_kses_post( get_sub_field( 'item' ) ); ?></li>
+											<?php } ?>
+										</ul>
+									</div>
 								</div>
 							</div>
-							<div class="c-accordion--simple__body u-clearfix">
-								<?php
-								// If there is detail
-								$detail = get_sub_field( 'detail' );
-								if ( $detail ) { ?>
-									<p class="e-p--common c-title-group__sub"><?php echo wp_kses_post( $detail ); ?></p>
-								<?php } ?>
-								<div class="o-col-md-12">
-									<ul class="c-list-paws c-list-paws--blue">
-										<?php while( have_rows( 'items' ) ) {
-											the_row();
-											// Set variables in loop
-											$item = get_sub_field( 'list_item', false, false ); ?>
-											<li class="e-p--common c-list-paws__item u-max-width--700"><?php echo wp_kses_post( get_sub_field( 'item' ) ); ?></li>
-										<?php } ?>
-									</ul>
-								</div>
-							</div>
+							<?php $header_index++; ?>
 						</div>
 					<?php } else if ( 'latest_articles' === get_row_layout() ) { ?>
 						<div class="c-latest-articles">
-							<div class="header">
-								<h2 class="p-alt-sterilization--latest-articles__title c-title-group__title e-h2 u-color--blue u-align--center"><?php esc_html_e( get_sub_field( 'title' ) ); ?></h2>
-								<p class="p-alt-sterilization--latest-articles__sub c-title-group__sub e-h4"><?php esc_html_e( get_sub_field( 'description' ) ); ?></p>
+							<div class="o-container o-container--max--small">
+								<div class="header">
+									<h2 class="p-alt-sterilization--latest-articles__title c-title-group__title e-h2 u-color--blue u-align--center"><?php esc_html_e( get_sub_field( 'title' ) ); ?></h2>
+									<p class="p-alt-sterilization--latest-articles__sub c-title-group__sub u-align--center e-p--large"><?php esc_html_e( get_sub_field( 'description' ) ); ?></p>
+								</div>
 							</div>
 							<div class="articles">
 								<?php
@@ -95,7 +108,7 @@ if ( $group ) { ?>
 										?>
 										<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 											<div class="image"><?php if( $image ) { echo wp_get_attachment_image( $image, [300,300] ); } ?></div>
-											<h3 class="title c-text-link"><?php echo esc_html( $link['title'] ); ?></h3>
+											<h2 class="title c-text-link"><?php echo esc_html( $link['title'] ); ?></h3>
 										</a>
 									</div>
 								<?php } ?>

@@ -429,7 +429,7 @@ class Molecule_Router{
 			//If we are on the home page
 			if ( is_front_page() ){
 
-				Molecule_Router::render( 'object/hero', '_hero', 'home' );
+				// Molecule_Router::render( 'object/hero', '_hero', 'home' );
 
 
 			// If we are on any other page other than a landing page

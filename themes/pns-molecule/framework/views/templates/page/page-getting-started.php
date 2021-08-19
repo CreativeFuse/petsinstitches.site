@@ -13,6 +13,9 @@ Molecule_Router::render( 'page/getting-started', '_getting-started', 'intro');
 // Prior to Your Visit section
 Molecule_Router::render( 'page/getting-started', '_getting-started', 'section');
 
+// Faqs
+Molecule_Router::render( 'page/getting-started', '_getting-started', 'faqs');
+
 // Request an Appointment
 Molecule_Router::render( 'object/cta', '_request', 'appointment');
 
