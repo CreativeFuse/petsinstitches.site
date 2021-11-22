@@ -5,6 +5,13 @@
 // Contains the content for the footer
 // no need for footer tags -those are handled in their own partials
 // =============================================================================
+$address_street = get_field('address_street', 'option');
+$address_city = get_field('address_city', 'option');
+$address_state = get_field('address_state', 'option');
+$address_zip = get_field('address_zip', 'option');
+$phone_number = get_field('phone_number', 'option');
+$fax_number = get_field('fax_number', 'option');
+
 ?>
 
 <div class="o-col-md-4">
@@ -22,21 +29,21 @@
 				<span itemprop="name"><b>Pets in Stitches</b></span>
 			</p>
 			<a itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="c-menu__link u-color--blue-l" href="https://www.google.com/maps/place/Pets+In+Stitches/@39.6306803,-84.2302138,17z/data=!3m1!4b1!4m5!3m4!1s0x884089007e771bbd:0x70b4d22ce61cd225!8m2!3d39.6306803!4d-84.2280251" target="_blank">
-				<span itemprop="streetAddress">8265 Springboro Pike</span>
+				<span itemprop="streetAddress"><?php esc_html_e( $address_street ); ?></span>
 				<br/>
-				<span itemprop="addressLocality">Miamisburg</span>,
-				<span itemprop="addressRegion">Ohio</span>
-				<span itemprop="postalCode">45343</span>
+				<span itemprop="addressLocality"><?php esc_html_e( $address_city ); ?></span>,
+				<span itemprop="addressRegion"><?php esc_html_e( $address_state ); ?></span>
+				<span itemprop="postalCode"><?php esc_html_e( $address_zip ); ?></span>
 			</a>
 		</p>
 
 		<p class="e-p--large c-text-icon">
 
 			<?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-phone.svg' ); ?>
-			<a class="c-menu__link u-color--blue-l" href="tel:937-630-3320"><span itemprop="telephone">937-630-3320</span></a>
+			<a class="c-menu__link u-color--blue-l" href="tel:<?php esc_html_e( $phone_number ); ?>"><span itemprop="telephone"><?php esc_html_e( $phone_number ); ?></span></a>
 			<br/>
 			<?php echo file_get_contents( molecule()->get_setting( 'svg_dir' ) . 'icon-printer.svg' ); ?>
-			<a class="c-menu__link u-color--blue-l" href="tel:937-630-3325"><span itemprop="faxNumber">937-630-3325</span></a>
+			<a class="c-menu__link u-color--blue-l" href="tel:<?php esc_html_e( $fax_number ); ?>"><span itemprop="faxNumber"><?php esc_html_e( $fax_number ); ?></span></a>
 		</p>
 
         <p>

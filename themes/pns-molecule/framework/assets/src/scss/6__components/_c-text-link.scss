@@ -4,12 +4,21 @@
  * ****************************
  */
 
-
+a :not(.c-menu__link):not(.c-copyright__link){
+	color: color( blue-m );
+    text-decoration: underline;
+}
+a:hover :not(.c-menu__link):not(.c-copyright__link){
+    
+    color: color( blue );
+    text-decoration: underline;
+    
+}
 .c-text-link a,
 .c-text-link {
     
     color: color( blue-m );
-    
+    text-decoration: underline;
 }
 
 

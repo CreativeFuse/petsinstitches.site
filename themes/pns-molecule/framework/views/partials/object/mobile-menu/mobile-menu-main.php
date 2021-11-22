@@ -1,4 +1,12 @@
+<?php
 
+$address_street = get_field('address_street', 'option');
+$address_city = get_field('address_city', 'option');
+$address_state = get_field('address_state', 'option');
+$address_zip = get_field('address_zip', 'option');
+$phone_number = get_field('phone_number', 'option');
+$opening_hours = get_field('opening_hours', 'option');
+?>
 <div class="o-mobile-menu">
 	<div class="o-container">
 
@@ -16,7 +24,7 @@
 
 							<li class="o-mobile-menu__menu-item"><a href="/about/">Team</li></a>
 							<li class="o-mobile-menu__menu-item"><a href="/partners/">Partners</li></a>
-							<li class="o-mobile-menu__menu-item"><a href="/blog/take-a-tour/">Take a Tour</li></a>
+							<li class="o-mobile-menu__menu-item"><a href="/take-a-tour/">Take a Tour</li></a>
 							<li class="o-mobile-menu__menu-item"><a href="/faqs/">FAQs</li></a>
 							<li class="o-mobile-menu__menu-item"><a href="/testimonials/">Testimonials</li></a>
 							<li class="o-mobile-menu__menu-item"><a href="/getting-started">Getting Started</li></a>
@@ -122,18 +130,11 @@
                     </p>
 
 
-                    <p class="u-color--blue-l">
+                    <div class="u-color--blue-l">
 
-                        Open 7:30am By Appointment Only (M-Th)
+                        <?php echo wp_kses_post( $opening_hours ); ?>
 
-                    </p>
-
-
-                    <p class="u-color--blue-l">
-
-                        3-4pm Wellness Walk-In Hours (Tu &amp; W)
-
-                    </p>
+                    </div>
 
 			</div>
 
@@ -143,10 +144,12 @@
 				<div class="o-mobile-menu__address">
 					<p class="e-p--common u-color--blue-l">
 
-						<a href="https://www.google.com/maps/place/Pets+In+Stitches/@39.6306803,-84.2302138,17z/data=!3m1!4b1!4m5!3m4!1s0x884089007e771bbd:0x70b4d22ce61cd225!8m2!3d39.6306803!4d-84.2280251" target="_blank">
-                            8625 Springboro Pike
-                            <br/>
-                            Miamisburg, OH 45342
+						<a href="https://www.google.com/maps/place/Pets+In+Stitches/@39.6306803,-84.2302138,17z/data=!3m1!4b1!4m5!3m4!1s0x884089007e771bbd:0x70b4d22ce61cd225!8m2!3d39.6306803!4d-84.2280251" target="_blank" style="color:#c3ecfd;">
+                            <span ><?php esc_html_e( $address_street ); ?></span>
+							<br/>
+							<span ><?php esc_html_e( $address_city ); ?></span>,
+							<span ><?php esc_html_e( $address_state ); ?></span>
+							<span ><?php esc_html_e( $address_zip ); ?></span>
                         </a>
 					</p>
 
@@ -160,7 +163,7 @@
 
 				<p class="e-p--common u-color--blue-l">
 
-					<a href="tel:937-630-3320">937-630-3320</a>
+					<a href="tel:<?php esc_html_e( $phone_number ); ?>" style="color:#c3ecfd;"><?php esc_html_e( $phone_number ); ?></a>
 
 				</p>
 

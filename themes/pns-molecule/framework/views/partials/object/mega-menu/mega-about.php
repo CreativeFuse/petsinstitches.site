@@ -16,7 +16,7 @@ $output .= '<div class="o-col-md-4">';
 
 		$output .= '<ul class="c-menu c-menu--list">';
 
-			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/blog/take-a-tour/">Take a Tour</a></li>';
+			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/take-a-tour/">Take a Tour</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/faqs/">FAQs</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/testimonials/">Testimonials</a></li>';
 			$output .= '<li><a class="c-menu__link e-p--large u-color--blue-l" href="/getting-started/" data-event-origin="about-menu">Getting Started</a></li>';

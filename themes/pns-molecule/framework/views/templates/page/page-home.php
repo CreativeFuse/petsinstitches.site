@@ -16,11 +16,17 @@ Molecule_Router::render( 'page/home', '_home', 'low-price');
 // Petcare with Passion
 Molecule_Router::render( 'page/home', '_home', 'petcare-passion');
 
-// Request an Appointment
-Molecule_Router::render( 'object/cta', '_request', 'appointment');
+// Benefits
+Molecule_Router::render( 'page/home', '_home', 'petcare-benefits');
+
+// Benefits
+Molecule_Router::render( 'page/home', '_home', 'petcare-services-and-offerings');
 
 // Choose your pet
 Molecule_Router::render( 'page/home', '_home', 'choose-pet');
 
 // Testimonial Slider
-Molecule_Router::render( 'component', '_slider', 'testimonials');
+// Molecule_Router::render( 'component', '_slider', 'testimonials');
+
+// Request an Appointment
+Molecule_Router::render( 'object/cta', '_request', 'appointment');

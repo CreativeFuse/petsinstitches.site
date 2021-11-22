@@ -1,7 +1,7 @@
 <?php
 
 $faqs = CreativeFuse\PetsInStitches\FAQ\get_faqs();
-$spay_neutering_faqs = $faqs[19];
+$spay_neutering_faqs = $faqs[183];
 $limit = 0;
 ?>
 
@@ -60,7 +60,7 @@ $limit = 0;
 
 							<?php endforeach;
 						?>
-						<p style="text-align: center;color:#9a9a9a;">Interested in more frequently asked questions? <a href="/faqs/" style="">View more</a></p>
+						<p style="text-align: center;color:#9a9a9a;">Interested in more frequently asked questions? <a href="/faqs/" class="c-text-link">View more</a></p>
 					</div>
 						
 

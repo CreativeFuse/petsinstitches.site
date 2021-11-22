@@ -23,6 +23,7 @@ function autoload() {
 		'faq/module.php',
 		'partners/module.php',
 		'post-op-content/module.php',
+		'postoperative-instructions/module.php',
 		'services/module.php',
 		'testimonials/module.php',
 		'shared_taxonomies/helper.php',

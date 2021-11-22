@@ -1,15 +1,16 @@
 <div class="o-section c-related-posts">
-    <div class="c-related-posts__container o-container o-container--max o-container--width">
+    <div class="o-container o-container--max">
 
         <div class="c-related-posts__title">
 			<h5 class="c-related-posts__title-text e-h2 u-color--blue"><?= esc_html( $props['title'] ); ?></h5>
 		</div>
 
-        <div class="c-related-posts__items">
+        <div class="c-card__feed">
             <?php foreach( $props['posts'] as $id ){ ?>
-
+                
                 <?php
 
+                    $post_date = get_the_date( 'F j, Y', $id );
                     /**
                      * We have to do some work to set up the images properly
                      */
@@ -40,16 +41,26 @@
 
                 ?>
 
-                <a class="c-related-post__item" href="<?= esc_url( get_permalink( $id ) ); ?>" data-event-origin=<?= "related-posts-{$props['current_post_id']}"; ?>>
-
-                    <div class="c-related-post__item__media">
-                        <img class="c-related-post__item__image" src="<?= esc_url( $thumbnail_url ); ?>" alt="<?= esc_attr( $thumbnail_alt ); ?>" width="<?= esc_attr( $thumbnail_width ); ?>" height="<?= esc_attr( $thumbnail_height ); ?>">
+                <a class="c-card c-card--post" href="<?= esc_url( get_permalink( $id ) ); ?>" data-event-origin=<?= "related-posts-{$props['current_post_id']}"; ?>>
+                    <div class="c-card--post__header">
+                        <div class="c-card--post__bg" style="background-image:url(<?= esc_url( $thumbnail_url ); ?>" alt="<?= esc_attr( $thumbnail_alt ); ?>" width="<?= esc_attr( $thumbnail_width ); ?>" height="<?= esc_attr( $thumbnail_height ); ?> )"></div>
                     </div>
-
-                    <div class="c-related-post__item__body">
-                        <h6 class="c-related-post__item__title e-h6 u-color--gray"><?= esc_html( get_the_title( $id ) ); ?></h6>
+                    
+                    <div class="c-card--post__body">
+                        <div class="c-title-group c-title-group--post">
+                            <h2 itemprop="name headline" class="c-card--post__title c-title-group__title e-h3 u-color--blue">
+                            <?= esc_html( get_the_title( $id ) ); ?>
+                            </h2>
+                        </div>
+                        <div class="c-card--post__footer">
+                            <p class="c-card--post__date c-title-group__sub e-p--small u-color--gray e-p--common">
+                                <?php echo $post_date; ?>
+                            </p>
+                            <div class="post-arrow">
+                                <img class="" style="" src="/wp-content/uploads/2021/10/next.png" />
+                            </div>
+                        </div>
                     </div>
-
                 </a>
 
             <?php } ?>

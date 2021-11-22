@@ -161,7 +161,7 @@ class Molecule_Enqueue {
 
 		// Load if not in admin and if we are on the stray cats page
 
-		if( ! is_admin() && is_page( 'stray-cats' ) ){
+		if( ! is_admin() && is_page( 'stray-cats' ) || ! is_admin() && is_page( 'take-a-tour' )){
 
 			wp_register_script( $script['handle'], $script['src'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
 			wp_enqueue_script( $script['handle'] );

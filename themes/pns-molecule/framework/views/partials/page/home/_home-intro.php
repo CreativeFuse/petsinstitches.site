@@ -14,8 +14,8 @@
 
 ?>
 
-<div class="o-hero o-hero--home" id="hero">
-	<div class="o-container o-container--max">
+<div class="o-hero o-hero--home o-container o-container--max" id="hero">
+	<!-- <div class="o-container o-container--max"> -->
 		<div class="o-row">
 			<div class="o-col-md-4 o-col-sm-6 o-col-xs-12 hero-content">
 				<div class="c-title-group c-title-group--hero">
@@ -48,7 +48,7 @@
 			</div>
 			<div class="o-col-md-8 o-col-sm-6 o-col-xs-12"></div>
 		</div>
-	</div>
+	<!-- </div> -->
 </div>
 
 <div class="c-intro o-section u-gradient--blue u-arrow--bottom">

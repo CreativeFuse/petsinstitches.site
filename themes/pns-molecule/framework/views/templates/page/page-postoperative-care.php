@@ -6,9 +6,9 @@
  * Post Operative Pages
  */
 
-// Tabbed navigation and content for our Post Operative Pages
-Molecule_Router::render( 'page/post-op', '_post-op', 'tabs');
 
+// Choose your pet
+Molecule_Router::render( 'page/post-op', '_post-op', 'choose-pet');
 
 // Request an Appointment
 Molecule_Router::render( 'object/cta', '_request', 'appointment');

@@ -327,20 +327,20 @@ class Molecule_Router{
 			// If the current page is a child of the post-op parent page
 			// load our post-op page template
 
-			if ( array_key_exists( $post->post_parent, $post_op_parent_id ) ){
+			// if ( array_key_exists( $post->post_parent, $post_op_parent_id ) ){
 
-				$folder = 'page';
-				$extension = 'post-op';
+			// 	$folder = 'page';
+			// 	$extension = 'post-op';
 
 
-			} else {
+			// } else {
 
 
 				// Set Defaults for page handling
 				$folder = 'page';
 				$extension = Molecule_Display::page_title( false );
 
-			}
+			// }
 
 
 
@@ -425,16 +425,17 @@ class Molecule_Router{
 		 * If we are on a page
 		 */
 		}elseif( is_page() ){
-
+			global $post;
 			//If we are on the home page
 			if ( is_front_page() ){
-
 				// Molecule_Router::render( 'object/hero', '_hero', 'home' );
+			
+			} elseif( $post->post_parent == '274' ) {
 
+				Molecule_Router::render( 'object/hero', '_hero', 'postop-care-pet' );
 
-			// If we are on any other page other than a landing page
 			} elseif( ! is_page_template( 'templates/landing.php' ) ) {
-
+				// If we are on any other page other than a landing page
 				Molecule_Router::render( 'object/hero', '_hero', 'page' );
 
 			}

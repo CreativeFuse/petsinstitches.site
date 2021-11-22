@@ -25,6 +25,7 @@ foreach ( $fields as $field ){
 	if( get_sub_field( $field ) ){
 
 		$step[ $field ] = get_sub_field( $field );
+		$link_target = $step['target'] ? $step['target'] : '_self';
 
 	} else  {
 
@@ -49,7 +50,7 @@ if( $step['type'] == 'simple' ){ ?>
 			<?php echo wp_kses_post( $step['copy'] ); ?>
 		</div>
 
-		<a class="c-btn c-btn--fill c-btn--purple c-btn--hover-outline c-title-group__btn" href="<?php echo esc_url( $step['button']['url'] ); ?>">
+		<a class="c-btn c-btn--fill c-btn--purple c-btn--hover-outline c-title-group__btn" href="<?php echo esc_url( $step['button']['url'] ); ?>" target="<?php echo esc_url( $link_target ); ?>">
 			<div class="c-btn__text">
 				<?php echo esc_html( $step['button']['title'] ); ?>					
 			</div>
